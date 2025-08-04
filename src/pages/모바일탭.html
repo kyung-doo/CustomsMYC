@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+   <script type="text/javascript">
+        $(() => {
+            $(".tabmenu-line1").on('change', (e, index) => {
+                console.log('탭메뉴 체인지: ', index);
+            });
+        });
+   </script>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- main -->
+            <h3 class="head-tit">개인통관고유부호 조회</h3>
+            <h4 class="sr-only">빈텍스트</h4>
+        </div>
+        <div class="cont-body">
+            <div class="tabmenu tabmenu-line1" data-ui="tabmenu" data-props="">
+                <button class="tab-menu " title="선택됨">기본정보</button>
+                <button class="tab-menu active">물품정보</button>
+                <button class="tab-menu ">환급세액</button>
+                <button class="tab-menu ">제출서류</button>
+                <button class="tab-menu ">물품정보</button>
+                <button class="tab-menu ">환급세액</button>                  
+            </div>
+            <div style="height: 800px"></div>
+        </div>
+        
+      </div>
+      <!-- //main -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+   </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Suspension/Release of personal customs clearance code</h3>  
+            <h4 class="sr-only">빈텍스트</h4>          
+         </div>
+         <div class="cont-body">
+            <div class="accordion-wrap accordion cont-advice" data-ui="accordion">
+               <div class="accordion-header">
+                  <a href="javascript: void(0);" class="accordion-btn" title="열기"><strong>개인통관고유부호란?</strong> <i class="icon btn-arrow-down medium"></i></a>
+               </div>
+               <div class="accordion-body d-none">
+                  <p class="txt">개인통관고유부호란?</p>                  
+               </div>
+            </div>                                                      
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type1">Mr. Hong Gil-dong's personal customs clearance code is<strong class="cl-7">P240000000000</strong>and the expiration date<strong class="cl-7">2026.01.01</strong></h5>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col2 txt-list">
+                           <strong class="tit">personal customs clearance code</strong>   
+                           <div class="inp-box">
+                              <p class="txt"><a href="#none" title="개인통관고유부호 복사" class="copy">P2400000000000 <i class="icon copy small"></i></a></p>
+                           </div>                                                                     
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">Expiration period</strong>
+                           <div class="inp-box">
+                              <p class="txt">2025.01.01 ~ 2026.01.01</p>
+                           </div>                        
+                        </li>                     
+                        <li class="col2 txt-list">
+                           <strong class="tit">Nationailty</strong>
+                           <div class="inp-box">
+                              <p class="txt">대한민국</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">Alien Registration No.</strong>
+                           <div class="inp-box">
+                              <p class="txt">921230-1******</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">In Korea</strong>
+                           <div class="inp-box">
+                              <p class="txt">홍길동</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">In English</strong>
+                           <div class="inp-box">
+                              <p class="txt">Hong Gil Dong</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">Phone Number</strong>
+                           <div class="inp-box">
+                              <p class="txt">042-1234-1234</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">Mobile Phone Number</strong>
+                           <div class="inp-box">
+                              <p class="txt">010-1234-1234</p>
+                           </div>                        
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">Email Address</strong>
+                           <div class="inp-box">
+                              <p class="txt">hong123@naver.com</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">Sign state</strong>
+                           <div class="inp-box">
+                              <p class="txt">Use</p>
+                           </div>                        
+                        </li>
+                        <li class="col2 txt-list">
+                           <!-- 타이틀 툴팁 -->
+                           <div class="tooltip-tit tit">
+                              <div class="title">
+                                 <strong>Number of reissues</strong>
+                                 <div class="contextual-help top right" data-ui="tooltip">                              
+                                    <div class="tooltip-btn-area">                                 
+                                       <button class="tooltip-ico">재발급 횟수 도움말</button>
+                                       <div class="tooltip-action">                  
+                                          <div class="tooltip-popover">
+                                          <strong class="tooltip-title">재발급 횟수</strong>
+                                          <div class="tooltip-contents">
+                                             <p>재발급 횟수</p>
+                                             <div class="btn-wrap">
+                                                <a href="#;" class="btn link">바로가기</a>
+                                             </div>
+                                          </div>
+                                          <button type="button" class="btn tooltip-close">
+                                             <span class="sr-only">닫기</span>                        
+                                          </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- 타이틀 툴팁 -->
+                           <div class="inp-box">
+                              <p class="txt"></p>
+                           </div>                         
+                        </li>
+                     </ul>                  
+                  </div>  
+               </div>
+               <div class="btn-area btn-end">
+                  <div class="align">                                          
+                     <button type="button" class="btn primary  medium">Stop using</button>
+                  </div>
+               </div>    
+               <!-- 팝업 사용후 삭제해주세요 -->
+               <div class="testtest">
+                  <!-- 개인통관고유부호 사용정지/해제 -->
+                  <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">Suspension of use of personal customs clearance code</button>   
+                  <div id="modal1" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-760">
+                        <div class="modal-header">
+                           <h5>Suspension of use of personal customs clearance code</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              <p class="txt-type">개인통관고유부호 재발급 안내 메시지를 보여주고<br> 안내에 대한 동의 여부를 확인 받음</p>
+                           </div>
+                           <div class="modal-cont">
+                              <div class="txt-box-type">
+                                 <p class="txt-type">안내 사항에 대해 확인 하였습니다.</p>
+                                 <div class="form-check">
+                                    <input type="checkbox" name="chk_2" id="chk_5">
+                                    <label for="chk_5">Check</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn modal-close tertiary medium">Close</button>
+                              <button type="button" class="btn primary medium">Stop using</button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- // 개인통관고유부호 사용정지/해제 -->
+                  <!-- 개인통관고유부호 사용정지/해제 -->
+                  <button type="button" data-modal-target="#modal2" style="width:100%;height:50px;margin-bottom:20px">Suspension of use of personal customs clearance code</button>   
+                  <div id="modal2" class="modal d-none type1" data-ui="modal">
+                     <div class="modal-wrap mw-400">
+                        <div class="modal-header">
+                           <h5>Suspension of use of personal customs clearance code</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              <p class="txt-type">홍길동님의 개인통관고유부호<br><strong class="cl-7">P240000000000</strong>의 사용정지 해제 되었습니다</p>
+                           </div>                           
+                        </div>
+                        <div class="modal-footer">                           
+                           <button type="button" class="btn primary medium">홈으로 이동</button>
+                        </div>
+                     </div>
+                  </div> 
+                  <!-- // 개인통관고유부호 신규발급 -->
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+   </div>
+</body>
+</html>

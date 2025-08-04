@@ -1,0 +1,377 @@
+.wrap-form-area{
+  .inp-form {border:1px solid #e4e4e4;border-radius:8px;padding:32px;position:relative;  
+    /** 버튼이있을때 **/
+    &:has(.form-btn-area){padding: 32px 130px 32px 32px;}   
+
+    /** stop이 있을떄 **/
+    &:has(.step-area.type1){padding: 32px 32px 32px 239px;}
+
+    /** stop,버튼이 같이 있을떄 **/
+    &:has(.step-area.type1):has(.form-btn-area){padding: 32px 130px 32px 239px;}
+    
+    > ul {display:flex;flex-direction:row;flex-wrap:wrap;margin-left:-40px;margin-top: -25px;
+      .tit {font-size:15px;position:relative;display:inline-flex;align-items:center;gap:4px;padding-right:12px;word-break: break-all;font-weight: 700;
+        .title > strong{font-size:15px}
+        + .form-group {display:flex;align-items:center;gap:8px;margin-top:9px;}
+      }      
+
+      li {margin-left: 40px;padding-top: 25px;min-width: 100px;align-items: flex-start;}          
+    }    
+    
+    /** 넓이 **/
+    .col1 {width: 100%;}
+    .col2 {width: calc(50% - 40px);}
+    .col3 {width: calc(33.333% - 40px);}
+    .col4 {width: calc(25% - 40px);}
+
+    /** 텍스트 리스트 **/
+    .txt-list {display: flex;margin-left: 40px;align-items: flex-start;
+      .tit{width:160px;line-height:150%;padding-right: 0;}
+      .title {display: flex;position: relative;}
+      .inp-box {display: block;padding-left: 30px;flex:1;margin-top: 0;
+        .txt {line-height: 150%;word-break: break-word;display: block;
+          button{margin-left: 15px;}
+        }        
+      }
+    }    
+
+    /** 필수 **/
+    .compulsory-title {margin-top: 10px;}
+
+    /** 파일첨부 **/
+    .file-form {margin-left: -16px;
+      [class*=col]{margin-left: 16px;flex:1;
+        .file-upload{width:100%;display: flex;gap:8px;
+          .txt-box{border:1px solid #c6c6c6;background-color:#fff;border-radius:4px;width:100%;height:48px;min-width:10px;max-width:570px;display:flex;align-items:center;                            
+            .txt{display:block;padding:0 16px;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}
+          }
+        }
+      }    
+      
+      /** 첨부파일 초기화,삭제 버튼 위치 **/
+      & + .form-btn-area{top: 66px;}
+    }   
+    
+    .inp-box {margin-top: 12px;display: flex;align-items: center;gap: 8px;width:100%;      
+      .area-group{display: flex;align-items: center;gap: 8px;width: 100%;min-width: 100px;}
+      .check-list-box{display: flex;gap:24px;flex-wrap: wrap;margin-top: 10px;width:100%;}
+    }  
+
+    .form-group, .wrap-form-group {width: 100%;}
+    .form-btn-area {position: absolute;top: 32px;right: 32px;display: flex;gap: 20px;
+      button.text {background-color: rgba(0, 0, 0, 0);gap: 5px;padding-right: 0;
+        &:disabled{
+          i.refresh{background-image: url('../assets/icons/refresh-d.svg');}
+        }      
+        &:disabled{
+          i.close{background-image: url('../assets/icons/close-d.svg');}
+        }      
+      }
+    }  
+
+    /** 체크박스 타입 **/
+    &:has(>.form-check){padding-left: 76px;
+      > .form-check{position: absolute;top:32px;left:32px;
+        label{padding: 0;padding-left: 0 !important;width:20px;}
+      }
+      
+    }
+
+    /** 드롭다운 메뉴 타입1 **/
+    &.type1 .cont-acc-list.type1 .accordion-body{border-top:0;margin-top: 0;}
+    .cont-acc-list.type1{margin: 0;border-top:0; padding: 0;   
+      .accordion-header{display: none;
+        a{padding: 0;}
+      }
+      .accordion-body{margin-top: 24px;padding: 0; padding-top: 24px;border-top:1px solid #D8D8D8;      
+        .inp-form{border:0;border-radius: 0;padding: 0;
+          ul{border-top:0;
+            li{background-color: rgba(0,0,0,0.0);border-radius: 0;align-items: flex-start;                        
+              &:not(.txt-list){flex-direction: column;}                        
+              .inp-box{width:100%;}
+              label{width:auto;padding-right: 12px;}              
+              .compulsory-txt{margin-top: 2px;margin-bottom: 0;}
+              .return-btn{width:121px}              
+            }
+          }
+        }      
+      }
+    }
+
+    /** 드롭다운 메뉴 타입2 **/  
+    .cont-acc-list.type2{margin: 0;padding: 0;border-top:0;margin-top: 11px;
+      .accordion-wrap{width:100%;
+        .accordion-body{
+          .inp-form{padding: 0;border:0;border-top:1px solid #D8D8D8;border-radius: 0;padding-top: 24px;}
+          ul{border-top:0;}
+          li{
+            label{width:auto;padding-right: 12px;}            
+            &:not(.txt-list){flex-direction: column;}          
+            .inp-box{width:100%;}
+          }        
+        }
+      }
+    } 
+
+    /** step **/
+    .step-area.type1{position: absolute;top:0;left:0;height:100%;padding: 32px 40px 32px 32px;
+      &::before{height:calc(100% - 64px)}
+      .step-wrap{flex-direction: column;
+        li{padding: 0 0 32px 0;width:127px;
+          &::before{width: 1px;height: 100%;left: 8.5px;}
+          .step-tit{padding-left: 32px;padding-top: 1px;}
+        }
+      }
+    }
+
+    .hy{min-width: 15px;display: flex;justify-content: center;}
+  }
+
+ /** 리스트 합계 **/
+  .total-area{display:flex;justify-content:flex-end;align-items:center;margin-top:24px;padding:24px 0;border-top:1px solid #717171;
+    p{font-size: 19px;}
+    strong{margin-left: 24px;font-size: 25px;
+      span{margin-left: 4px;}
+    }
+  }
+
+  /** 주소찾기 모바일 **/
+  &.type1{margin-top: 24px;
+    .inp-form{padding: 24px !important;
+      li.txt-list{flex-direction: column;
+        .inp-box{text-align: left;padding-left: 0 !important;margin-top: 14px;width: 100%;}
+        .add-tit{font-size:19px;display:flex;align-items:center;width:100%;padding-right: 75px;line-height: 150%;
+          .add-modify-btn{font-size:0;width:0;background-color: rgba(0,0,0,0.0);margin-left: 8px;}        
+        }
+        .add-txt{color:#555;line-height: 150%;}
+      }  
+    }  
+    .form-btn-area{top:29px !important}
+  }
+
+  .batch-list{width: 100%;display: flex;align-items: center;justify-content: flex-end;gap: 24px;
+    .txt{line-height: 150%;}
+  }
+
+  .nowrap-box{display: flex;gap: 8px;}
+
+  //인증번호 입력
+  .vc-list{
+    .inp-box{align-items: flex-start;}
+  }   
+
+  //서브 리스트 유형
+  .sub-form{    
+    &.dotted-line-bottom{margin-bottom: 0 !important;}
+    .calendar{margin-right: 0;}
+    .sub-form-box{width:100%;
+      ul{display: flex;margin-left: -40px;}
+      .sub-list-wrap{display: flex;gap:24px}
+      label{font-size:15px;}
+      .sub-box{margin-top: 12px;display: flex;align-items: center;gap: 8px;}
+      .sub-list-box{width:100%;min-width: 100px;}
+      label{font-weight: 700;}      
+    }   
+    .sub-tit{position: relative;}  
+  }
+
+  //주소
+  .address-list button{gap:4px;margin-right: 8px;}
+
+  //선이없는 타입
+  &.no-bor-form{
+    .inp-form{padding: 0;border:0;}
+  }
+}
+
+@media (max-width: 1312px) {  
+  .wrap-form-area{
+    /** 버튼이 있는 리스트 **/
+    .inp-form:has(.form-btn-area){padding: 72px 24px 34px 24px;}   
+
+    /** 파일첨부 타입 버튼 위치 **/
+    .inp-form .file-form {
+      /** 첨부파일 초기화,삭제 버튼 위치 **/
+      & + .form-btn-area{top: 32px;}
+    }       
+
+    /** stop,버튼이 같이 있을떄 **/
+    .inp-form:has(.step-area.type1):has(.form-btn-area){padding: 34px 130px 34px 239px;}    
+  }
+}
+
+@media (max-width: 1023px) {
+  /** step **/
+  .wrap-form-area{
+    .inp-form{      
+      &:has(.step-area.type1){padding: 140px 24px 32px 24px;}      
+      /** stop,버튼이 같이 있을떄 **/
+      &:has(.step-area.type1):has(.form-btn-area){padding: 140px 130px 32px 24px;
+        .form-btn-area{top: 140px;}
+      }
+      .step-area.type1{width:100%;height:auto;padding-bottom: 0;padding: 32px 24px 0 24px;
+        &.dotted-line-right::before{bottom:0;width: calc(100% - 48px);height:2px;background-image:url(../assets/icons/dotted.svg);left:24px}        
+        .step-wrap{flex-direction: row;flex-direction: row-reverse;justify-content: center;align-items: flex-start;
+          li{width:auto;min-width:auto;flex:1;display: flex;justify-content: center;
+            &::before{top: 10px;left: 50%;width: 100%;height: 1px;}
+            &:first-child::before{display: none;}
+            &:last-child::before{display: block;}
+            .step-tit{display: block;padding: 32px 0px 0 0px;word-break: break-all;text-align: center;}
+            &:after{left:50%;transform: translateX(-50%);z-index: 1;}            
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media (max-width: 767px) {
+  /** 리스트 **/
+  .wrap-form-area{
+    .inp-form {padding: 34px 24px;
+      [class*=col] {width: 100% !important;}
+      [class*=mw] {max-width: 100% !important;}
+      [class*=form-group] {width: 100% ;}    
+      .form-group {
+        &.medium {
+          input[type=text], select, input[type=password] {font-size: 15px;}
+        }
+
+        &.form-tit-group {
+          label, input[type=text], input[type=password] {font-size: 15px;}
+        }
+      }   
+      
+      /** 첨부파일 **/
+      & ul.file-form{flex-direction: column;width:100%;}
+
+      li {
+        /** 텍스트 타입 **/
+        &.txt-list {          
+          .tit{width:120px !important;}
+        }      
+
+        /** 주소 **/
+        &.address-list .inp-box {flex-wrap: wrap;          
+          .first-add{width:calc(100% - 160px)}
+          button{margin-right: 0;}          
+        }
+
+        /** 반응형할떄 줄바꿈 **/
+        &.line-break{flex-direction: column;
+          .inp-box{padding-left: 0 !important;margin-top: 16px;
+            .txt{text-align: left !important;}
+          }
+        }        
+      }    
+
+      .form-btn-area{right: 24px;}    
+
+      /** 체크박스 타입 **/
+      &:has(>.form-check){padding: 76px 24px 34px 24px;
+        > .form-check{left:24px;}      
+      }    
+
+      .form-btn-area{top: 24px;}
+
+
+      /** stop,버튼이 같이 있을떄 **/
+      &:has(.step-area.type1):has(.form-btn-area){padding: 140px 24px 32px 24px;
+        .form-btn-area{position: static;margin-top: 17px;justify-content: center;
+          button{height:48px;width:100%;}
+        }
+      }
+    }
+
+    //서브 리스트 유형
+    .sub-form{    
+      .sub-form-box{
+        ul{flex-direction: column;}      
+        li{width:calc(100% - 40px) !important}  
+      }       
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .cont-acc-list.type1{
+    .accordion-body{display: block;}
+  } 
+}
+
+@media (max-width: 480px) {
+  /** 리스트 **/
+  .wrap-form-area{    
+    .inp-form ul {   
+      .inp-box{gap:12px 8px;
+        &:has(.hy){gap:12px 2px;}
+      }      
+      
+      button:not(.ico):not(.tooltip-close):not(.calendar-btn):not(.tooltip-ico):not(.add-modify-btn):not(.inquiry){width: 100%;}      
+      
+      /** 란번호 자세히 버튼 **/
+      .number-box{
+        button{width:59px !important;}      
+      }
+
+      /** 환급신청 세액정보 버튼 **/
+      .return-box{    
+        .txt{display: flex;flex-direction: column;align-items: flex-end;}
+        button{width:129px !important;margin-left: 0 !important;}    
+      }
+
+      .file-upload{
+        flex-direction: column;
+
+        .file-upload-btn-wrap{
+          width:100%;
+
+          label{
+            width:100%;
+          }
+        }
+      }
+
+      .batch-list{flex-direction: column;}  
+
+      //인증번호 입력
+      .vc-list{      
+        .form-group{display: flex;gap:8px;
+          .advice-txt{margin-top: 0;}
+          input[type=text]{width:140px;}
+        }
+      } 
+    }
+
+     //서브 리스트 유형
+    .sub-box:not(.nowrap-list):not([class*=nowrap-list-type]),
+    .sub-list-wrap{flex-direction: column;}
+    .sub-list-box .calendar{width:100%;}
+
+    /** 입력폽 밑으로 정렬 **/
+    .inp-box:not(.nowrap-list):not([class*=nowrap-list-type]){flex-direction: column;}      
+
+    /** 입력폼 반응형 타입1 **/
+    .inp-box[class*=nowrap-list-]:not(.nowrap-list-type1),
+    .sub-box[class*=nowrap-list-]{display: flex;flex-wrap: wrap;
+      .form-group:first-child{width: calc(100% - 23px);}
+      .form-group{width: calc(50% - 16px);}                 
+
+      &.nowrap-list-type2{            
+        .form-group:first-child{width: calc(100% - 23px);}
+        .form-group{width: 100%;}          
+      }      
+    }  
+    .nowrap-list-type1{
+      .form-group:first-child{width:98px;min-width:98px}
+    }              
+  }
+  
+  /** 드롭다운 **/
+  .cont-acc-list.type1{
+    .accordion-header{display: block !important;position: absolute;top:32px;right:24px;padding:0 !important;}    
+  } 
+  
+  .nowrap-box{width:100%;}
+}
+

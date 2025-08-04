@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">환급신청 처리결과 상세조회</h3>  
+            <h4 class="sr-only">빈텍스트</h4>          
+         </div>
+         <div class="cont-body">
+            <div class="accordion-wrap accordion cont-advice" data-ui="accordion">
+               <div class="accordion-header">
+                  <a href="javascript: void(0);" class="accordion-btn" title="열기"><strong>개인통관고유부호란?</strong> <i class="icon btn-arrow-down medium"></i></a>
+               </div>
+               <div class="accordion-body d-none">
+                  <p class="txt">개인통관고유부호란?</p>                  
+               </div>
+            </div>                                                      
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">환급신청 기본정보</h5>       
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                     
+                        <li class="col2 txt-list">
+                           <strong class="tit">이름</strong>
+                           <div class="inp-box">
+                              <p class="txt">홍길동</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">개인통관고유부호</strong>
+                           <div class="inp-box">
+                              <p class="txt">P123456789123</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col1 txt-list">
+                           <strong class="tit">휴대전화번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">010-1234-1234</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col1 txt-list">
+                           <strong class="tit">주소</strong>
+                           <div class="inp-box">
+                              <p class="txt">(35353) 대전광역시 서구 월평동로123-12 월평빌라301호</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">지급은행</strong>
+                           <div class="inp-box">
+                              <p class="txt">인천공항세관</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">계좌번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">659-******-*****</p>
+                           </div>                        
+                        </li>                            
+                        <li class="col1 txt-list">
+                           <strong class="tit">지급계좌 실명번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">920102 - *******</p>
+                           </div>                        
+                        </li>                                                    
+                     </ul>                  
+                  </div>
+               </div>
+               <h5 class="title-type3">환급신청 처리결과</h5>      
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                     
+                        <li class="col2 txt-list">
+                           <strong class="tit">환급신청번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">118521200056X</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">신청일자</strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-05-12</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">환급번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">021641201266</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">환급신청금액</strong>
+                           <div class="inp-box">
+                              <p class="txt">10,000,000 원</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">처리세관</strong>
+                           <div class="inp-box">
+                              <p class="txt">인천공항세관</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">처리과</strong>
+                           <div class="inp-box">
+                              <p class="txt">환급심사과</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col1 txt-list dotted-line-top">
+                           <strong class="tit">처리상태</strong>   
+                           <div class="inp-box">
+                              <strong class="txt cl-2">기각</strong>
+                           </div>                                                                     
+                        </li>
+                     </ul>                  
+                  </div> 
+               </div>
+               <h5 class="title-type3">환급신청 보완서류 정보</h5>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                                             
+                        <li class="col2 txt-list">
+                           <strong class="tit">통보일시</strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-05-14 12:00:00</p>
+                           </div>                        
+                        </li>                      
+                        <li class="col2 txt-list">
+                           <strong class="tit">담당자연락처</strong>
+                           <div class="inp-box">
+                              <p class="txt">010-1234-1234</p>
+                           </div>                        
+                        </li>                      
+                        <li class="col2 txt-list">
+                           <strong class="tit">추가서류</strong>
+                           <div class="inp-box">
+                              <p class="txt">통장사본, 신분증, 환불 영수증</p>
+                           </div>                        
+                        </li>                      
+                     </ul>                  
+                  </div>
+               </div>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <h5 class="title-type">환급신청 첨부파일</h5>      
+                  </div>   
+                  <div class="right-box">
+                     <button type="button" class="btn secondary medium">보완서류 등록</button>
+                  </div>               
+               </div>
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap pc">
+                     <table class="tbl col check">
+                        <caption>환급신청 첨부파일에 대한 표로 NO,문서종류,파일명 구성되어있다.</caption>
+                        <colgroup>
+                           <col style="width: 80px;">                           
+                           <col style="width: 25%;">                           
+                           <col style="width: 68.75%;">                           
+                        </colgroup>
+                        <thead>
+                           <tr>                                                
+                              <th scope="col">NO</th>                              
+                              <th scope="col">문서종류</th>                              
+                              <th scope="col">파일명</th>                              
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>6</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>7</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>8</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>9</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>
+                           <tr>
+                              <td>10</td>
+                              <td class="text-left">구매 인보이스</td>
+                              <td class="text-left">12345________.pdf</td>
+                           </tr>                                                                                                                                    
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="table-wrap mo">                     
+                     <ul class="wrap-body">
+                        <li>
+                           <ul class="body">                                                            
+                              <li>
+                                 <strong class="title">NO</strong>
+                                 <span class="txt">3</span>
+                              </li>                              
+                              <li>
+                                 <strong class="title">문서종류</strong>
+                                 <span class="txt">구매 인보이스</span>
+                              </li>                              
+                              <li>
+                                 <strong class="title">파일명</strong>
+                                 <span class="txt">구매 인보이스.pdf</span>
+                              </li>                              
+                           </ul>
+                        </li>                               
+                        <li>
+                           <ul class="body">                                                            
+                              <li>
+                                 <strong class="title">NO</strong>
+                                 <span class="txt">3</span>
+                              </li>                              
+                              <li>
+                                 <strong class="title">문서종류</strong>
+                                 <span class="txt">구매 인보이스</span>
+                              </li>                              
+                              <li>
+                                 <strong class="title">파일명</strong>
+                                 <span class="txt">구매 인보이스.pdf</span>
+                              </li>                              
+                           </ul>
+                        </li>                               
+                     </ul>
+                  </div>
+               </div>
+               <h5 class="title-type3">환급신청 물품정보</h5>  
+               <div class="wrap-form-area">                  
+                  <div class="inp-form">
+                     <ul>                     
+                        <li class="col2 txt-list">
+                           <strong class="tit">란번호</strong>
+                           <div class="inp-box number-box">
+                              <p class="txt">001 <button type="button" class="btn tertiary xsmall">자세히</button></p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">품명</strong>
+                           <div class="inp-box">
+                              <p class="txt">TELEVISION 1234567890</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수입신고번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">434124321M</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">고지번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">123456789</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수출신고번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">434124321M</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수출신고 란번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">001</p>
+                           </div>                        
+                        </li>    
+                        <li class="col1 txt-list dotted-line-top">
+                           <strong class="tit">란사항 신청액 합계</strong>   
+                           <div class="inp-box return-box">
+                              <p class="txt">145,0.60 <button type="button" class="btn tertiary xsmall">환급신청 세액정보</button></p>
+                           </div>                                                                     
+                        </li>                                                                                                  
+                     </ul>                  
+                  </div>  
+                  <div class="inp-form">
+                     <ul>                     
+                        <li class="col2 txt-list">
+                           <strong class="tit">란번호</strong>
+                           <div class="inp-box number-box">
+                              <p class="txt">001 <button type="button" class="btn tertiary xsmall">자세히</button></p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">품명</strong>
+                           <div class="inp-box">
+                              <p class="txt">TELEVISION 1234567890</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수입신고번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">434124321M</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">고지번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">123456789</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수출신고번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">434124321M</p>
+                           </div>                        
+                        </li>                                                                                 
+                        <li class="col2 txt-list">
+                           <strong class="tit">수출신고 란번호</strong>
+                           <div class="inp-box">
+                              <p class="txt">001</p>
+                           </div>                        
+                        </li>    
+                        <li class="col1 txt-list dotted-line-top">
+                           <strong class="tit">란사항 신청액 합계</strong>   
+                           <div class="inp-box return-box">
+                              <p class="txt">145,0.60 <button type="button" class="btn tertiary xsmall">환급신청 세액정보</button></p>
+                           </div>                                                                     
+                        </li>                                                                                                  
+                     </ul>                  
+                  </div> 
+                  <div class="total-area">
+                     <p>환급 신청액 합계</p>
+                     <strong>145,060<span>원</span></strong>
+                  </div>
+               </div> 
+               <div class="btn-area btn-end">
+                  <div class="align">
+                     <button type="button" class="btn secondary medium">환급통지서 출력</button>                     
+                  </div>
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->
+               <div class="testtest">
+                  <!-- 환급신청 란사항 규격정보 -->
+                  <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">환급신청 란사항 규격정보</button>                  
+                  <div id="modal1" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-1280">
+                        <div class="modal-header">
+                           <h5>환급신청 란사항 규격정보</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              <div class="wrap-form-area">
+                                 <div class="inp-form">
+                                    <ul>                                                                             
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">란번호 </strong>
+                                          <div class="inp-box">
+                                             <p class="txt">001</p>
+                                          </div>                        
+                                       </li>                                  
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">품명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">TELEVISION 1234567890</p>
+                                          </div>                        
+                                       </li>                                  
+                                       <li class="col1 txt-list">
+                                          <strong class="tit">수입신고번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">434124321M</p>
+                                          </div>                        
+                                       </li>                                  
+                                       <li class="col1 txt-list dotted-line-top">
+                                          <strong class="tit">번호</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">00101</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col1 txt-list">
+                                          <strong class="tit">모델 및 규격</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">RSG UHD 65 SEREIES 65 INCH CLASS 4K SMART UHD TV</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">신고단가</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">11,500</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">신고수량</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">2</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">환급신청 수량</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">1</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">잔여수량</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">1</p>
+                                          </div>                                                                     
+                                       </li>
+                                       <li class="col1 txt-list solid-line-top1">
+                                          <strong class="tit">란사항 신청액 합계</strong>   
+                                          <div class="inp-box">                                       
+                                             <p class="txt">140,860</p>
+                                          </div>                                                                     
+                                       </li>
+                                    </ul>                               
+                                 </div>
+                              </div>
+                           </div>                        
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn modal-close tertiary medium">닫기</button>                           
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 환급신청 란사항 규격정보 -->
+                  <!-- 환급세액정보 -->
+                  <button type="button" data-modal-target="#modal2" style="width:100%;height:50px;margin-bottom:20px">환급세액정보</button>                  
+                  <div id="modal2" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-1280">
+                        <div class="modal-header">
+                           <h5>환급세액정보</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              <strong class="modal-tit">란번호 001</strong>
+                              <div class="wrap-cont-tbl">
+                                 <div class="table-wrap pc">
+                                    <table class="tbl col cont bor-col-sep">
+                                       <caption>환급세액정보에 대한 표로 구분,본세,기납부 금액(원),기환급 금액(원),환급신청 가능금액(원)(기납부-기환급),환급 신청액(원),관세,개별 소비세,교통에너지환경세,주세,교육세,농특세,부가세부가세과세과표 입력 시 자동입력,부가세 과세과표,부가세 면세과표,신고지연가산세,미신고가산세,납기경과가산세,세외수입금액,합계 구성되어있다.</caption>
+                                       <colgroup>
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                       </colgroup>
+                                       <thead>                                          
+                                          <tr class="line2 tr-first">                                                
+                                             <th scope="col" rowspan="2">구분</th>                                                                     
+                                             <th scope="col" colspan="4">본세</th>                                                                     
+                                          </tr>
+                                          <tr class="line2">                                                
+                                             <th scope="col">기납부 금액(원)</th>                                                                     
+                                             <th scope="col">기환급 금액(원)</th>                                                                     
+                                             <th scope="col">환급신청 가능금액(원) <span>(기납부-기환급)</span></th>                                                                     
+                                             <th scope="col">환급 신청액(원)</th>                                                                     
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <th scope="col">관세</th>
+                                             <td>145,0.60</td>
+                                             <td>0</td>
+                                             <td>145,060</td>
+                                             <td>145,060</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">개별 소비세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">교통에너지환경세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">주세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">교육세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">농특세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">부가세 <span>부가세과세과표 입력 시 자동입력</span></th>
+                                             <td>195,840</td>
+                                             <td>0</td>
+                                             <td>195,840</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">부가세 과세과표</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">부가세 면세과표</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">신고지연가산세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">미신고가산세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">납기경과가산세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">세외수입금액</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">합계</th>
+                                             <td>340,900</td>
+                                             <td>0</td>
+                                             <td>340,900</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                       </tbody>
+                                    </table>
+                                    <table class="tbl col cont bor-col-sep">
+                                       <caption>환급세액정보에 대한 표로 구분,본세,기납부 금액(원),기환급 금액(원),환급신청 가능금액(원)(기납부-기환급),환급 신청액(원),관세,개별 소비세,교통에너지환경세,주세,교육세,농특세,부가세,합계 구성되어있다.</caption>
+                                       <colgroup>
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                          <col style="width: 20%;">                     
+                                       </colgroup>
+                                       <thead>                                          
+                                          <tr class="line2 tr-first">                                                
+                                             <th scope="col" rowspan="2">구분</th>                                                                     
+                                             <th scope="col" colspan="4">본세</th>                                                                     
+                                          </tr>
+                                          <tr class="line2">                                                
+                                             <th scope="col">기납부 금액(원)</th>                                                                     
+                                             <th scope="col">기환급 금액(원)</th>                                                                     
+                                             <th scope="col">환급신청 가능금액(원) <span>(기납부-기환급)</span></th>                                                                     
+                                             <th scope="col">환급 신청액(원)</th>                                                                     
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <th scope="col">관세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">개별 소비세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">교통에너지환경세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">주세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">교육세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">농특세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                          <tr>
+                                             <th scope="col">부가세</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                                                                                                               
+                                          <tr>
+                                             <th scope="col">합계</th>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                             <td>0</td>
+                                          </tr>                                            
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="table-wrap mo">
+                                    <strong class="modal-tit">본세</strong>
+                                    <div class="cont-acc-tbl">                                                                              
+                                       <ul class="mo-cont-wrap">  
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>관세</strong>
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>개별 소비세</strong>
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>교통에너지환경세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>주세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>교육세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>농특세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>부가세 <span>부가세과세과표 입력 시 자동입력</span></strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>신고지연가산세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>미신고가산세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>납기경과가산세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>세외수입금액</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>환급 신청액합계</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                       </ul>                                          
+                                    </div>      
+                                    <strong class="modal-tit">가산세</strong>
+                                    <div class="cont-acc-tbl">                                                                              
+                                       <ul class="mo-cont-wrap">  
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>관세</strong>
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>개별 소비세</strong>
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>교통에너지환경세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>주세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>교육세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>농특세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>
+                                          <li class="accordion-wrap" data-ui="accordion" data-props="beforeClose: true;">                                             
+                                             <div class="accordion-header">
+                                                <a href="javascript: void(0);" class="accordion-btn" title="열기">
+                                                   <strong>부가세</strong>  
+                                                   <i class="icon btn-arrow-down medium"></i>
+                                                </a>
+                                             </div>
+                                             <div class="accordion-body d-none">
+                                                <ul>
+                                                   <li>
+                                                      <strong class="acc-tit">기납부 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">0</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">환급신청 가능금액(원) <span>(기납부-기환급)</span></strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                   <li>
+                                                      <strong class="acc-tit">기환급 금액(원)</strong>
+                                                      <p class="acc-txt">145,0.60</p>
+                                                   </li>
+                                                </ul>
+                                             </div>                                             
+                                          </li>                                          
+                                       </ul>                                          
+                                    </div>                                    
+                                 </div>
+                              </div>
+                           </div>                        
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn modal-close tertiary medium">닫기</button>                           
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 환급세액정보 -->
+                  <!-- 환급 통지서 출력 -->
+                  <button type="button" data-modal-target="#modal3" style="width:100%;height:50px;margin-bottom:20px">환급 통지서 출력</button>                  
+                  <div id="modal3" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-1280">
+                        <div class="modal-header">
+                           <h5>환급 통지서 출력</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              컨텐츠
+                           </div>                        
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn modal-close tertiary medium">닫기</button>                           
+                        </div>
+                     </div>
+                  </div> 
+                  <!-- 환급 통지서 출력 -->
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+   </div>
+</body>
+</html>

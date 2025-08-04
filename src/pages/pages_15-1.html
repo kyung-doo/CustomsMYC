@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">해외직구 통관정보 내역 조회</h3>    
+            <h4 class="sr-only">빈텍스트</h4>        
+         </div>
+         <div class="cont-body">
+            <div class="accordion-wrap accordion cont-advice" data-ui="accordion">
+               <div class="accordion-header">
+                  <a href="javascript: void(0);" class="accordion-btn" title="열기"><strong>개인통관고유부호란?</strong> <i class="icon btn-arrow-down medium"></i></a>
+               </div>
+               <div class="accordion-body d-none">
+                  <p class="txt">개인통관고유부호란?</p>                  
+               </div>
+            </div>                                                      
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="search-box">
+                  <ul>                                   
+                     <li class="col1">
+                        <strong class="tit">신고일자 <i class="compulsory">필수</i></strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" title="시작날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10">
+                                 <button class="calendar-btn">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" title="종료날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10">
+                                 <button class="calendar-btn">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_1">
+                              <label class="form-chip-outline" for="chk_chip_1">당일</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_2">
+                              <label class="form-chip-outline" for="chk_chip_2">1개월</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_3">
+                              <label class="form-chip-outline" for="chk_chip_3">6개월</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_4">
+                              <label class="form-chip-outline" for="chk_chip_4">1년</label>
+                           </div>                           
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="ex1">개인통관 고유부호 <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-360">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="ex1" required="" title="개인통관 고유부호 선택해주세요">
+                                 <option value="" selected="" disabled="" hidden="">전체</option>
+                                 <option value="항목1">항목1</option>
+                                 <option value="항목2">항목2</option>
+                                 <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                              
+                           </div>
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="ex2">통관형태</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-360">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="ex2" required="" title="통관형태 선택해주세요">
+                                 <option value="" selected="" disabled="" hidden="">전체</option>
+                                 <option value="항목1">항목1</option>
+                                 <option value="항목2">항목2</option>
+                                 <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                              
+                           </div>
+                        </div>                        
+                     </li>
+                     <li class="col1">
+                        <label class="tit" for="ex3">처리상태</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-360">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="ex3" required="" title="처리상태 선택해주세요">
+                                 <option value="" selected="" disabled="" hidden="">전체</option>
+                                 <option value="항목1">항목1</option>
+                                 <option value="항목2">항목2</option>
+                                 <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                              
+                           </div>
+                        </div>                        
+                     </li>
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">초기화</button>
+                        <button type="button" class="btn secondary medium">조회</button>                        
+                     </div>
+                  </div>
+               </div>
+               <p class="compulsory-txt"><i class="compulsory">필수</i> 표시는 필수 입력 사항입니다.</p>
+               <div class="board-top tbl-top">
+                  <div class="left-box">
+                     <strong class="tit top-txt">전체<strong>240</strong>개</strong>
+                     <div class="top-txt">
+                        <select class="form-select-sort large" title="정보 구분 선택">                           
+                           <option value="">10개씩 보기</option>               
+                           <option value="">10개씩 보기</option>               
+                           <option value="">10개씩 보기</option>               
+                           <option value="">10개씩 보기</option>               
+                        </select>
+                     </div>                     
+                  </div>                  
+               </div>
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap pc">
+                     <table class="tbl col check">
+                        <caption>해외직구 통관정보 내역 조회에 대한 NO,B/L번호,품명,판매업체 상호,신고일자,통관형태,처리상태 표로 로 구성되어있다.</caption>
+                        <colgroup>
+                           <col style="width: 80px;">                                                      
+                           <col style="width: 25%;">
+                           <col style="width: 23.4375%;">
+                           <col style="width: 15.625%;">
+                           <col style="width: 10.15625%;">
+                           <col style="width: 7.8125%;">
+                           <col style="width: 11.71875%;">
+                        </colgroup>                        
+                        <thead>
+                           <tr>                                                
+                              <th scope="col">NO</th>                                                            
+                              <th scope="col">B/L번호</th>                                                            
+                              <th scope="col">품명</th>                                                            
+                              <th scope="col">판매업체 상호</th>                                                            
+                              <th scope="col">신고일자</th>                                                            
+                              <th scope="col">통관형태</th>                                                            
+                              <th scope="col">처리상태</th>                                                            
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">수입신고</a></td>                                                                                                                       
+                              <td>통관진행중</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>2</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>목록배제</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>3</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>4</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>5</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>6</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>7</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>8</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>9</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>
+                           <tr>
+                              <td>10</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">HDFC25E6902978A-598941820554</a></td>                                                                                                                       
+                              <td>Dell UltraSharp U2723QE 등</td>                                                                                                                       
+                              <td>아마존글로벌스토어</td>                                                                                                                       
+                              <td>2025-12-05</td>                                                                                                                       
+                              <td><a href="#none" class="cl-7">목록통관</a></td>                                                                                                                       
+                              <td>통관완료 후 반출</td>                                                                                                                       
+                           </tr>                                                                                                                                                                                                                                                                                                                                                 
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="table-wrap mo">                     
+                     <ul class="wrap-body">
+                        <li>
+                           <ul class="body">                              
+                              <li>
+                                 <strong class="title">NO</strong>
+                                 <span class="txt">1</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">B/L번호</strong>
+                                 <span class="txt">HDFC25E6902978A-598941820554</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">품명</strong>
+                                 <span class="txt">Dell UltraSharp U2723QE 등</span>
+                              </li>
+                              <li>
+                                 <strong class="title">판매업체 상호</strong>
+                                 <span class="txt">아마존글로벌스토어</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">신고일자</strong>
+                                 <span class="txt">2025-12-05</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">통관형태</strong>
+                                 <span class="txt">수입신고</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">처리상태</strong>
+                                 <span class="txt">통관진행중</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <button type="button" class="btn tertiary medium">통관진행정보</button>
+                                 <button type="button" class="btn tertiary medium">수입신고상세 보기</button>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                           </ul>
+                        </li>
+                        <li>
+                           <ul class="body">                              
+                              <li>
+                                 <strong class="title">NO</strong>
+                                 <span class="txt">2</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">B/L번호</strong>
+                                 <span class="txt">HDFC25E6902978A-598941820554</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">품명</strong>
+                                 <span class="txt">Dell UltraSharp U2723QE 등</span>
+                              </li>  
+                               <li>
+                                 <strong class="title">판매업체 상호</strong>
+                                 <span class="txt">아마존글로벌스토어</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                              <li>
+                                 <strong class="title">신고일자</strong>
+                                 <span class="txt">2025-12-05</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">통관형태</strong>
+                                 <span class="txt">수입신고</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <strong class="title">처리상태</strong>
+                                 <span class="txt">통관진행중</span>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                              <li>
+                                 <button type="button" class="btn tertiary medium">통관진행정보</button>
+                                 <button type="button" class="btn tertiary medium">수입신고상세 보기</button>
+                              </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                           </ul>
+                        </li>                                                        
+                     </ul>
+                  </div>
+               </div>
+               <div class="pagination pagination-type1">               
+                  <button class="page-navi prev" disabled="">이전</button>
+                  <div class="page-links">
+                     <a class="page-link mobile-link" href="#">1</a>
+                     <span class="page-link link-dot mobile-dot"></span>
+                     <a class="page-link" href="#">2</a>
+                     <a class="page-link" href="#">3</a>
+                     <a class="page-link" href="#">4</a>
+                     <a class="page-link mobile-link" href="#">5</a>
+                     <a class="page-link active mobile-link" href="#"><span class="sr-only">현재페이지 </span>6</a>                  
+                     <a class="page-link mobile-link" href="#">7</a>
+                     <a class="page-link" href="#">8</a>
+                     <a class="page-link" href="#">9</a>
+                     <span class="page-link link-dot"></span>
+                     <a class="page-link mobile-link" href="#">120</a>
+                  </div>
+                  <button class="page-navi next">다음</button>
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->
+               <div class="testtest">
+                  <!-- 목록통관내역 조회 -->
+                  <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">목록통관내역 조회</button>                     
+                  <div id="modal1" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-1280">
+                        <div class="modal-header">
+                           <h5>목록통관내역 조회</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">                           
+                           <div class="modal-cont">
+                              <h5 class="title-type3">목록통관내역</h5>
+                              <div class="wrap-form-area">
+                                 <div class="inp-form">
+                                    <ul>                                                                             
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">품명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">TOMMY HILFIGER ROCCI SHOES</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">House B/L 번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">6079053057286</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">발송국</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">US (미국)</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">중량</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">0.59</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">포장개수</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">1</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">내포장개수</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">1</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">주문완료일시</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">2025-01-01 12:00</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">주문자 성명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">김영희</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">국내배송업체사업자등록번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">1108105034</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">국내배송업체 사업자 명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">대한통운(주)</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 성명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">김영희</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 기본주소</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">서울 강북구 솔샘로174</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 우편번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">01192</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 상세주소</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">현대아파트 111동222호</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 전화번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">010-1231-234</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">수하인 개인통관고유부호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">P111234567899</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">송하인 성명</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">HELLO SFJ MODO CO</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">송하인 주소</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">121 OKRA IRVINE CALIFORNIA 92618</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">송하인 전화번호</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">010-1111-1111</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">주문사이트 인터넷 주소</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">www.coupang.com</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">물품가격(미화)</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">50</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">구매대행업체</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">Malltail</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">배송대행업체</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">Malltail</p>
+                                          </div>                        
+                                       </li>
+                                       <li class="col2 txt-list">
+                                          <strong class="tit">판매중개자</strong>
+                                          <div class="inp-box">
+                                             <p class="txt">쿠팡</p>
+                                          </div>                        
+                                       </li>                                                                                                                                                           
+                                    </ul>                  
+                                 </div>
+                              </div>
+                              <h5 class="title-type3">상세물품정보</h5>
+                              <div class="board-top tbl-top">
+                                 <div class="left-box">
+                                    <strong class="tit top-txt">전체<strong>240</strong>개</strong>
+                                    <div class="top-txt">
+                                       <select class="form-select-sort large" title="정보 구분 선택">                           
+                                          <option value="">10개씩 보기</option>               
+                                          <option value="">10개씩 보기</option>               
+                                          <option value="">10개씩 보기</option>               
+                                          <option value="">10개씩 보기</option>               
+                                       </select>
+                                    </div>                     
+                                 </div>                  
+                              </div>
+                              <div class="wrap-check-tbl">
+                                 <div class="table-wrap pc">
+                                    <table class="tbl col check">
+                                       <caption>상세물품정보에 대한 NO,주문번호,상품일련번호,판매중계자,품명,규격명,상품판매 페이지주소,물품가격(미화) 표로 로 구성되어있다.</caption>
+                                       <colgroup>
+                                          <col style="width: 70px;">
+                                          <col style="width: 12%;">
+                                          <col style="width: 10%;">
+                                          <col style="width: 8.59375%;">
+                                          <col>
+                                          <col style="width: 8%;">
+                                          <col>
+                                          <col style="width: 10.625%;">                                                                                                
+                                       </colgroup>
+                                       <thead>
+                                          <tr>                                                
+                                             <th scope="col">NO</th>
+                                             <th scope="col">주문번호</th>
+                                             <th scope="col">상품일련번호</th>
+                                             <th scope="col">판매중계자</th>
+                                             <th scope="col">품명</th>
+                                             <th scope="col">규격명</th>
+                                             <th scope="col">상품판매 페이지주소</th>
+                                             <th scope="col">물품가격(미화)</th>                                                                           
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>1</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>2</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>3</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>4</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>5</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>6</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>7</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>8</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>9</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>
+                                          <tr>
+                                             <td>10</td>
+                                             <td>20250316001</td>
+                                             <td>001</td>
+                                             <td>쿠팡</td>
+                                             <td><p class="tb-title">TOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOESTOMMY HILFIGER ROCCI SHOES</p></td>
+                                             <td>1ea</td>
+                                             <td><a href="#none" class="cl-7 tb-title" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></td>
+                                             <td>40 USD</td>                                                                                                                                      
+                                          </tr>                                                                                                                                                                                                                                                                                                                                                                
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="table-wrap mo">                     
+                                    <ul class="wrap-body">
+                                       <li>
+                                          <ul class="body">                              
+                                             <li>
+                                                <strong class="title">NO</strong>
+                                                <span class="txt">1</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">주문번호</strong>
+                                                <span class="txt">20250316001</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">상품일련번호</strong>
+                                                <span class="txt">001</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">판매중계자</strong>
+                                                <span class="txt">쿠팡</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">품명</strong>
+                                                <span class="txt">TOMMY HILFIGER ROCCI SHOES</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">규격명</strong>
+                                                <span class="txt">1ea</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">상품판매 페이지주소</strong>
+                                                <span class="txt"><a href="#none" class="cl-7" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></span>
+                                             </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                          </ul>
+                                       </li>  
+                                       <li>
+                                          <ul class="body">                              
+                                             <li>
+                                                <strong class="title">NO</strong>
+                                                <span class="txt">999</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">주문번호</strong>
+                                                <span class="txt">20250316001</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">상품일련번호</strong>
+                                                <span class="txt">001</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">판매중계자</strong>
+                                                <span class="txt">쿠팡</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">품명</strong>
+                                                <span class="txt">TOMMY HILFIGER ROCCI SHOES</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">규격명</strong>
+                                                <span class="txt">1ea</span>
+                                             </li>
+                                             <li>
+                                                <strong class="title">상품판매 페이지주소</strong>
+                                                <span class="txt"><a href="#none" class="cl-7" target="_blank" title="새창열기">https://11st.co.kr/products/ma/7583824652?&trTypeCd=S</a></span>
+                                             </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                          </ul>
+                                       </li>                                                      
+                                    </ul>
+                                 </div>
+                              </div>
+                               <div class="pagination pagination-type1">               
+                                 <button class="page-navi prev" disabled>이전</button>
+                                 <div class="page-links">
+                                    <a class="page-link mobile-link" href="#">1</a>
+                                    <span class="page-link link-dot mobile-dot"></span>
+                                    <a class="page-link" href="#">2</a>
+                                    <a class="page-link" href="#">3</a>
+                                    <a class="page-link" href="#">4</a>
+                                    <a class="page-link mobile-link" href="#">5</a>
+                                    <a class="page-link active mobile-link" href="#"><span class="sr-only">현재페이지 </span>6</a>                  
+                                    <a class="page-link mobile-link" href="#">7</a>
+                                    <a class="page-link" href="#">8</a>
+                                    <a class="page-link" href="#">9</a>
+                                    <span class="page-link link-dot"></span>
+                                    <a class="page-link mobile-link" href="#">120</a>
+                                 </div>
+                                 <button class="page-navi next" >다음</button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="modal-footer">                              
+                           <button type="button" class="btn modal-close primary medium">닫기</button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 목록통관내역 조회 -->
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->               
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+   </div>
+</body>
+</html>
