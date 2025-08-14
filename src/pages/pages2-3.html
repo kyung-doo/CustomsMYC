@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">User management</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">Login Information</h5>     
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Manager ID</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">shuhan</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Email Address</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">zhugeliang@shuhan.com</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>e-Commerce Code</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">F25123456</p>
+                           </div>   
+                        </li>                                                       
+                     </ul>                  
+                  </div>                     
+               </div>
+               <h5 class="title-type3">Company employee management</h5>    
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col check">
+                        <caption>Company employee management</caption>
+                        <colgroup>
+                           <col style="width: 60px;">                           
+                           <col style="width: 160px;">                           
+                           <col style="width: 240px;">
+                           <col style="width: 150px;">
+                           <col style="width: 140px;">
+                           <col style="width:380px;">                                                      
+                           <col style="width:150px;">                                                      
+                        </colgroup>
+                        <thead>
+                           <tr>                                                
+                              <th scope="col"></th>
+                              <th scope="col">ID</th>                              
+                              <th scope="col">Email</th>                              
+                              <th scope="col">User Name</th>                              
+                              <th scope="col">Activation</th>                              
+                              <th scope="col">Remark</th>       
+                              <th scope="col">Application date</th>       
+                                   
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="chk1" checked>
+                                    <label for="chk1"><span class="sr-only">선택</span></label>
+                                 </div>
+                              </td>
+                              <td>shuhan01</td>                              
+                              <td>zhangfei@shuhan.com</td> 
+                              <td>Zhang Fei</td> 
+                              <td>
+                                 <div class="form-group medium">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="">
+                                          <option value="" disabled="" hidden="">Activation</option>
+                                          <option value="Yes" selected="">Yes</option>
+                                          <option value="No">No</option>                                          
+                                       </select>
+                                    </div>                                    
+                                 </div>
+                              </td> 
+                              <td>
+                                 <div class="form-group medium">                     
+                                    <div class="form-conts">
+                                       <input type="text" class="input">
+                                    </div>                                    
+                                 </div>
+                              </td> 
+                              <td>2025-04-05</td> 
+                           </tr>  
+                           <tr>
+                              <td>
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="chk2" checked>
+                                    <label for="chk2"><span class="sr-only">선택</span></label>
+                                 </div>
+                              </td>
+                              <td>shuhan02</td>                              
+                              <td>zhangfei@shuhan.com</td> 
+                              <td>Zhang Fei</td> 
+                              <td>
+                                 <div class="form-group medium">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="">
+                                          <option value="" disabled="" hidden="">Activation</option>
+                                          <option value="Yes">Yes</option>
+                                          <option value="No" selected="">No</option>                                          
+                                       </select>
+                                    </div>                                    
+                                 </div>
+                              </td> 
+                              <td>
+                                 <div class="form-group medium">                     
+                                    <div class="form-conts">
+                                       <input type="text" class="input">
+                                    </div>                                    
+                                 </div>
+                              </td> 
+                              <td>2025-04-05</td> 
+                           </tr>   
+                           <tr>
+                              <td>
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="chk3">
+                                    <label for="chk3"><span class="sr-only">선택</span></label>
+                                 </div>
+                              </td>
+                              <td>shuhan03</td>                              
+                              <td>zhangfei@shuhan.com</td> 
+                              <td>Zhang Fei</td> 
+                              <td>New</td> 
+                              <td>
+                                 <div class="form-group medium">                     
+                                    <div class="form-conts">
+                                       <input type="text" class="input" value="remark sample">
+                                    </div>                                    
+                                 </div>
+                              </td> 
+                              <td>2025-04-05</td> 
+                           </tr>                                                                                                                           
+                        </tbody>
+                     </table>
+                  </div>     
+               </div> 
+               <div class="btn-area btn-between">
+                  <div class="align">                        
+                     <button type="button" class="btn tertiary medium">Reset Password</button>
+                  </div>
+                  <div class="align">
+                     <button type="button" class="btn tertiary medium">Search</button>
+                     <button type="button" class="btn primary medium" disabled>approval</button>
+                     <button type="button" class="btn primary medium">Save</button>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

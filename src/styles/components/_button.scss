@@ -20,7 +20,7 @@ button[class*=btn],label[class*=btn] {cursor: pointer;display: inline-flex;align
     &:hover{background-color: #F8F8F8;border-color: #1D1D1D;}
     &:active{background-color: #F0F0F0;border-color: #1D1D1D;}    
   }
-  &.text{padding: 0;background-color: #fff;        
+  &.text{padding: 0;background-color: rgba(0,0,0,0.0);        
     &.xlarge,&.large{height: 40px;font-size: 19px;}
     &.medium{height: 32px;}    
     &.small{height: 24px;}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login signup">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit sr-only">빈텍스트</h3>            
+            <h4 class="head-tit sr-only">빈텍스트</h4>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">Application completed</button>               
+               <div id="modal1" class="modal type1 d-none" data-ui="modal">
+                  <div class="modal-wrap mw-400">
+                     <div class="modal-header">
+                        <h5>Application completed</h5>                     
+                     </div>
+                     <div class="modal-body" tabindex="0">                        
+                        <div class="modal-cont">
+                           Your membership application has been completed. You can use it after approval from the company administrator.
+                        </div>
+                     </div>
+                     <div class="modal-footer">                           
+                        <button type="button" class="btn modal-close primary medium">close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

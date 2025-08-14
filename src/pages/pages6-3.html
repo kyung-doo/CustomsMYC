@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction Information 1st verification error details</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submitting<br>company name</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">해외EC물품판매업체</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Submission<br>number</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">123456789-250316-000003</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Number of<br>submissions</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">300</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>1st verification<br>error</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt cl-2">Y</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>1st Verification<br>Processing Status</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2. 접수반려</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submission date<br>and time</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-03-15  13:10:25</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Original file<br>submitted</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <ul class="addmore-list">
+                                 <li class="gap0">
+                                    <p class="title wauto">123456789-250315-000002.json</p>
+                                    <p class="txt"><button class="btn text medium ml-0">download<i class="icon download medium ml-5"></i></button></p>
+                                 </li>                                                                           
+                              </ul>
+                           </div>   
+                        </li>                                                                             
+                     </ul>                  
+                  </div>                              
+               </div>
+               <h5 class="title-type3">Error details</h5>
+               <div class="txt-box-type type2">
+                  <strong class="title-type font-2 dotted-line-bottom font-3 font-400">An error occurred while verifying the integrity of the submitted transaction Information JSON file.</strong>
+                  <p class="cl-2 d-flex f-a-start font-4 lin-h1"><i class="icon danger medium mr-5 mt-3"></i>In the first verification, only JSON schema verification and required basic item verification are performed. If there is an error in the submitted transaction Information, the entire transaction will be rejected. Please correct the errors and resubmit.</p>
+               </div>
+               <div class="wrap-cont-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:280px;">                                  
+                           <col style="width:1000px;">                                                             
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1">Error item</th>                                                                                                                                                               
+                              <th scope="col" class="b-right-1">Error details</th>                                                                                                                                                               
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>
+                              <td>E-commerce business code</td>
+                              <td class="text-left">전자상거래업체부호가 관세청에 등록된 번호가 아닙니다.</td>                              
+                           </tr>
+                           <tr>
+                              <td>Order site internet address</td>
+                              <td class="text-left">인터넷주소 이름이 잘못되었습니다.</td>                              
+                           </tr>                                                                                                                                                                                                                                                                              
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               
+
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

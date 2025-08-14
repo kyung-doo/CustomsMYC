@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">E-commerce API usage management</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">E-commerce API usage management</h5>     
+               <div class="search-box">
+                  <ul>
+                     <li class="col1">
+                        <strong class="tit">Application period <i class="compulsory">필수</i></strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-01">
+                                 <button class="calendar-btn">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-02">
+                                 <button class="calendar-btn">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_11" checked="">
+                              <label class="form-chip-outline" for="chk_chip_11">day</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_12">
+                              <label class="form-chip-outline" for="chk_chip_12">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_13">
+                              <label class="form-chip-outline" for="chk_chip_13">Month</label>
+                           </div>                           
+                        </div>                        
+                     </li>                     
+                     <li class="col2">
+                        <label for="servicename" class="tit">Service name</label>
+                        <div class="search-area f-d-column f-a-start">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="servicename" required="">
+                                    <option value="" selected="" disabled="" hidden="">ALL</option>
+                                    <option value="ALL">ALL</option>                                 
+                                 </select>                                 
+                              </div>                                    
+                           </div>                           
+                        </div>                        
+                     </li>                    
+                     <li class="col2">
+                        <label for="Processing" class="tit">Processing status</label>
+                        <div class="search-area f-d-column f-a-start">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="Processing" required="">
+                                    <option value="" selected="" disabled="" hidden="">승인</option>
+                                    <option value="ALL">승인</option>                                 
+                                 </select>                                 
+                              </div>                                    
+                           </div>                           
+                        </div>                        
+                     </li>                    
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">Reset</button>
+                        <button type="button" class="btn secondary medium">Check</button>                        
+                     </div>
+                  </div>
+               </div>
+               <p class="compulsory-txt"><i class="compulsory">필수</i> Indicates required fields.</p>
+               <h5 class="title-type3">Application details</h5>
+               <div class="wrap-cont-tbl bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:60px;">                           
+                           <col style="width:150px;">
+                           <col style="width:550px;">
+                           <col style="width:200px;">
+                           <col style="width:160px;">
+                           <col style="width:160px;">
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1">No</th>
+                              <th scope="col">Application date</th>
+                              <th scope="col">Client ID</th>
+                              <th scope="col">Service name</th>
+                              <th scope="col">Processing date</th>                                                             
+                              <th scope="col" class="b-right-1">Processing status</th>                                                                                                                                                               
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>                              
+                              <td>1</td>
+                              <td>2025-11-05</td>
+                              <td class="text-left"><a href="">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</a></td>
+                              <td class="text-left">거래정보 제출 외 5종</td>
+                              <td>2025-11-05</td>
+                              <td>Approval</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>2</td>
+                              <td>2025-11-05</td>
+                              <td class="text-left"><a href="">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</a></td>
+                              <td class="text-left">거래정보 제출 외 5종</td>
+                              <td>2025-11-05</td>
+                              <td>Approval</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>3</td>
+                              <td>2025-11-05</td>
+                              <td class="text-left"><a href="">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</a></td>
+                              <td class="text-left">거래정보 제출 외 5종</td>
+                              <td>2025-11-05</td>
+                              <td>Approval</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>4</td>
+                              <td>2025-11-05</td>
+                              <td class="text-left"><a href="">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</a></td>
+                              <td class="text-left">거래정보 제출 외 5종</td>
+                              <td>2025-11-05</td>
+                              <td>Approval</td>                              
+                           </tr>                              
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="pagination pagination-type1">               
+                  <button class="page-navi prev" disabled="">이전</button>
+                  <div class="page-links">
+                     <a class="page-link mobile-link" href="#">1</a>
+                     <span class="page-link link-dot mobile-dot"></span>
+                     <a class="page-link" href="#">2</a>
+                     <a class="page-link" href="#">3</a>
+                     <a class="page-link" href="#">4</a>
+                     <a class="page-link mobile-link" href="#">5</a>
+                     <a class="page-link active mobile-link" href="#"><span class="sr-only">현재페이지 </span>6</a>                  
+                     <a class="page-link mobile-link" href="#">7</a>
+                     <a class="page-link" href="#">8</a>
+                     <a class="page-link" href="#">9</a>
+                     <span class="page-link link-dot"></span>
+                     <a class="page-link mobile-link" href="#">120</a>
+                  </div>
+                  <button class="page-navi next">다음</button>
+               </div>
+               <div class="btn-area btn-end">
+                  <div class="align">
+                     <button type="button" class="btn primary large">Apply for e-commerce API</button>                     
+                  </div>
+               </div>
+
+
+
+
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

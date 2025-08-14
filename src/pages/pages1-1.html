@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>   
+   <div id="wrap" class="login signup">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit sr-only">빈텍스트</h3>            
+            <h4 class="head-tit sr-only">빈텍스트</h4>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-login">                  
+                  <strong class="title">Log in</strong>
+                  <div class="wrap-form-area">
+                     <div class="inp-form">
+                        <ul>                                                         
+                           <li class="col1 id-inp">
+                              <label for="ex1" class="tit">ID</label>
+                              <div class="inp-box">
+                                 <div class="form-group large">                  
+                                    <div class="form-conts">
+                                       <input type="text" id="ex1" class="input ico" placeholder="Enter ID">
+                                    </div>  
+
+                                 </div>
+                              </div>  
+                           </li>
+                           <li class="col1 pass-inp">
+                              <label for="ex2" class="tit">Password</label>
+                              <div class="inp-box">
+                                 <div class="form-group large">                  
+                                    <div class="form-conts">
+                                       <input type="text" id="ex2" class="input ico" placeholder="Enter Password">
+                                    </div>                           
+                                 </div>
+                              </div>  
+                           </li>                           
+                           <li class="col1 vc-list">
+                           <label for="ex3" class="tit">Authentication number</label>
+                           <div class="inp-box">
+                              <div class="form-group large">                     
+                                 <div class="form-conts">
+                                    <input type="text" id="ex3" class="input" placeholder="Enter number">                                    
+                                 </div>                           
+                                 <p class="advice-txt info-txt time">05:00</p>
+                              </div>                              
+                              <button type="button" class="btn secondary large">Send</button>                                 
+                           </div>                                                   
+                        </li>
+                        </ul>                  
+                     </div>
+                  </div>
+                  <div class="btn-box">
+                     <button type="button" class="btn primary large">Log In</button>
+                     <button type="button" class="btn primary large signup">Sign Up</button>
+                  </div>
+                  <p class="bot-txt">Having trouble logging in? <a href="#none">Contact us</a></p>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

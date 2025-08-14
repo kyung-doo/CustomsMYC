@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction Information 2st verification error details</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submitting company name</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">해외EC물품판매업체</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Submission number</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">123456789-250316-000003</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Number of submissions</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">300</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Number of secondary verification errors</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">30</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>1st Verification Processing Status</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">4. 부분오류반려</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submission date and time</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-03-15  13:10:25</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submit original file</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <ul class="addmore-list">
+                                 <li class="gap0">
+                                    <p class="title wauto">123456789-250315-000002.json</p>
+                                    <p class="txt"><button class="btn text medium ml-0">download<i class="icon download medium ml-5"></i></button></p>
+                                 </li>                                                                           
+                              </ul>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Error file</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <ul class="addmore-list">
+                                 <li class="gap0">
+                                    <p class="title wauto">123456789-250315-000002.json</p>
+                                    <p class="txt"><button class="btn text medium ml-0">download<i class="icon download medium ml-5"></i></button></p>
+                                 </li>                                                                           
+                              </ul>
+                           </div>   
+                        </li>                                                                               
+                     </ul>                  
+                  </div>                              
+               </div>     
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <div class="board-top tbl-top">
+                        <div class="left-box">
+                           <strong class="tit top-txt">All<strong>240</strong></strong>
+                           <div class="top-txt">
+                              <select class="form-select-sort large" title="정보 구분 선택">                           
+                                 <option value="">View 10 at a time</option>                                                
+                              </select>
+                           </div>                     
+                        </div>                  
+                     </div>
+                  </div>   
+                  <div class="right-box">
+                     <button type="button" class="btn tertiary medium">Download EXCEL</button>                     
+                  </div>               
+               </div>     
+               <div class="wrap-cont-tbl scorll bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:60px;">                                                             
+                           <col style="width: 150px;">                                                             
+                           <col style="width: 150px;">                                                             
+                           <col style="width:160px;">                                                             
+                           <col style="width: 154px;">                                                             
+                           <col style="width:110px;">                                                             
+                           <col style="width: 109px;">                                                             
+                           <col style="width:140px;">                                                             
+                           <col style="width: 163px;">                                                             
+                           <col style="width:160px;">                                                             
+                           <col style="width:160px;">                                                                                        
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                
+                              <th scope="col" class="b-left-1">No</th>                                                                                                                                 
+                              <th scope="col">HBL number</th>                                                                                                                                 
+                              <th scope="col">Order number</th>
+                              <th scope="col">Submission date</th>
+                              <th scope="col">Date of purchase</th>
+                              <th scope="col">Orderer</th>
+                              <th scope="col">Consignee</th>
+                              <th scope="col">Classification</th>
+                              <th scope="col">Error item</th>
+                              <th scope="col">Error data</th>                              
+                              <th scope="col" class="b-right-1">오류내용</th>                                                                                                   
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>
+                              <td>1</td>     
+                              <td>4332382574</td>
+                              <td>0944308328</td>
+                              <td>2025-03-15</td>
+                              <td>2025-03-12</td>
+                              <td>홍길동</td>
+                              <td>홍길녀</td>
+                              <td>수하인 정보</td>
+                              <td>개인통관고유부호</td>
+                              <td>P220026218147</td>
+                              <td>오류내용</td>
+                           </tr>
+                           <tr>
+                              <td>2</td>     
+                              <td>4332382574</td>
+                              <td>0944308328</td>
+                              <td>2025-03-15</td>
+                              <td>2025-03-12</td>
+                              <td>홍길동</td>
+                              <td>홍길녀</td>
+                              <td>수하인 정보</td>
+                              <td>개인통관고유부호</td>
+                              <td>P220026218147</td>
+                              <td>오류내용</td>
+                           </tr>
+                           <tr>
+                              <td>3</td>     
+                              <td>4332382574</td>
+                              <td>0944308328</td>
+                              <td>2025-03-15</td>
+                              <td>2025-03-12</td>
+                              <td>홍길동</td>
+                              <td>홍길녀</td>
+                              <td>수하인 정보</td>
+                              <td>개인통관고유부호</td>
+                              <td>P220026218147</td>
+                              <td>오류내용</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>     
+                              <td>4332382574</td>
+                              <td>0944308328</td>
+                              <td>2025-03-15</td>
+                              <td>2025-03-12</td>
+                              <td>홍길동</td>
+                              <td>홍길녀</td>
+                              <td>수하인 정보</td>
+                              <td>개인통관고유부호</td>
+                              <td>P220026218147</td>
+                              <td>오류내용</td>
+                           </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                        </tbody>
+                     </table>
+                  </div>
+               </div> 
+               <div class="pagination pagination-type1">               
+                  <button class="page-navi prev" disabled="">이전</button>
+                  <div class="page-links">
+                     <a class="page-link mobile-link" href="#">1</a>
+                     <span class="page-link link-dot mobile-dot"></span>
+                     <a class="page-link" href="#">2</a>
+                     <a class="page-link" href="#">3</a>
+                     <a class="page-link" href="#">4</a>
+                     <a class="page-link mobile-link" href="#">5</a>
+                     <a class="page-link active mobile-link" href="#"><span class="sr-only">현재페이지 </span>6</a>                  
+                     <a class="page-link mobile-link" href="#">7</a>
+                     <a class="page-link" href="#">8</a>
+                     <a class="page-link" href="#">9</a>
+                     <span class="page-link link-dot"></span>
+                     <a class="page-link mobile-link" href="#">120</a>
+                  </div>
+                  <button class="page-navi next">다음</button>
+               </div>             
+               
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

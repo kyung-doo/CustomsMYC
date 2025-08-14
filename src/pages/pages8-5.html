@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">E-commerce API Usage History</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="search-box">
+                  <ul>
+                     <li class="col1">
+                        <strong class="tit">Date of issuance <i class="compulsory">필수</i></strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-01">
+                                 <button class="calendar-btn">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-02">
+                                 <button class="calendar-btn">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_11" checked="">
+                              <label class="form-chip-outline" for="chk_chip_11">day</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_12">
+                              <label class="form-chip-outline" for="chk_chip_12">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_13">
+                              <label class="form-chip-outline" for="chk_chip_13">Month</label>
+                           </div>                           
+                        </div>                        
+                     </li>                     
+                     <li class="col2">
+                        <label for="clientid" class="tit">Client ID</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-360">                     
+                              <div class="form-conts">
+                                 <input type="text" id="clientid" class="input">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>                                                            
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">Reset</button>
+                        <button type="button" class="btn secondary medium">Check</button>                        
+                     </div>
+                  </div>
+               </div>
+               <p class="compulsory-txt"><i class="compulsory">필수</i> Indicates required fields.</p>
+               <h5 class="title-type3">Access Token Issuance History</h5>
+               <div class="board-top tbl-top">
+                  <div class="left-box">
+                     <strong class="tit top-txt">All<strong>240</strong></strong>
+                     <div class="top-txt">
+                        <select class="form-select-sort large" title="정보 구분 선택">                           
+                           <option value="">View 10 at a time</option>                                                
+                        </select>
+                     </div>                     
+                  </div>                  
+               </div>
+               <div class="wrap-cont-tbl bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:200px;">                           
+                           <col style="width:470px;">
+                           <col style="width:400px;">
+                           <col style="width:210px;">                           
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1">Date of issuance</th>
+                              <th scope="col">Client ID</th>
+                              <th scope="col">Access Token</th>                              
+                              <th scope="col" class="b-right-1">Expiration date</th>                                                                                                                                                               
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>                              
+                              <td>2025-05-06 12:30:23</td>
+                              <td class="text-left">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</td>
+                              <td>sdf******************************************</td>
+                              <td>2025-05-06 13:30:23</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>2025-05-06 12:30:23</td>
+                              <td class="text-left">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</td>
+                              <td>sdf******************************************</td>
+                              <td>2025-05-06 13:30:23</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>2025-05-06 12:30:23</td>
+                              <td class="text-left">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</td>
+                              <td>sdf******************************************</td>
+                              <td>2025-05-06 13:30:23</td>                              
+                           </tr>
+                           <tr>                              
+                              <td>2025-05-06 12:30:23</td>
+                              <td class="text-left">ekew33kslfjlsjsdfjs3kksldfFi39sisdwlikjslkdjfs983</td>
+                              <td>sdf******************************************</td>
+                              <td>2025-05-06 13:30:23</td>                              
+                           </tr>                              
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+
+
+
+
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->      
+   </div>
+</body>
+</html>

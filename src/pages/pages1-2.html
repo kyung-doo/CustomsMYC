@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login signup">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit sr-only">빈텍스트</h3>            
+            <h4 class="head-tit sr-only">빈텍스트</h4>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-signup">
+                  <div class="header">
+                     <h5 class="pages-logo">Welcome to KOREA CUSTOMS SERVICE</h5>
+                  </div>
+                  <div class="body">
+                     <div class="cont w-400">
+                        <strong class="title">e-Commerce Business Code Creation Guide</strong>
+                        <div class="box">
+                           <p class="txt">The e-Commerce Business Code is unique identifier for e-Commerce businesses, essential for submitting Purchase Information and enabling API integration.</p>
+                           <p class="txt">Please prepare the following required documents and apply for the e-Commerce business Code</p>
+                           <div class="txt dotted-line-top">
+                              <strong class="title">Required Documents</strong>
+                              <ul class="list">
+                                 <li>1. Business Registration Certificate <span>(in English)</span></li>
+                                 <li>2. Domain Registration Certificate <span>(in English)</span></li>
+                                 <li>3. D-U-N-S Registration Certificate <span>(in English)</span></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="btn-box">
+                           <button class="btn primary large ico1">Company and<br>representative</button>
+                           <button class="btn primary large ico2">Company staff</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

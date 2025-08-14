@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">E-commerce API usage management</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">List of eCommerce API</h5>
+               <div class="board-top tbl-top">
+                  <div class="left-box">
+                     <strong class="tit top-txt">All<strong>7</strong></strong>                     
+                  </div>                  
+               </div>
+               <div class="wrap-cont-tbl bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:60px;">
+                           <col style="width:130px;">
+                           <col style="width:400px;">
+                           <col style="width:550px;">
+                           <col style="width:140px;">                                                                                        
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1">
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="all-chk">
+                                    <label for="all-chk"><span class="sr-only">전체선택</span></label>
+                                 </div>
+                              </th>
+                              <th scope="col">Service id</th>                               
+                              <th scope="col">Service name</th>                               
+                              <th scope="col">URL</th>                               
+                              <th scope="col" class="b-right-1">Service status</th>                                                                                                                                                               
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>
+                              <td>
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="chk1">
+                                    <label for="chk1"><span class="sr-only">선택</span></label>
+                                 </div>
+                              </td>    
+                              <td>ECAPI001</td>
+                              <td class="text-left">접근토근발급</td>
+                              <td class="text-left"><a href="http://" target="_blank">https://unipass.customs.go.kr/api/ecrest/023</a></td>
+                              <td>In service</td>                                                        
+                           </tr>   
+                           <tr>
+                              <td>
+                                 <div class="form-check medium">
+                                    <input type="checkbox" id="chk2" disabled>
+                                    <label for="chk2"><span class="sr-only">선택</span></label>
+                                 </div>
+                              </td>    
+                              <td>ECAPI001</td>
+                              <td class="text-left">접근토근발급</td>
+                              <td class="text-left"><a href="http://" target="_blank">https://unipass.customs.go.kr/api/ecrest/023</a></td>
+                              <td>In service</td>                                                        
+                           </tr>                                                                                                                                                                                                                                                                                                     
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="btn-area btn-end">                  
+                  <div class="align">                     
+                     <button type="button" class="btn tertiary medium">Link guide download</button>
+                     <button type="button" class="btn primary medium">Apply for e-commerce API</button>
+                  </div>
+               </div>
+
+
+
+               <!-- 팝업 사용후 삭제해주세요 -->
+               <div class="testtest">
+                  <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">Application for use completed</button>
+                  <div id="modal1" class="modal d-none" data-ui="modal">
+                     <div class="modal-wrap mw-560">
+                        <div class="modal-header">
+                           <h5>Application for use completed</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <h5 class="title-type3">Your request to use the eCommerce API has been approved!</h5>
+                           <div class="modal-cont">
+                              <strong class="cont-title">Client ID</strong>
+                              <div class="txt-box-type">
+                                 <p class="txt-type text-center">fkldr33ksslke0239sjdflsdk28kew39ur74usjejwj38D</p>                                 
+                              </div>
+                           </div>
+                           <div class="modal-cont">
+                              <strong class="cont-title">Secret</strong>
+                              <div class="txt-box-type">
+                                 <p class="txt-type pr-20">sjlejw3i3029320sdfw3ew93203492eorweriw290sefjw3iwq9sd</p>
+                                 <button type="button" class="btn tertiary small">Copy</button>
+                              </div>
+                           </div>
+                           <div class="modal-cont">
+                              <strong class="cl-2 d-flex f-a-start font-4 lin-h1"><i class="icon danger medium mr-5"></i>Caution!</strong>
+                              <p class="font-4 cl-2 pl-26">Please copy and save the Secret before closing the screen. You will not be able to view it again after closing the screen.</p>
+                           </div>
+                           
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn modal-close tertiary medium">Close</button>                              
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->
+
+
+
+
+               
+
+
+
+                 
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

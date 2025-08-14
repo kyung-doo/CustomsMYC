@@ -89,5 +89,5 @@ function windowR(){
 }
 
 $(function(){  
-  windowR()   
+  //windowR()   
 })

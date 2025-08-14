@@ -83,17 +83,26 @@ html *, body * {font-family: 'Pretendard';box-sizing: border-box;}
 .font-3{font-size:17px !important;}
 .font-4{font-size:15px !important;}
 .font-5{font-size:25px !important;}
+.font-6{font-size:13px !important;}
+
+/** font-weight **/
+.font-400{font-weight: 400 !important;}
+.font-700{font-weight: 700 !important;}
 
 /** flex **/
 .d-flex {display: flex !important;}
 .f-center{justify-content: center !important;}
 .f-no-wrap{flex-wrap: nowrap !important;}
+.f-align-center{align-items: center !important;}
+.f-d-column{flex-direction: column !important;}
+.f-a-start{align-items: flex-start !important;}    
+.gap0{gap: 0 !important;}
 
 /** 선 **/
-.bor-right{border-right:1px solid #B1B8BE !important;}
-.bor-left-no{border-left:none !important;}
-.bor-right-no{border-right:none !important;}
-.bor-col-sep{border-collapse: separate !important;}
+.b-left-1{border-left:1px solid #E6E8EA !important;}
+.b-right-1{border-right:1px solid #E6E8EA !important;}
+
+.b-bottom-n{border-bottom: 0 !important;}
 
 /** color **/
 .cl-1{color:#2768FF !important;}
@@ -104,8 +113,12 @@ html *, body * {font-family: 'Pretendard';box-sizing: border-box;}
 .cl-6{color:#555 !important;}
 .cl-7{color:#246BEB !important;}
 .cl-8{color:#C6C6C6 !important;}
+.cl-9{color:#003675 !important;}
+
 
 /** line-height **/
 .lin-h1{line-height: 150% !important;}
 
+/** 넓이 **/
 .w100per{width:100% !important}
+.wauto{width:auto !important}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login signup">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit sr-only">빈텍스트</h3>            
+            <h4 class="head-tit sr-only">빈텍스트</h4>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-signup">
+                  <div class="header">
+                     <h5 class="pages-logo">Welcome to KOREA CUSTOMS SERVICE</h5>
+                  </div>
+                  <div class="body">
+                     <div class="cont w-400">
+                        <div class="txt-box-type end mt-0 mb-0">
+                           <div class="form-check">                           
+                              <input type="checkbox" id="chk1" checked>                           
+                              <label for="chk1" class="type1">By creating an account, I agree to KOREA Customs’s <span>Term of Service</span> and <span>Privacy Notice</span>.</label>
+                           </div>
+                        </div>   
+                        <div class="wrap-form-area mt-16">
+                           <div class="inp-form">
+                              <ul>                                                         
+                                 <li class="col1">
+                                    <div class="tit">
+                                       <div class="form-check">                           
+                                          <input type="checkbox" id="chk2" checked>                           
+                                          <label for="chk2">I already have an e-Commerce Code</label>
+                                       </div>
+                                    </div>
+                                    <div class="inp-box">
+                                       <div class="form-group large">                  
+                                          <div class="form-conts">
+                                             <input type="text" id="ex1" class="input" placeholder="e-Commerce Code">
+                                          </div>  
+
+                                       </div>
+                                    </div>  
+                                 </li>
+                                 <li class="col1 email-inp">
+                                    <label for="ex1" class="tit">E-mail</label>
+                                    <div class="inp-box">
+                                       <div class="form-group large">                  
+                                          <div class="form-conts">
+                                             <input type="text" id="ex1" class="input ico" placeholder="Company representative email">
+                                          </div>                           
+                                       </div>
+                                    </div>  
+                                 </li>                           
+                                 <li class="col1 vc-list">
+                                 <label for="ex2" class="tit">Authentication number</label>
+                                 <div class="inp-box">
+                                    <div class="form-group large">                     
+                                       <div class="form-conts">
+                                          <input type="text" id="ex2" class="input" placeholder="Enter number">                                    
+                                       </div>                           
+                                       <p class="advice-txt info-txt time">05:00</p>
+                                    </div>                              
+                                    <button type="button" class="btn secondary large">Send</button>                                 
+                                 </div>                                                   
+                              </li>
+                              </ul>                  
+                           </div>
+                        </div> 
+                        <div class="btn-box type1">
+                           <div class="align">                            
+                              <button type="button" class="btn primary large">next</button>                 
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

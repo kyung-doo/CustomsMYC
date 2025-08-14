@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Details of application for e-commerce business code</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">Basic Information</h5>     
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <label for="Company" class="tit">
+                              <strong>Company Name <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="SHUHAN LTD." id="Company">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <label for="Business" class="tit">
+                              <strong>Business<br> Registration Number <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="202438961G" id="Business">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <label for="Country" class="tit">
+                              <strong>Country Code <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="CN" id="Country">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>          
+                        <li class="col2 txt-list">
+                           <label for="Number" class="tit">
+                              <strong>D-U-N-S Number</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" placeholder="(optional)" id="Number">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <label for="Number" class="tit">
+                              <strong>LEI Number</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" placeholder="optional" id="Number">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>          
+                        <li class="col1 txt-list">
+                           <label for="Zipcode" class="tit">
+                              <strong>Zipcode <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium mw-352">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="01433" id="Zipcode">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <label for="Address1" class="tit">
+                              <strong>Address #1 <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="51 BRAS BASAH ROAD, #01-21, LAZADA ONE, SINGAPORE" id="Address1">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <label for="Address2" class="tit">
+                              <strong>Address #2</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" placeholder="(optional)" id="Address2">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <label for="Corporate" class="tit">
+                              <strong>Corporate Phone</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="000-1111-2222" id="Corporate">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <label for="Corporate2" class="tit">
+                              <strong>Corporate Fax</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="999-8888-7777" id="Corporate2">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>          
+                        <li class="col1 txt-list">
+                           <label for="Major" class="tit">
+                              <strong>Major(Main)<br>Business Type <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium mw-352">                  
+                                 <div class="form-conts">
+                                    <select class="form-select" required="" id="Major">
+                                       <option value="" disabled="" hidden="">select</option>
+                                       <option value="항목1" selected="">Mail-order Sales</option>                                                
+                                    </select>
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Minor(Sub)<br>Business Type</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_1">
+                                 <label for="chk_1">Mail-order Sales</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_2">
+                                 <label for="chk_2">e-Commerce intermediation</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_3">
+                                 <label for="chk_3">Shipping Agency</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_4">
+                                 <label for="chk_4">Buying Agency</label>
+                              </div>
+                           </div>   
+                        </li>                                            
+                        <li class="col1 txt-list">
+                           <label for="Remark" class="tit">
+                              <strong>Remark</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="remark sample" id="Remark">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>                                   
+                     </ul>                  
+                  </div>   
+               </div>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <h5 class="title-type3">CEO Information</h5>
+                  </div>   
+                  <div class="right-box">
+                     <button class="btn text medium ml-10"><i class="icon plus medium"></i>Add More</button>
+                  </div>               
+               </div>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <label for="Information" class="tit">
+                              <strong>CEO Information <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box line-box">
+                              <div class="txt">
+                                 <div class="form-group medium mw-352">                     
+                                    <div class="form-conts">
+                                       <input type="text" class="input" value="Liu Bei" id="Information">
+                                    </div>                              
+                                 </div>
+                                 <div class="calendar">
+                                    <div class="calendar-form" data-ui="datepicker">
+                                       <input type="text" placeholder="YYYY-MM-DD" maxlength="10" value="1970-01-01">
+                                       <button class="calendar-btn">달력보기</button>
+                                    </div>                        
+                                 </div>
+                              </div>
+                              <div class="txt">
+                                 <div class="form-group medium mw-352">                     
+                                    <div class="form-conts">
+                                       <input type="text" class="input" placeholder="CEO Name">
+                                    </div>                              
+                                 </div>
+                                 <div class="calendar">
+                                    <div class="calendar-form" data-ui="datepicker">
+                                       <input type="text" placeholder="YYYY-MM-DD" maxlength="10">
+                                       <button class="calendar-btn">달력보기</button>
+                                    </div>                                                          
+                                 </div>
+                                 <button class="btn text medium ml-10"><i class="icon close medium"></i>delect</button>                                                           
+                              </div>
+                           </div>
+                        </li>                                                                   
+                     </ul>                  
+                  </div>   
+               </div>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <h5 class="title-type3">Domain Information</h5>
+                  </div>   
+                  <div class="right-box">
+                     <button class="btn text medium ml-10"><i class="icon plus medium"></i>Add More</button>
+                  </div>               
+               </div>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <label for="Information" class="tit">
+                              <strong>Site Information <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box line-box">
+                              <div class="txt">
+                                 <div class="form-group medium mw-240">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="" id="Information">
+                                          <option value="" disabled="" hidden="">select</option>
+                                          <option value="select" selected="">select</option>                                                      
+                                       </select>
+                                    </div>                                                
+                                 </div>
+                                 <div class="wrap-form-group mw-547">
+                                    <div class="form-group form-tit-group">  
+                                       <label for="consult_name11" class="form-title">https://</label>                   
+                                       <div class="form-conts">
+                                          <input type="text" id="consult_name11" class="input" placeholder="URL">
+                                       </div>                     
+                                    </div>                  
+                                 </div>                                                
+                              </div>
+                              <div class="txt">
+                                 <div class="form-group medium mw-240">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="">
+                                          <option value="" disabled="" hidden="">select</option>
+                                          <option value="select" selected="">select</option>                                                      
+                                       </select>
+                                    </div>                                                
+                                 </div>
+                                 <div class="wrap-form-group mw-547">
+                                    <div class="form-group form-tit-group">  
+                                       <label for="consult_name11" class="form-title">https://</label>                   
+                                       <div class="form-conts">
+                                          <input type="text" id="consult_name11" class="input" placeholder="URL">
+                                       </div>                                                                        
+                                    </div>                                                  
+                                 </div> 
+                                 <button class="btn text medium ml-10"><i class="icon close medium"></i>delect</button>                                                                             
+                              </div>
+                           </div>
+                        </li>                                                                   
+                     </ul>                  
+                  </div>   
+               </div>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <h5 class="title-type3">Attatchment</h5>
+                  </div>   
+                  <div class="right-box">
+                     <button class="btn text medium ml-10"><i class="icon plus medium"></i>Add More</button>
+                  </div>               
+               </div>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <label for="Attatchment" class="tit">
+                              <strong>Attatchment <i class="compulsory">필수</i></strong>
+                           </label>
+                           <div class="inp-box line-box">
+                              <div class="txt">
+                                 <div class="form-group medium mw-240">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="" id="Attatchment">
+                                          <option value="" disabled="" hidden="">select</option>
+                                          <option value="select" selected="">select</option>                                                      
+                                       </select>
+                                    </div>                                                
+                                 </div>
+                                 <div class="file-upload">
+                                    <div class="txt-box mw-547"><p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p></div>
+                                    <div class="file-upload-btn-wrap">
+                                       <input type="file" name="myFile" id="fileu-upload1" hidden="" title="파일을 선택해주세요">
+                                       <label for="fileu-upload1" class="btn tertiary medium">
+                                          Find
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="txt">
+                                 <div class="form-group medium mw-240">                  
+                                    <div class="form-conts">
+                                       <select class="form-select" required="">
+                                          <option value="" disabled="" hidden="">select</option>
+                                          <option value="select" selected="">select</option>                                                      
+                                       </select>
+                                    </div>                                                
+                                 </div>
+                                 <div class="file-upload">
+                                    <div class="txt-box mw-547"><p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p></div>
+                                    <div class="file-upload-btn-wrap">
+                                       <input type="file" name="myFile" id="fileu-upload2" hidden="" title="파일을 선택해주세요">
+                                       <label for="fileu-upload2" class="btn tertiary medium">
+                                          Find
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <button class="btn text medium ml-10"><i class="icon close medium"></i>delect</button>                                                                             
+                              </div>
+                           </div>
+                        </li>                                                                   
+                     </ul>                  
+                  </div>                                       
+               </div>
+               <h5 class="title-type3">Applicant Information</h5>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Category</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">New</p>
+                           </div>   
+                        </li>                                                                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Email</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">zhugeliang@shuhan.com</p>
+                           </div>   
+                        </li>                                                                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>e-Commerce Code</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt"></p>
+                           </div>   
+                        </li>                                                                            
+                        <li class="col2 txt-list">
+                           <label for="Applicant" class="tit">
+                              <strong>Applicant</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                     
+                                 <div class="form-conts">
+                                    <input type="text" class="input" value="Zhuge Liang" id="Applicant">
+                                 </div>                                          
+                              </div>
+                           </div>   
+                        </li>                                                                            
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Application Date</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <div class="calendar">
+                                 <div class="calendar-form" data-ui="datepicker">
+                                    <input type="text" title="시작날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10" value="2025-04-05">
+                                    <button class="calendar-btn">시작 달력보기</button>
+                                 </div>                        
+                              </div>  
+                           </div>   
+                        </li>                                                                            
+                     </ul>                  
+                  </div>
+               </div>
+               <div class="btn-area btn-between">
+                  <div class="align">                        
+                     <button type="button" class="btn tertiary large">Previous</button>
+                  </div>
+                  <div class="align">                     
+                     <button type="button" class="btn primary large">Next</button>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

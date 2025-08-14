@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">E-commerce Business Code Application Status (List)</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="search-box">
+                  <ul>
+                     <li class="col1">
+                        <strong class="tit">Period</strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-01">
+                                 <button class="calendar-btn">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-02">
+                                 <button class="calendar-btn">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_11" checked>
+                              <label class="form-chip-outline" for="chk_chip_11">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_12">
+                              <label class="form-chip-outline" for="chk_chip_12">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_13">
+                              <label class="form-chip-outline" for="chk_chip_13">1 year</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" id="chk_chip_14">
+                              <label class="form-chip-outline" for="chk_chip_14">All</label>
+                           </div>
+                        </div>                        
+                     </li>                     
+                     <li class="col1">
+                        <label for="Status" class="tit">Status</label>
+                        <div class="search-area f-d-column f-a-start">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" id="Status" required="">
+                                    <option value="" disabled="" hidden="">ALL</option>
+                                    <option value="ALL" selected="">ALL</option>                                 
+                                 </select>                                 
+                              </div>                                    
+                           </div>
+                           <p class="advice-txt mt-10">
+                              <strong class="font-4">01</strong><span class="font-4 cl-6 ml-5 mr-10">Application</span> 
+                              <strong class="font-4">02</strong><span class="font-4 cl-6 ml-5 mr-10">Receipt</span> 
+                              <strong class="font-4">03</strong><span class="font-4 cl-6 ml-5 mr-10">Ddistribution</span> 
+                              <strong class="font-4">04</strong><span class="font-4 cl-6 ml-5 mr-10">Aapproval</span> 
+                              <strong class="font-4">05</strong><span class="font-4 cl-6 ml-5 mr-10">Companion</span>
+                           </p>                        
+                        </div>                        
+                     </li>                    
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">                        
+                        <button type="button" class="btn secondary medium">Search</button>                        
+                     </div>
+                  </div>
+               </div>
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col check">
+                        <caption>Correction details</caption>
+                        <colgroup>
+                           <col style="width: 60px;">                                                      
+                           <col style="width: 200px;">                                                      
+                           <col style="width: 320px;">                                                      
+                           <col style="width: 180px;">                                                      
+                           <col style="width: 80px;">                                                      
+                           <col style="width: 440px;">                                                      
+                        </colgroup>
+                        <thead>
+                           <tr>                                                
+                              <th scope="col">No</th>
+                              <th scope="col">Application No</th>
+                              <th scope="col">Application Type</th>
+                              <th scope="col">e-Commerce Code</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Remark</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>                              
+                              <td>1</td>                               
+                              <td><a href="#none" class="cl-7">REQ-001-000001</a></td> 
+                              <td class="text-left">신규 : New</td> 
+                              <td>F25123456</td> 
+                              <td>반려</td> 
+                              <td></td> 
+                           </tr>                                                                                                                                                      
+                        </tbody>
+                     </table>
+                  </div>     
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

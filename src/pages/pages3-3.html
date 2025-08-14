@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Change password</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <h5 class="title-type3">User Information</h5>    
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>ID</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">shuhan</p>
+                           </div>   
+                        </li>                                                       
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Name</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">Zhuge Liang</p>
+                           </div>   
+                        </li>                                                       
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>E-mail</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">zhugeliang@shuhan.com</p>
+                           </div>   
+                        </li>                                                       
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>e-Commerce Code</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">F25123456</p>
+                           </div>   
+                        </li>                                                       
+                     </ul>                  
+                  </div>                     
+               </div> 
+               <div class="btn-area btn-end">
+                  <div class="align">                            
+                     <button type="button" class="btn secondary medium">Change Password</button>
+                  </div>
+               </div>
+               <h5 class="title-type3">Change Password</h5>
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <label for="ex1" class="tit">
+                              <strong>Current Password</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium mw-400">                     
+                                 <div class="form-conts">
+                                    <input type="text" id="ex1" class="input" data-ui="hidden-input" placeholder="Enter Password">
+                                 </div>                                 
+                              </div>
+                           </div>   
+                        </li>                                                       
+                        <li class="col1 txt-list">
+                           <label for="ex2" class="tit">
+                              <strong>New Password</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium mw-400">                     
+                                 <div class="form-conts">
+                                    <input type="text" id="ex2" class="input" data-ui="hidden-input" placeholder="Enter Password">
+                                 </div>                                 
+                              </div>
+                           </div>   
+                        </li>                                                       
+                        <li class="col1 txt-list">
+                           <label for="ex3" class="tit">
+                              <strong>Confirm New Password</strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium mw-400">                     
+                                 <div class="form-conts">
+                                    <input type="text" id="ex3" class="input" data-ui="hidden-input" placeholder="Enter Password">
+                                 </div>                                 
+                              </div>
+                           </div>   
+                        </li>                                                                               
+                     </ul>                  
+                  </div>                     
+               </div>
+               <div class="btn-area btn-end">
+                  <div class="align">                            
+                     <button type="button" class="btn primary medium">Submit</button>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

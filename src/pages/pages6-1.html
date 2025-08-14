@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction Information submission status</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="search-box">
+                  <ul>
+                     <li class="col1">
+                        <strong class="tit">Submission<br>period <i class="compulsory">필수</i></strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" title="시작날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-01">
+                                 <button class="calendar-btn">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" title="종료날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-02">
+                                 <button class="calendar-btn">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_11" checked>
+                              <label class="form-chip-outline" for="chk_chip_11">day</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_12">
+                              <label class="form-chip-outline" for="chk_chip_12">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_13">
+                              <label class="form-chip-outline" for="chk_chip_13">1 month</label>
+                           </div>                           
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="userid">User ID</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="userid" class="input" placeholder="ecpdtseller">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="companyname">Company<br>name</label>
+                        <div class="search-area">
+                            <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="companyname" class="input" placeholder="해외EC물품판매업체">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="submissionnumber">Submission<br>number</label>
+                        <div class="search-area">
+                            <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="submissionnumber" class="input">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="processingstatus">Processing<br>status</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" required="" id="processingstatus">
+                                    <option value="" selected="" disabled="" hidden="">전체</option>
+                                    <option value="항목1">항목1</option>
+                                    <option value="항목2">항목2</option>
+                                    <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                   
+                           </div>
+                        </div>                        
+                     </li>                     
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">Reset</button>
+                        <button type="button" class="btn secondary medium">Check</button>                        
+                     </div>
+                  </div>
+               </div>
+               <p class="compulsory-txt"><i class="compulsory">필수</i> Indicates required fields.</p>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <div class="board-top tbl-top">
+                        <div class="left-box">
+                           <strong class="tit top-txt">All<strong>240</strong></strong>
+                           <div class="top-txt">
+                              <select class="form-select-sort large" title="정보 구분 선택">                           
+                                 <option value="">View 10 at a time</option>                                                
+                              </select>
+                           </div>                     
+                        </div>                  
+                     </div>
+                  </div>   
+                  <div class="right-box">
+                     <button type="button" class="btn tertiary medium">Download EXCEL</button>                     
+                  </div>               
+               </div>
+               <div class="wrap-cont-tbl scorll bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:60px;">                                  
+                           <col style="width:120px;">                                  
+                           <col style="width:260px;">                                  
+                           <col style="width:130px;">                                  
+                           <col style="width:130px;">                                  
+                           <col style="width:90px;">                                  
+                           <col style="width:120px;">                                  
+                           <col style="width:130px;">                                  
+                           <col style="width:90px;">                                  
+                           <col style="width:120px;">                                  
+                           <col style="width:200px;">                                  
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                
+                              <th scope="col" rowspan="2" class="b-left-1">No</th>                                                                                                   
+                              <th scope="col" rowspan="2">Submission<br>method</th>                                                                                                   
+                              <th scope="col" rowspan="2">Submission number</th>                                                                                                   
+                              <th scope="col" rowspan="2">Submission<br>date</th>                                                                                                   
+                              <th scope="col" colspan="3">1st verification</th>                                                                                                   
+                              <th scope="col" colspan="3">2st verification</th>                                                                                                   
+                              <th scope="col" rowspan="2" class="b-right-1">total</th>                                                                                                   
+                           </tr>                           
+                           <tr>
+                              <th scope="col">Number of<br>submissions</th>                                                                                                   
+                              <th scope="col">Error</th>                                                                                                   
+                              <th scope="col">Processing<br>status</th>                                                                                                   
+                              <th scope="col">Number of<br>submissions</th>                                                                                                   
+                              <th scope="col">Error</th>                                                                                                   
+                              <th scope="col">Processing<br>status</th>                                                                                                   
+                           </tr>
+                        </thead>
+                        <tbody>                           
+                           <tr>
+                              <td>1</td>
+                              <td>Rest API</td>
+                              <td><a href="">123456789-250315-000001</a></td>
+                              <td>2025-03-15</td>
+                              <td class="text-right">500</td>
+                              <td>N</td>
+                              <td>검증완료</td>
+                              <td class="text-right">450</td>
+                              <td><a href="" class="cl-2">Y</a></td>
+                              <td class="text-right">50</td>
+                              <td class="text-right">1</td>
+                           </tr>                                                                                                                                                                                                                                                   
+                           <tr>
+                              <td>2</td>
+                              <td>Rest API</td>
+                              <td><a href="">123456789-250315-000001</a></td>
+                              <td>2025-03-15</td>
+                              <td class="text-right">500</td>
+                              <td>N</td>
+                              <td class="cl-2">검증오류</td>
+                              <td class="text-right">450</td>
+                              <td><a href="" class="cl-7">Y</a></td>
+                              <td class="text-right">50</td>
+                              <td class="text-right">1</td>
+                           </tr>                                                                                                                                                                                                                                                   
+                           <tr>
+                              <td>3</td>
+                              <td>Rest API</td>
+                              <td><a href="">123456789-250315-000001</a></td>
+                              <td>2025-03-15</td>
+                              <td class="text-right">500</td>
+                              <td>N</td>
+                              <td class="cl-2">검증오류</td>
+                              <td class="text-right">450</td>
+                              <td><a href="" class="cl-7">Y</a></td>
+                              <td class="text-right">50</td>
+                              <td class="text-right">1</td>
+                           </tr>                                                                                                                                                                                                                                                   
+                           <tr>
+                              <td>4</td>
+                              <td>Rest API</td>
+                              <td><a href="">123456789-250315-000001</a></td>
+                              <td>2025-03-15</td>
+                              <td class="text-right">500</td>
+                              <td>N</td>
+                              <td class="cl-2">검증오류</td>
+                              <td class="text-right">450</td>
+                              <td><a href="" class="cl-7">Y</a></td>
+                              <td class="text-right">50</td>
+                              <td class="text-right">1</td>
+                           </tr>                                                                                                                                                                                                                                                   
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="pagination pagination-type1">               
+                  <button class="page-navi prev" disabled="">이전</button>
+                  <div class="page-links">
+                     <a class="page-link mobile-link" href="#">1</a>
+                     <span class="page-link link-dot mobile-dot"></span>
+                     <a class="page-link" href="#">2</a>
+                     <a class="page-link" href="#">3</a>
+                     <a class="page-link" href="#">4</a>
+                     <a class="page-link mobile-link" href="#">5</a>
+                     <a class="page-link active mobile-link" href="#"><span class="sr-only">현재페이지 </span>6</a>                  
+                     <a class="page-link mobile-link" href="#">7</a>
+                     <a class="page-link" href="#">8</a>
+                     <a class="page-link" href="#">9</a>
+                     <span class="page-link link-dot"></span>
+                     <a class="page-link mobile-link" href="#">120</a>
+                  </div>
+                  <button class="page-navi next">다음</button>
+               </div>
+
+
+
+
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

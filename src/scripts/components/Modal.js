@@ -22,7 +22,7 @@ class Modal {
             </button>`
         );
         this.copyHtml = this.ele.html();
-        $("body").append(this.ele);
+        $("#wrap").append(this.ele);
         this.ele.empty();
     }
 

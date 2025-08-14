@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">As-Is Personal customs clearance code validity verification items</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-cont-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width:180px;">
+                           <col style="width:360px;">
+                           <col style="width:140px;">                                                             
+                           <col style="width:600px;">                                                             
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1">View items</th> 
+                              <th scope="col">As-Is (Information Inquiry/Business Operator Inquiry)</th>                                                                                                                                                                                             
+                              <th scope="col" class="b-right-1" colspan="2">To-Be (Business support/Business owner checks opening department)</th>                                                                                                                                                               
+                           </tr>                                                      
+                        </thead>
+                        <tbody>                           
+                           <tr>
+                              <td>User</td>                              
+                              <td class="text-left">사업자 (사업자인증 Login 사용자)</td>
+                              <td>Identification</td>
+                              <td class="text-left">로그인 사용자가 등록된 전자상거래업체 인지 확인 추가</td>
+                           </tr>
+                           <tr>
+                              <td>Personal customs clearance code</td>                              
+                              <td class="text-left">사업자 (사업자인증 Login 사용자)</td>
+                              <td>Maintain</td>
+                              <td class="text-left"></td>
+                           </tr>
+                           <tr>
+                              <td>Name</td>                              
+                              <td class="text-left">ex) 홍길동</td>
+                              <td>Maintain</td>
+                              <td class="text-left"></td>
+                           </tr>
+                           <tr>
+                              <td>Mobile phone number</td>                              
+                              <td class="text-left">ex) 010-1234-5678</td>
+                              <td>Maintain</td>
+                              <td class="text-left"></td>
+                           </tr>
+                           <tr>
+                              <td>Address</td>                              
+                              <td class="text-left">N/A</td>
+                              <td>Addition</td>
+                              <td class="text-left">기능구현은 도로명 주소 조회하여 우편번호로 비교할 수 있게 구현</td>
+                           </tr>
+                           <tr>
+                              <td>Order number</td>                              
+                              <td class="text-left">N/A</td>
+                              <td>Addition</td>
+                              <td class="text-left">주문번호는 검증에는 사용하지 않으며, 인증번호 발급 및 확인을 위한 정보로 DB에</td>
+                           </tr>
+                           <tr>
+                              <td>Automatic input prevention code</td>                              
+                              <td class="text-left"></td>
+                              <td>Maintain</td>
+                              <td class="text-left"></td>
+                           </tr>                                                                                                                                                                                                                                                                              
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <h5 class="title-type3">Personal customs clearance code validity verification and authentication number issuance</h5>
+               <div class="search-box">
+                  <ul>                     
+                     <li class="col2">
+                        <label class="tit" for="name">Name <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="name" class="input" placeholder="홍길동">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit minw-150 w-150" for="personal">Personal customs clearance code <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="personal" class="input" placeholder="P123456789012">
+                                 <p class="advice-txt mt-5">Please enter numbers only, without ‘-’</p>                      
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="mobile">Mobile phone number <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="mobile" class="input" placeholder="010-1234-5678">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit minw-150 w-150" for="zipcode">Zip code <i class="compulsory">필수</i></label>
+                        <div class="search-area-box">
+                           <div class="search-area nowrap type1">
+                              <div class="form-group medium mw-135">                     
+                                 <div class="form-conts">
+                                    <input type="text" id="zipcode" class="input">                                       
+                                 </div>                              
+                              </div> 
+                              <button type="button" class="btn secondary medium ico">Postcode search <i class="icon search-type1 medium ml-5"></i></button>                                                         
+                           </div> 
+                           <p class="advice-txt mt-5">Use the search button to search for the road name address and then enter the zip code.</p>                      
+                        </div> 
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="ordernumber">Order number <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="ordernumber" class="input" placeholder="9876543210">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit minw-150 w-150" for="automatic">Automatic input prevention code <i class="compulsory">필수</i></label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-200">                     
+                              <div class="form-conts">
+                                 <input type="text" id="automatic" class="input">
+                              </div>                              
+                           </div> 
+                           <p class="codeview">12345</p>
+                           <button class="btn text medium ml-10"><i class="icon refresh medium"></i>Reset</button>
+                        </div>                        
+                     </li>                                         
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">Reset</button>
+                        <button type="button" class="btn secondary medium">Check</button>                        
+                     </div>
+                  </div>
+               </div>
+               <p class="compulsory-txt"><i class="compulsory">필수</i> Indicates required fields.</p>
+
+
+               <!-- 팝업 사용후 삭제해주세요 -->
+               <div class="testtest">
+                  <button type="button" data-modal-target="#modal1" style="width:100%;height:50px;margin-bottom:20px">Your personal customs clearance code is valid</button>   
+                  <div id="modal1" class="modal type1 d-none" data-ui="modal">
+                     <div class="modal-wrap mw-400">
+                        <div class="modal-header">
+                           <h5>Your personal customs clearance code is valid</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">
+                           <div class="modal-cont">
+                              <p class="advice-txt mt-5">The “authentication number” has been sent to the user.</p>
+                           </div>
+                           <div class="modal-cont">                              
+                              <p class="txt-type">
+                                 You can receive the authentication number from the orderer and use it for customs clearance work.
+                              </p>
+                           </div>                           
+                        </div>
+                        <div class="modal-footer">                              
+                           <button type="button" class="btn modal-enter primary medium">Check</button>
+                        </div>
+                     </div>
+                  </div>
+
+
+
+
+
+                  <button type="button" data-modal-target="#modal2" style="width:100%;height:50px;margin-bottom:20px">Viewing rights</button>   
+                  <div id="modal2" class="modal type1 d-none" data-ui="modal">
+                     <div class="modal-wrap mw-400">
+                        <div class="modal-header">
+                           <h5>Viewing rights</h5>                     
+                        </div>
+                        <div class="modal-body" tabindex="0">                           
+                           <div class="modal-cont">                              
+                              <p class="txt-type">
+                                 You do not have permission to view
+                              </p>
+                           </div>                           
+                        </div>
+                        <div class="modal-footer">                              
+                           <button type="button" class="btn modal-enter primary medium">Check</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- 팝업 사용후 삭제해주세요 -->              
+
+               
+
+
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      
+   </div>
+</body>
+</html>

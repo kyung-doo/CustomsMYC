@@ -1,24 +1,22 @@
-[class*=cont-acc-]{border-top:1px solid #1D1D1D;margin-top: 20px;padding-top: 8px;    
-  .mo-cont-wrap li{margin-top: 8px;background-color: #F4F5F6;border-radius: 8px;
-    &.accordion-wrap .accordion-body li{padding-top: 10px;}
-  }
-  .accordion-wrap{                        
-    &.active{
+.accordion-wrap{margin-top: 40px;border-bottom:1px solid #58616A;
+    &.active{border-bottom:0;
       .accordion-header{
         a{
+          &::before{transition: all .3s;transform: rotate(270deg);}
           i{transition: all .3s;transform: rotate(180deg);}
         }
       }
     }
     .accordion-header{      
-      a{padding: 20px 24px;display: flex;justify-content: space-between;align-items: center;        
+      a{display: flex;justify-content: space-between;align-items: center;margin-bottom: 17px;position: relative;        
+        &::before{content:"";display: block;position: absolute;top:0;right:0;width:20px;height:100%;background-image: url("../assets/icons/btn-arrow-right-d.svg");background-repeat: no-repeat;background-position: center;transform: rotate(90deg);}        
         .data{display: block;font-size: 15px;color:#555;margin-top: 5px;}
         i{font-size:0;}
       }
     }
-    .accordion-body{padding: 0 24px 24px 24px;               
-      ul{border-top:1px solid #D8D8D8;        
-        li{padding-top: 25px;transition: all .3s;display: flex;justify-content: space-between;          
+    .accordion-body{
+      ul{
+        li{padding-top: 25px;
           .txt-area{text-align: right;}
           &.form-list{flex-direction: column;
             .form-group{margin-top: 12px;}
@@ -30,4 +28,3 @@
       }
     }
   }
-} 
