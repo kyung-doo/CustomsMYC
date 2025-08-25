@@ -20,21 +20,3 @@
     &.home + li a:before {display: none;}
   }
 }
-
-@media (max-width: 767px) {
-  .breadcrumb {display: flex;gap: 10px;
-
-    li {
-      &:not(:last-child):not(.home) {display: none;}
-
-      &:last-child {padding-left: 39px;
-
-        a:after {content: "";display: block;width: 12px;height: 2px;background-image: url("../assets/icons/breadcrumb.svg");position: absolute;top: 50%;left: -40px;transform: translateY(-50%);}
-      }
-
-      &.home:after {left: 27px;}
-
-      &:last-child:before {left: 22px;}
-    }
-  }
-}

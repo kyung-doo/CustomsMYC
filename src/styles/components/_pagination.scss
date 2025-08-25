@@ -27,25 +27,3 @@
     .page-num {display: flex;align-items: center;font-size: 15px;color: #555;padding: 0 8px;margin-right: 16px;}
   }
 }
-
-@media (max-width: 767px) {
-  .pagination {min-width: 100px;position: relative;padding: 63px 0 2px 0;    
-    .mobile-dot {display: flex;}
-    a.page-link:not(.mobile-link) {display: none;}
-    .page-navi {position: absolute;top: 0;}
-    .next {margin-left: 66px;}
-    .prev {margin-right: 66px;}
-  }
-  .wrap-pagination {position: relative;padding-top: 64px;
-    .pagination {position: initial;padding-top: 0;}
-    .page-link {display: none;}
-    .pagination {
-      .next {margin-left: 66px;}
-      .prev {margin-right: 66px;}
-    }    
-  }  
-}
-
-@media (max-width: 480px) {
-  .pagination .page-link{width: 35px;height:35px;}
-}

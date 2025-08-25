@@ -13,6 +13,11 @@ $(() => {
             $(".gnb-menu li").removeClass('active');
             $(this).parent().addClass('active');            
         });
+
+        btn.on('focus', function (){
+            $(".gnb-menu li").removeClass('active');
+            $(this).parent().addClass('active');            
+        });
     });
     
     $(".gnb-toggle-wrap").each(function () {
@@ -24,13 +29,16 @@ $(() => {
 
     $('.header-container').on('mouseenter',function(){
         $(".gnb-menu li").removeClass('active');                            
-    })
+    })    
 
     $('.gnb-menu').on('mouseleave',function(){
         $(".gnb-menu li").removeClass('active');                            
     })
-    
-    
+
+    $('#header .main-menu .gnb-main-list .gnb-list > li').last().find('a').focusout(function(){
+        $('.gnb-toggle-wrap').hide();
+        console.log(1)
+    })
     
 
     /*

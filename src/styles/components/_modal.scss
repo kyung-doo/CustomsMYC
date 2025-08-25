@@ -28,15 +28,3 @@
   .btn-close {position: absolute;right: 32px;top: 32px;width: 20px;height: 20px;background-color: rgba(0, 0, 0, 0);padding: 0;}
   &.type1 .modal-footer {border-top: 0;padding: 0;}
 }
-
-@media (max-width: 480px) {
-  .modal-wrap{padding: 24px;
-    .btn-close{top:24px;right:24px;}    
-    .modal-body{max-height: calc(100vh - 305px);
-      .modal-cont{margin-bottom: 24px;}
-    } 
-    .modal-footer{
-      .form-check{width:100%;margin-bottom: 16px;display: flex;justify-content: flex-end;}      
-    }    
-  }
-}
