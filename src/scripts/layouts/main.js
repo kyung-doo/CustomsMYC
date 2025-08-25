@@ -43,11 +43,12 @@ $(() => {
                 direction: direction, 
                 autoHeight : true,
                 spaceBetween: spaceBetween,  
-                freeMode:true,
+                freeMode:true,                
                 autoplay:{
                     delay: speed,
                     disableOnInteraction: false,                    
-                },                 
+                },
+                                
 
                 pagination: {
                     el: page,
@@ -76,10 +77,7 @@ $(() => {
             }); 
             
         });
-    }
-
-    //리스트 슬라이드
-    slide('#list-slide','vertical','bullets',4,12,'.pagination1','.next-btn1','.prev-btn1');
+    }   
 
     //이미지 슬라이드
     slide('#images-slide','horizontal','fraction',1,0,'.pagination2','.next-btn2','.prev-btn2');

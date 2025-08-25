@@ -1,5 +1,7 @@
 @use "../mixin" as *;
-
+input[type=file]{display:block;position:absolute;width:0;height:0;opacity: 0;
+    &:focus + label{outline: 2px solid #000;}
+}
 .file-upload.line {padding: 32px;border:1px solid #E4E4E4;border-radius: 8px;
   &.list{border:0;padding: 0;}
   .file-head {
@@ -70,8 +72,4 @@
       .txt{line-height: 150%;}
     }
   }  
-}
-
-@media (max-width: 480px) {
-  .file-upload.line{padding: 24px;}  
 }
