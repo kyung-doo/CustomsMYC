@@ -140,7 +140,11 @@ class Datepicker {
         this.calendar.find(".month-con").hide();
 
         $("html, body").on('scroll.datepicker', () => {
-            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
+            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});     
+        });
+
+        $("html, body").on('click', () => {            
+            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});  
         });
         $(window).on('resize.datepicker', () => {
             this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
@@ -220,7 +224,25 @@ class Datepicker {
             this.currentYear = new Date().getFullYear();
             this.currentMonth = new Date().getMonth() + 1;
         }
-        
+
+        //달력 짤렸을떄
+        const $calendar = $('.calendar-wrap');
+
+        if (!$calendar.is(':visible')) return;
+
+        const calendarOffset = $calendar.offset();
+        const calendarHeight = $calendar.outerHeight();
+        const calendarBottom = calendarOffset.top + calendarHeight;
+        const windowBottom = $('.content-wrap').scrollTop() + $('.content-wrap').height() - 80;        
+
+        if (calendarBottom > windowBottom) {                
+            //달력짤림
+            $('body').addClass('on');            
+        }else{
+            //달력안짤림
+            $('body').removeClass('on');            
+        }  
+
         this.renderCalendar();
     }
 
@@ -431,7 +453,7 @@ class Datepicker {
         this.isShow = false;
         this.selectDate = null;
 
-        
+        $('body').removeClass('on');
     }
 }
 
