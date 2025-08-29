@@ -1,28 +1,29 @@
 /** 컨텐츠 여백 **/
 .cont-body{   
-   .btn-area:has(.large){margin-top: 48px;}
-   .btn-area:has(.medium){margin-top: 24px;}
+   .btn-area:has(.large){margin-top: 35px;}
+   .btn-area:has(.medium){margin-top: 25px;}
    .advice-txt {margin-top: 16px}
-   .board-top.no-wrap.title-top{margin-top: 45px;}   
+   .board-top.no-wrap.title-top{margin-top: 30px;}   
    .search-box+.compulsory-txt{margin-bottom: 49px;margin-top: 24px;}
-   .pagination{margin-top: 40px;}
+   .pagination{margin-top: 30px;}
    .txt-box-type.type2 + .wrap-cont-tbl{margin-top: 24px;}
    .board-top.no-wrap.title-top + .wrap-cont-tbl{margin-top: 24px;}
-   .board-top.tbl-top + .wrap-cont-tbl{margin-top: 24px;}
-   .search-box + .wrap-check-tbl{margin-top: 48px;}
+   .board-top.tbl-top + .wrap-cont-tbl{margin-top: 15px;}
+   .search-box + .wrap-check-tbl{margin-top: 40px;}
 }
 .modal-cont{
   .cont-title + .txt-box-type{margin-top: 10px;}
 }
 
 #wrap.signup .content-wrap{padding: 64px 16px;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;}
-.content-wrap {width:1280px;margin: 0 auto;position: relative;flex:1;height:100%;
+#wrap.main .content-wrap{padding: 0;}
+.content-wrap {width:1280px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 40px 0;
   .cont-head {
     .head-util {display: flex;justify-content: space-between;margin-top: 24px;align-items: center;
       .breadcrumb-wrap {padding-left: 10px;}
       .language-area {width: auto;display: flex;justify-content: flex-end;}
     }
-    .head-tit {font-size: 32px;margin: 51px 0;line-height: 150%;display: flex;flex-direction: column;
+    .head-tit {font-size: 30px;margin: 0 0 30px 0;line-height: 150%;display: flex;flex-direction: column;
       .txt{font-size: 19px;color: #555;line-height: 150%;margin-top: 19px;}
     }
     .step-area {display: flex;justify-content: space-between;margin-bottom: 62px;
@@ -38,7 +39,7 @@
   }
 
   //페이지 도움말
-  .cont-body{padding-bottom: 51px;
+  .cont-body{
     .cont-advice{position: relative;background-color: #EDF1F5;border-radius: 8px;    
       &.active{border-radius: 8px 8px 0 0;
         i{transform: rotate(180deg);}

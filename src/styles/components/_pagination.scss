@@ -8,7 +8,7 @@
   .prev:before {background-image: url("../assets/icons/btn-arrow-left.svg");left: 5px;}
   .next:before {background-image: url("../assets/icons/btn-arrow-right.svg");right: 2px;}
   .page-links {display: flex;gap: 8px;}
-  .page-link {width: 40px;height: 40px;display: flex;justify-content: center;align-items: center;color: #555;background-color: #fff;border-radius: 4px;}
+  .page-link {width: 35px;height: 35px;display: flex;justify-content: center;align-items: center;color: #555;background-color: #fff;border-radius: 4px;}
   a.page-link:hover, .page-navi:hover {background-color: #EDF1F5;}
   a.page-link:active {background-color: #CDD7E4;}
   .page-navi {background-color: #fff;

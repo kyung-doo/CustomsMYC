@@ -35,7 +35,7 @@ input {
     &[type=radio]:disabled + label, &[type=checkbox]:disabled + label {border-color: #c6c6c6;background-color: #d8d8d8;color: #717171;}
   }
   &.large {
-    label {padding: 12px 16px;line-height: 22px;}
+    label {padding: 0 16px;line-height: 22px;height: 35px;}
     input {
       &[type=radio]:checked + label, &[type=checkbox]:checked + label {padding-left: 36px;}
       &[type=radio]:checked + label:before, &[type=checkbox]:checked + label:before {left: 18px;}

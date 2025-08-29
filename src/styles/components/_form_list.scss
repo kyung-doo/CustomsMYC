@@ -23,7 +23,7 @@
     &:has(.step-area.type1):has(.form-btn-area){padding: 32px 130px 32px 239px;}
 
     &:has(.txt-list){margin-top: 24px;border-top:1px solid #58616A;border-radius: 0;
-      &:first-child{margin-top: 13px;}
+      &:first-child{margin-top: 0px;}
 
     }
 
@@ -36,7 +36,7 @@
         + .form-group {display:flex;align-items:center;gap:8px;margin-top:9px;}
       }      
 
-      li {padding-top: 25px;min-width: 100px;align-items: flex-start;}          
+      li {padding-top: 20px;min-width: 100px;align-items: flex-start;}          
     }    
     
     /** 넓이 **/
@@ -47,22 +47,22 @@
 
     /** 텍스트 리스트 **/
     .txt-list {display: flex;align-items: flex-start;border-bottom:1px solid #E6E8EA;padding-top: 0;                     
-      .tit{width:200px;min-width:200px;line-height:150%;padding-right: 0;background-color: #F4F5F6;height:100%;word-break: auto-phrase;padding: 19px 16px;
+      .tit{width:200px;min-width:200px;line-height:150%;padding-right: 0;background-color: #F4F5F6;height:100%;word-break: auto-phrase;padding: 10px 16px;
         > strong{position: relative;display: inline-block;font-size: 15px;}
       }
       .title {display: flex;position: relative;}
-      .inp-box {flex: 1;margin-top: 0;padding: 16px;height: 100%;
+      .inp-box {flex: 1;margin-top: 0;padding: 10px 16px;height: 100%;
         .txt {line-height: 150%;word-break: break-word;display: block;
           button{margin-left: 15px;}
         }                
         .form-check{margin-right: 13px;
           label{padding-left: 29px !important;}
         }
-        .addmore-list{display: flex;flex-direction: column;width:100%;padding: 16px 0;
-          li{display: flex;gap:8px;padding: 0 0 16px 0;margin-bottom: 16px !important;border-bottom:1px solid #E6E8EA;width:100%;align-items: center;padding-left: 16px;
+        .addmore-list{display: flex;flex-direction: column;width:100%;padding: 10px 0;
+          li{display: flex;gap:8px;padding: 0 0 10px 0;margin-bottom: 10px !important;border-bottom:1px solid #E6E8EA;width:100%;align-items: center;padding-left: 16px;
             .txt:first-child{padding-left: 0 !important;}
             &:last-child{padding-bottom: 0;margin-bottom: 0 !important;border-bottom: 0;}
-            .title{margin-bottom: 0 !important;font-size: 17px !important;width:200px;min-width:200px;padding-right: 16px;position: relative;
+            .title{margin-bottom: 0 !important;font-size: 15px !important;width:200px;min-width:200px;padding-right: 16px;position: relative;
               &::before{content:"";display: block;position: absolute;top:50%;right:0;width:1px;height:12px;background-color: #E4E4E4;transform: translateY(-50%);}
             }
             .txt{padding-left: 16px;}
@@ -71,7 +71,7 @@
         &:has(.addmore-list){padding: 0;}  
         
         &.line-box{flex-direction: column;align-items: flex-start;padding: 0;gap:0;          
-          > .txt{border-top:1px solid #E6E8EA;width:100%;padding: 16px;display: flex;gap:8px;align-items: center;
+          > .txt{border-top:1px solid #E6E8EA;width:100%;padding: 10px 16px;display: flex;gap:8px;align-items: center;
             &:first-child{border-top:0;}
           }
         }
@@ -83,8 +83,8 @@
 
     /** 파일첨부 **/
     .file-upload{display: flex;gap:8px;
-      .txt-box{border:1px solid #c6c6c6;background-color:#fff;border-radius:4px;width:100%;height:48px;display:flex;align-items:center;padding-left: 16px;                            
-        .txt{display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}
+      .txt-box{border:1px solid #c6c6c6;background-color:#fff;border-radius:4px;width:100%;height:35px;display:flex;align-items:center;padding-left: 16px;padding-right: 16px;                            
+        .txt{display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}        
       }
     }
     

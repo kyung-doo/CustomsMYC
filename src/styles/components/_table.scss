@@ -33,7 +33,7 @@
 
   table {table-layout: fixed;width: 100%;border-spacing: 0;}
 
-  th {font-size: 15px;border-bottom: 1px solid #58616A;vertical-align: middle;background-color: #E6E8EA;position: relative;text-align: center;line-height: 150%;padding: 11px 16px;font-weight: 700;
+  th {font-size: 15px;border-bottom: 1px solid #58616A;vertical-align: middle;background-color: #E6E8EA;position: relative;text-align: center;line-height: 150%;padding: 8px 16px;font-weight: 700;
     *:not(.tooltip-tit *) {font-weight: 700;font-size: 15px;}
     .tooltip-tit{display: flex;justify-content: center;      
       .title{padding-right: 20px;position: relative;}
@@ -44,7 +44,7 @@
     }        
   }
 
-  td {border-bottom: 1px solid #E4E4E4;vertical-align: middle;text-align: center;line-height: 150%;padding: 12px 16px;} 
+  td {border-bottom: 1px solid #E4E4E4;vertical-align: middle;text-align: center;line-height: 150%;padding: 8px 16px;} 
 
 
   .th-turn {width: 20px;height: 20px;position: absolute;top: 50%;right: 0;background-image: url(../assets/icons/tb-turn.svg);background-position: center;background-color: rgba(0, 0, 0, 0);transition: all 0.3s;transform: translateY(-50%);padding: 0;
