@@ -15,9 +15,9 @@
   .cont-title + .txt-box-type{margin-top: 10px;}
 }
 
-#wrap.signup .content-wrap{padding: 64px 16px;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;}
-#wrap.main .content-wrap{padding: 0;}
-.content-wrap {width:1280px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 40px 0;
+#wrap.signup .content-wrap{padding: 210px 0 64px 0;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;background-image: url("../assets/image/myc-bg.png");}
+#wrap.main .content-wrap{padding: 146px 0 0 0;}
+.content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 186px 20px 40px 20px;
   .cont-head {
     .head-util {display: flex;justify-content: space-between;margin-top: 24px;align-items: center;
       .breadcrumb-wrap {padding-left: 10px;}
