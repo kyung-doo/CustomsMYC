@@ -16,6 +16,7 @@ class Datepicker {
         this.props = props;
         this.input = this.ele.find('input');
         this.btn = this.ele.find('.calendar-btn');
+        this.btn.attr('type', 'button');
         this.today = new Date();
         this.selectDate = null;
         this.minDate = null;
@@ -80,19 +81,33 @@ class Datepicker {
                     }
                 }
             }
+        });    
+
+        $("#wrap").append('<div class="calendar-blind d-none"></div>');
+
+        this.btn.on('click', (e) => {            
+            if(!this.isShow) {                
+                this.isShow = true;                
+                this.showCalendar();                                
+                
+            }   
+            this.btn.closest('.calendar-form').addClass('on');                             
+            
+            $('.calendar-blind').show();
+        });    
+        
+        $(".calendar-blind").on('click', function () {
+            $('.datepicker').hide();
+            $('.calendar-form').removeClass('on')
+            $('.calendar-form input').removeAttr('disabled')
+            $('.calendar-blind').hide();
         });
 
-        this.btn.on('click', () => {
-            if(!this.isShow) {
-                this.isShow = true;
-                this.showCalendar();                                
-            }
-            this.btn.closest('.calendar-form').addClass('on');
-        });
+       
     }
 
     showCalendar () {
-
+        
         $('*[data-ui="datepicker"]').each(function () {
             $(this).datepicker('hideCalendar');
         });
@@ -140,24 +155,23 @@ class Datepicker {
         this.calendar.find(".month-con").hide();
 
         $("html, body").on('scroll.datepicker', () => {
-            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});     
-        });
-
-        $("html, body").on('click', () => {            
-            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});  
+            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
         });
         $(window).on('resize.datepicker', () => {
             this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
         });
-        $("html, body").trigger('scroll.datepicker');
+        $("html, body").trigger('scroll.datepicker');                        
+
         this.calendar.find(".btn-cancel").on('click', () => {
             this.hideCalendar();
+            $('.calendar-blind').hide();
         });
         this.calendar.find(".btn-enter").on('click', () => {
             if(this.selectDate) {
                 this.input.val(dayjs(this.selectDate).format('YYYY-MM-DD'));
             }
             this.hideCalendar();
+            $('.calendar-blind').hide();
         });
         this.calendar.find(".btn-prev").css({'pointer-events': ''}).on('click', () => {
             this.prevCalendar();
@@ -165,6 +179,20 @@ class Datepicker {
         this.calendar.find(".btn-next").css({'pointer-events': ''}).on('click', () => {
             this.nextCalendar();
         });
+
+        // const exceptions = ['.calendar-form','.calendar-wrap','button'];
+
+        // $(document).on('click', function(e) {
+        //     let isInsideException = exceptions.some(selector =>
+        //         $(e.target).closest(selector).length > 0
+        //     );
+
+        //     if (!isInsideException) {
+        //         $('.datepicker').hide();
+        //         $('.calendar-form').removeClass('on')
+        //         $('.calendar-form input').removeAttr('disabled')
+        //     }           
+        // });     
 
         this.calendar.find(".day-con button").attr('disabled', '');
 
@@ -243,6 +271,7 @@ class Datepicker {
             $('body').removeClass('on');            
         }  
 
+        
         this.renderCalendar();
     }
 
@@ -454,6 +483,8 @@ class Datepicker {
         this.selectDate = null;
 
         $('body').removeClass('on');
+
+        
     }
 }
 
@@ -467,3 +498,9 @@ $.fn.datepicker = function (option, params) {
     });
 };
 $.fn.datepicker.Constructor = Datepicker;
+
+
+ $(document).ready(function () {       
+
+      
+});
