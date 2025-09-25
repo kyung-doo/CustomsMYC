@@ -3,15 +3,14 @@
 /** 달력 **/
 .calendar {display: flex;align-items: center;position: relative;margin-right: 8px;gap:8px;
     &:has(.calendar-btn:disabled) input{background-color: #D8D8D8 !important;opacity:1 !important;border-color:#C6C6C6 !important;background-color: #D8D8D8 !important;border:1px solid red;}
-    .calendar-form{display: flex;align-items: center;justify-content: space-between;position: relative;max-width: 174px;min-width: 10px;width: 100%;height: 35px;background-color: #FFF;border: 1px solid #C6C6C6;border-radius: 4px;overflow: hidden;                        
-        input{padding: 0 43px 0 16px;
-            &::placeholder{color:#8E8E8E;}
-        }
+    .calendar-form{display: flex;align-items: center;justify-content: space-between;position: relative;max-width: 174px;min-width: 10px;width: 100%;height: 30px;background-color: #FFF;border: 1px solid #C6C6C6;border-radius: 4px;overflow: hidden;                        
+        input{padding: 0 43px 0 16px;}
     }
     .calendar-form.on{outline: 2px solid #246BEB;border-color:#246BEB;}
-    input[type=text] {width: 100%;height: 100%;border: 0;}
+    input[type=text]:not(.form-group input[type=text]) {width: 100%;height: 100%;border: 0;}
     .calendar-btn {min-width:24px;height:24px;font-size:0;background-image:url("../assets/icons/calendar.svg");background-color:rgba(0,0,0,0);background-repeat:no-repeat;background-position:center;padding:0;position:absolute;top:50%;right:12px;transform:translateY(-50%)}
     .hr {min-width: 15px;display: flex;justify-content: center;}
+    .form-group input[type=text]{padding: 0;text-align: center;}
 }
 
 .datepicker {width:360px;position:fixed;left:0;top:0;border:1px solid #ccc;z-index:9;background-color:#fff;
@@ -48,7 +47,7 @@
                 &.today button:hover {background-color: #EDF1F5;}
 
                 /** 선택 **/
-                &.active button {background-color: #246BEB !important;color: #fff !important;}                
+                &.active:not(.prev) button {background-color: #246BEB !important;color: #fff !important;}                
 
                 /** hover **/
                 &.btn:hover:not(.today){background-color: #EDF1F5;border-color:#EDF1F5;}

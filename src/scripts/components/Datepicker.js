@@ -261,14 +261,15 @@ class Datepicker {
         const calendarOffset = $calendar.offset();
         const calendarHeight = $calendar.outerHeight();
         const calendarBottom = calendarOffset.top + calendarHeight;
-        const windowBottom = $('.content-wrap').scrollTop() + $('.content-wrap').height() - 80;        
+        const windowBottom = $('.content-wrap').scrollTop() + $('.content-wrap').height() - 100;        
+
 
         if (calendarBottom > windowBottom) {                
             //달력짤림
-            $('body').addClass('on');            
+            $('.cont-body').addClass('on');                                
         }else{
             //달력안짤림
-            $('body').removeClass('on');            
+            $('.cont-body').removeClass('on');                                
         }  
 
         
@@ -482,7 +483,7 @@ class Datepicker {
         this.isShow = false;
         this.selectDate = null;
 
-        $('body').removeClass('on');
+        $('.cont-body').removeClass('on');
 
         
     }

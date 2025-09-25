@@ -4,7 +4,7 @@
    <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
 </head>
 <body>
-   <div id="wrap" class="login signup">
+   <div id="wrap" class="login">
       <!-- header -->
       <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
       <!-- //header -->
@@ -12,7 +12,9 @@
             <h3 class="head-tit sr-only">빈텍스트</h3>            
             <h4 class="head-tit sr-only">빈텍스트</h4>            
          </div>
-         <div class="cont-body">            
+         <div class="signup">        
+            <div class="content-wrap">
+               <div class="cont-body">            
             <!-- 내용 -->
             <div class="cont-area">
                <div class="wrap-signup w-1280">
@@ -121,6 +123,8 @@
             </div>
             <!--// 내용 -->
          </div>
+            </div>
+         </div>         
       </div>
       <!-- //content-wrap -->
       

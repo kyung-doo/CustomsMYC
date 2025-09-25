@@ -1,8 +1,10 @@
 @use "../mixin" as *;
 
 
-input {
-  &[type=radio], &[type=checkbox] {width: 0;height: 0;position: absolute;overflow: hidden;opacity: 0;}
+input[type=radio]:not(.grid_list input[type=radio]), input[type=checkbox]:not(.grid_list input[type=checkbox]) {width: 0;height: 0;position: absolute;overflow: hidden;opacity: 0;}
+
+input {  
+  &[type=radio],&[type=checkbox]{padding: 0;margin: 0;}
   &[type=radio]:focus + label,&[type=checkbox]:focus + label{outline:2px solid #000;}
 }
 .form-check {position: relative;  
@@ -35,7 +37,7 @@ input {
     &[type=radio]:disabled + label, &[type=checkbox]:disabled + label {border-color: #c6c6c6;background-color: #d8d8d8;color: #717171;}
   }
   &.large {
-    label {padding: 0 16px;line-height: 22px;height: 35px;}
+    label {padding: 0 16px;line-height: 22px;height: 30px;}
     input {
       &[type=radio]:checked + label, &[type=checkbox]:checked + label {padding-left: 36px;}
       &[type=radio]:checked + label:before, &[type=checkbox]:checked + label:before {left: 18px;}
@@ -64,7 +66,7 @@ input {
 .form-check {
   input[type=checkbox] {
     + label {padding-left: 28px;
-      &:before {width: 14px;height: 14px;padding: 2px;border-radius: 4px;}
+      &:before {width: 10px;height: 10px;padding: 2px;border-radius: 4px;}
     }
     &:checked + label:before {background-color: #246BEB;background-repeat: no-repeat;background-position: center;background-image: url('../assets/icons/check-a.svg');z-index: 1;}
   }

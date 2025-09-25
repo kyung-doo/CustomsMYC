@@ -1,4 +1,4 @@
-.accordion-wrap{margin-top: 40px;border-bottom:1px solid #58616A;
+.accordion-wrap{margin-top: 24px;border-bottom:1px solid #58616A;
     &.active{border-bottom:0;
       .accordion-header{
         a{
@@ -8,7 +8,7 @@
       }
     }
     .accordion-header{      
-      a{display: flex;justify-content: space-between;align-items: center;margin-bottom: 17px;position: relative;        
+      a{display: flex;justify-content: space-between;align-items: center;position: relative;        
         &::before{content:"";display: block;position: absolute;top:0;right:0;width:20px;height:100%;background-image: url("../assets/icons/btn-arrow-right-d.svg");background-repeat: no-repeat;background-position: center;transform: rotate(90deg);}        
         .data{display: block;font-size: 15px;color:#555;margin-top: 5px;}
         i{font-size:0;}

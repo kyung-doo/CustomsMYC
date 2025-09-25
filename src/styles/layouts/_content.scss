@@ -1,29 +1,34 @@
 /** 컨텐츠 여백 **/
 .cont-body{   
-   .btn-area:has(.large){margin-top: 35px;}
-   .btn-area:has(.medium){margin-top: 25px;}
-   .advice-txt {margin-top: 16px}
-   .board-top.no-wrap.title-top{margin-top: 30px;}   
-   .search-box+.compulsory-txt{margin-bottom: 49px;margin-top: 24px;}
-   .pagination{margin-top: 30px;}
-   .txt-box-type.type2 + .wrap-cont-tbl{margin-top: 24px;}
-   .board-top.no-wrap.title-top + .wrap-cont-tbl{margin-top: 24px;}
+   .btn-area:has(.large){margin-top: 25px;}
+   .btn-area:has(.medium){margin-top: 20px;}
+   .advice-txt {margin-top: 5px}
+   .board-top.no-wrap.title-top{margin-top: 16px;}   
+   .search-box+.compulsory-txt{margin-bottom: 30px;margin-top: 16px;}
+   .paging{margin-top: 24px;}
+   .txt-box-type.type2 + .wrap-cont-tbl{margin-top: 14px;}
+   .board-top.no-wrap.title-top + .wrap-cont-tbl{margin-top: 16px;}
    .board-top.tbl-top + .wrap-cont-tbl{margin-top: 15px;}
-   .search-box + .wrap-check-tbl{margin-top: 40px;}
+   .search-box + .wrap-check-tbl{margin-top: 40px;}   
 }
 .modal-cont{
   .cont-title + .txt-box-type{margin-top: 10px;}
 }
 
-#wrap.signup .content-wrap{padding: 210px 0 64px 0;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;background-image: url("../assets/image/myc-bg.png");}
-#wrap.main .content-wrap{padding: 146px 0 0 0;}
-.content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 186px 20px 40px 20px;
+
+.signup .content-wrap{padding: 128px 0 16px 0;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;background-image: url("../assets/image/myc-bg.png");width:100%;}
+
+#wrap.main .content-wrap{padding: 97px 0 0 0;}
+
+.content-wrap:has(.signup){width:100%;padding: 0;}
+
+.content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 120px 20px 40px 20px;
   .cont-head {
     .head-util {display: flex;justify-content: space-between;margin-top: 24px;align-items: center;
       .breadcrumb-wrap {padding-left: 10px;}
       .language-area {width: auto;display: flex;justify-content: flex-end;}
     }
-    .head-tit {font-size: 30px;margin: 0 0 30px 0;line-height: 150%;display: flex;flex-direction: column;
+    .head-tit {font-size: 24px;margin: 0 0 20px 0;line-height: 150%;display: flex;flex-direction: column;
       .txt{font-size: 19px;color: #555;line-height: 150%;margin-top: 19px;}
     }
     .step-area {display: flex;justify-content: space-between;margin-bottom: 62px;
@@ -39,7 +44,7 @@
   }
 
   //페이지 도움말
-  .cont-body{
+  .cont-body{padding-bottom: 40px;
     .cont-advice{position: relative;background-color: #EDF1F5;border-radius: 8px;    
       &.active{border-radius: 8px 8px 0 0;
         i{transform: rotate(180deg);}
@@ -55,3 +60,7 @@
     }
   }  
 }
+
+
+//배경이있는 페이지 높이값
+#wrap,#maincontent,.content-wrap,.signup{height:100%}
