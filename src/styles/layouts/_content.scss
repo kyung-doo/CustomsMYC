@@ -16,7 +16,7 @@
 }
 
 
-.signup .content-wrap{padding: 128px 0 16px 0;margin: 0;width:100%;background-color: #F4F5F6;display: flex;justify-content: center;align-items: center;background-image: url("../assets/image/myc-bg.png");width:100%;}
+
 
 #wrap.main .content-wrap{padding: 97px 0 0 0;}
 
@@ -44,7 +44,7 @@
   }
 
   //페이지 도움말
-  .cont-body{padding-bottom: 40px;
+  .cont-body{
     .cont-advice{position: relative;background-color: #EDF1F5;border-radius: 8px;    
       &.active{border-radius: 8px 8px 0 0;
         i{transform: rotate(180deg);}
@@ -63,4 +63,8 @@
 
 
 //배경이있는 페이지 높이값
-#wrap,#maincontent,.content-wrap,.signup{height:100%}
+//#wrap,#maincontent,.content-wrap,.signup{height:100%}
+.signup .content-wrap{padding: 113px 0 16px 0;margin: 0;width:100%;display: flex;justify-content: center;align-items: center;width:100%;}
+
+#wrap:has(.content-wrap>.signup){background-image: url("../assets/image/myc-bg.png");}
+#wrap #main:has(.signup){background-image:none}

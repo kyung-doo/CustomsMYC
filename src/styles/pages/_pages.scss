@@ -377,7 +377,7 @@ a[class*=cl-]{text-decoration: underline;}
 }
 
 //로그인
-.wrap-login{margin-top: -48px;
+.wrap-login{
   .title-top{margin: 48px 0 0 0;flex-wrap: wrap;overflow: hidden;
     > div{padding-bottom: 16px;margin-bottom: 20px;position: relative;
       &::before{content:"";display: block;position: absolute;bottom:0;left:0;width: 100000px;height: 0.5px;background-color: #E4E4E4;}
