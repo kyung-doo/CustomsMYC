@@ -54,7 +54,7 @@ class Datepicker {
                 return;
             }
 
-            if(isNaN(Date.parse(val))) {
+            if(!this.isValidDate(val)) {
                 alert('올바른 날짜 형식을 입력하세요. (YYYY-MM-DD)');
                 this.input.val('').focus(); 
             } else {
@@ -104,6 +104,17 @@ class Datepicker {
         });
 
        
+    }
+
+    isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    isValidDate( dateStr ) {
+        if(isNaN(Date.parse(dateStr))) return false;
+        const [year, month, day] = dateStr.split('-').map(Number);
+        const maxDays = [31, this.isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        return day <= maxDays[month - 1];
     }
 
     showCalendar () {
