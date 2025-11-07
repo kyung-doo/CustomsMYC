@@ -135,7 +135,10 @@
          </div>         
       </div>
       <!-- //content-wrap -->
-      
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
    </div>
 </body>
 </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction Information Submission Status</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="search-box">
+                  <ul>
+                     <li class="col1">
+                        <strong class="tit">Submission<br>period</strong>
+                        <div class="search-area">
+                           <div class="calendar">
+                              <div class="calendar-form" data-ui="datepicker" data-props="maxInput: '#endDate'">
+                                 <input id="startDate" type="text" title="시작날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-01">
+                                 <button class="calendar-btn" type="button">시작 달력보기</button>
+                              </div>
+                              <i class="hy">~</i>
+                              <div class="calendar-form" data-ui="datepicker" data-props="minInput: '#startDate'">
+                                 <input id="endDate" type="text" title="종료날짜를 입력해주세요" placeholder="YYYY-MM-DD" maxlength="10" value="2025-07-02">
+                                 <button class="calendar-btn" type="button">종료 달력보기</button>
+                              </div>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_11" checked="">
+                              <label class="form-chip-outline" for="chk_chip_11">day</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_12">
+                              <label class="form-chip-outline" for="chk_chip_12">1 week</label>
+                           </div>
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_13">
+                              <label class="form-chip-outline" for="chk_chip_13">1 month</label>
+                           </div>                           
+                           <div class="form-chip large">
+                              <input type="radio" class="radio" name="chk_1" id="chk_chip_14">
+                              <label class="form-chip-outline" for="chk_chip_14">1 onths</label>
+                           </div>                           
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="userid">User ID</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="userid" class="input">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="companyname">Company name</label>
+                        <div class="search-area">
+                            <div class="form-group medium mw-328">                     
+                              <div class="form-conts">
+                                 <input type="text" id="companyname" class="input">
+                              </div>                              
+                           </div> 
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="submissionnumber">Submission<br>number</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" required="" id="submissionnumber">
+                                    <option value="" selected="" disabled="" hidden="">전체</option>
+                                    <option value="항목1">항목1</option>
+                                    <option value="항목2">항목2</option>
+                                    <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                   
+                           </div>
+                        </div>                        
+                     </li>
+                     <li class="col2">
+                        <label class="tit" for="processingstatus">Processing<br>status</label>
+                        <div class="search-area">
+                           <div class="form-group medium mw-328">                  
+                              <div class="form-conts">
+                                 <select class="form-select" required="" id="processingstatus">
+                                    <option value="" selected="" disabled="" hidden="">전체</option>
+                                    <option value="항목1">항목1</option>
+                                    <option value="항목2">항목2</option>
+                                    <option value="항목3">항목3</option>
+                                 </select>
+                              </div>                   
+                           </div>
+                        </div>                        
+                     </li>                     
+                  </ul>
+                  <div class="btn-area btn-end">
+                     <div class="align">
+                        <button type="button" class="btn tertiary medium">Reset</button>
+                        <button type="button" class="btn secondary medium">Check</button>                        
+                     </div>
+                  </div>
+               </div>
+               <div class="board-top no-wrap title-top">
+                  <div class="left-box">
+                     <div class="board-top tbl-top">
+                        <div class="left-box">
+                           <strong class="tit top-txt">All<strong>240</strong></strong>
+                           <div class="top-txt">
+                              <select class="form-select-sort large" title="정보 구분 선택">                           
+                                 <option value="">View 10 at a time</option>                                                
+                              </select>
+                           </div>                     
+                        </div>                  
+                     </div>
+                  </div>   
+                  <div class="right-box">
+                     <button type="button" class="btn tertiary medium"><i class="icon download medium mr-5"></i> Download EXCEL</button>                     
+                  </div>               
+               </div>
+               <div class="wrap-cont-tbl bg-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col cont">
+                        <caption>Transaction Information submission status</caption>
+                        <colgroup>
+                           <col style="width: 60px;">                                                      
+                           <col style="width: 160px;">           
+                           <col style="width: 160px;">           
+                           <col style="width: 160px;">           
+                           <col style="width: 160px;">           
+                           <col style="width: 160px;">           
+                           <col style="width: 160px;">                                      
+                           <col style="width: 260px;">                                      
+                        </colgroup>
+                        <thead>                                          
+                           <tr>                                                                                              
+                              <th scope="col" class="b-left-1" rowspan="2">No</th>
+                              <th scope="col" rowspan="2">Submission<br>number</th>
+                              <th scope="col" rowspan="2">Submission<br>date</th>                              
+                              <th scope="col" colspan="4">Verification result</th>                              
+                              <th scope="col" class="b-right-1" rowspan="2">Processing status</th>                                                                                                                                                               
+                           </tr>                                                 
+                           <tr>
+                              <th scope="col">Number of<br>submissions</th>                              
+                              <th scope="col">Error</th>                              
+                              <th scope="col">등록건수</th>                              
+                              <th scope="col">Number of<br>registrations</th>                              
+                           </tr>     
+                        </thead>
+                        <tbody>                           
+                           <tr>                              
+                              <td>1</td>                              
+                              <td class="cl-7 underline">1204516199999M</td>                           
+                              <td>2025-03-15</td>                              
+                              <td>3</td>                              
+                              <td>Y</td>                              
+                              <td>0</td>                              
+                              <td>3</td>                              
+                              <td>All errors rejected</td>                              
+                           </tr>                           
+                           <tr>                              
+                              <td>1</td>                              
+                              <td class="cl-7 underline">1204516199999M</td>                           
+                              <td>2025-03-15</td>                              
+                              <td>3</td>                              
+                              <td>Y</td>                              
+                              <td>0</td>                              
+                              <td>3</td>                              
+                              <td>All errors rejected</td>                              
+                           </tr>                           
+                           <tr>                              
+                              <td>1</td>                              
+                              <td class="cl-7 underline">1204516199999M</td>                           
+                              <td>2025-03-15</td>                              
+                              <td>3</td>                              
+                              <td>Y</td>                              
+                              <td>0</td>                              
+                              <td>3</td>                              
+                              <td>All errors rejected</td>                              
+                           </tr>                           
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="paging">
+                  <ul>
+                     <li class="morePrev on"><a href="#1"><span>첫페이지</span></a></li>
+                     <li class="prev"><a href="#10"><span>이전</span></a></li>
+                  </ul>
+                  <ul class="pages">
+                     <li class="selected"><strong>1</strong></li>   
+                     <li><a href="#2">2</a></li>
+                     <li><a href="#3">3</a></li>
+                     <li><a href="#4">4</a></li>
+                     <li><a href="#5">5</a></li>
+                     <li><a href="#6">6</a></li>
+                     <li><a href="#7">7</a></li>
+                     <li><a href="#8">8</a></li>
+                     <li><a href="#9">9</a></li>
+                     <li><a href="#10">10</a></li>
+                  </ul>
+                  <ul>
+                     <li class="next"><a href="#11"><span>다음</span></a></li>
+                     <li class="moreNext"><a href="#11"><span>마지막페이지</span></a></li>
+                  </ul>
+               </div>
+
+               
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
+   </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
    <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
 </head>
-<body>
+<body class="common-loading">
    <!-- 로그인전 - login / 로그인후 - logout -->
    <div id="wrap" class="main login">
       <!-- header -->
@@ -78,28 +78,31 @@
             <div class="wrap-box2">
                <div class="area2">
                   <ul class="list">
-                     <li>
-                        <a href="#none" class="ico1">
-                           <strong class="tit">Email<br>Verification <i class="icon btn-arrow-right medium"></i></strong>
-                           <p class="tb-title">Email verification is the process of confirming the authenticity of user’s email address. Thpically, after registering or applying for a service, a verification link or …</p>
-                        </a>
+                     <li class="list1">
+                        <div class="box">
+                           <strong class="tit">e-Commerce<br>Business Code</strong>
+                           <p>You can check the status of your e-commerce business code correction, renewal, and application through the e-Commerce Business Code menu.</p>
+                           <!-- <span class="go"><i class="icon arrow-right"></i></span> -->
+                        </div>
                      </li>
-                     <li>
-                        <a href="#none" class="ico2">
-                           <strong class="tit">Application for<br> e-Commerce Business Code <i class="icon btn-arrow-right medium"></i></strong>
-                           <p class="tb-title">Email verification is the process of confirming the authenticity of user’s email address. Thpically, after registering or applying for a service, a verification link or …</p>
-                        </a>
+                     <li class="list2">
+                        <div class="box">
+                           <strong class="tit">Purchase<br>Information</strong>
+                           <p>You can check the transaction information submission status and status details, as well as transaction information 1st/2nd verification error details, through the Purchase Information menu.</p>
+                           <!-- <span class="go"><i class="icon arrow-right"></i></span> -->
+                        </div>
                      </li>
-                     <li>
-                        <a href="#none" class="ico3">
-                           <strong class="tit">Issuance of<br> e-Commerce Business Code <i class="icon btn-arrow-right medium"></i></strong>
-                           <p class="tb-title">Email verification is the process of confirming the authenticity of user’s email address. Thpically, after registering or applying for a service, a verification link or …</p>
-                        </a>
+                     <li class="list3">
+                        <div class="box">
+                           <strong class="tit">Personal customs<br>clearance code</strong>
+                           <p>You can verify the validity of your personal customs clearance code through the Personal customs clearance code menu, and after verification of validity, an authentication number will be automatically sent to the consignee.</p>
+                           <!-- <span class="go"><i class="icon arrow-right"></i></span> -->
+                        </div>
                      </li>
                   </ul>
                </div>
             </div>
-            <div class="area3">
+            <!-- <div class="area3">
                <ul class="list">
                   <li>
                      <strong class="tit">e-Commerce Business Code</strong>
@@ -128,10 +131,13 @@
                      </div>
                   </li>
                </ul>
-            </div>            
+            </div>             -->
          </div>
       </div>
       <!-- //content-wrap -->      
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
    </div>
 </body>
 </html>
