@@ -22,7 +22,7 @@
 
 .content-wrap:has(.signup){width:100%;padding: 0;}
 
-.content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 120px 20px 40px 20px;
+.content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 120px 20px 0 20px;
   .cont-head {
     .head-util {display: flex;justify-content: space-between;margin-top: 24px;align-items: center;
       .breadcrumb-wrap {padding-left: 10px;}
@@ -64,7 +64,7 @@
 
 //배경이있는 페이지 높이값
 //#wrap,#maincontent,.content-wrap,.signup{height:100%}
-.signup .content-wrap{padding: 113px 0 16px 0;margin: 0;width:100%;display: flex;justify-content: center;align-items: center;width:100%;}
+.signup .content-wrap{padding: 138px 0 0 0;margin: 0;width:100%;display: flex;justify-content: center;align-items: center;width:100%;}
 
 #wrap:has(.content-wrap>.signup){background-image: url("../assets/image/myc-bg.png");}
 #wrap #main:has(.signup){background-image:none}

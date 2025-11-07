@@ -81,7 +81,7 @@
                </div>
                <p class="compulsory-txt"><i class="compulsory">필수</i> Indicates required fields.</p>
                <h5 class="title-type3">Application details</h5>
-               <div class="wrap-cont-tbl bg-tbl">
+               <div class="wrap-cont-tbl bg-tbl common-loading">
                   <div class="table-wrap">
                      <table class="tbl col cont">
                         <caption>Transaction Information submission status</caption>
@@ -178,7 +178,10 @@
          </div>
       </div>
       <!-- //content-wrap -->
-      
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
    </div>
 </body>
 </html>

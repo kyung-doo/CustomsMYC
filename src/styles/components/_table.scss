@@ -33,8 +33,8 @@
 
   table {table-layout: fixed;width: 100%;border-spacing: 0;}
 
-  th {border-bottom: 1px solid #58616A;vertical-align: middle;background-color: #E6E8EA;position: relative;text-align: center;line-height: 120%;padding: 5px;font-weight: 700;font-size:13px;;
-    *:not(.tooltip-tit *) {font-weight: 700;font-size: 15px;}
+  th {border-bottom: 1px solid #58616A;vertical-align: middle;background-color: #E6E8EA;position: relative;text-align: center;line-height: 120%;padding: 10px 5px;font-weight: 700;
+    *:not(.tooltip-tit *) {font-weight: 700;}
     .tooltip-tit{display: flex;justify-content: center;      
       .title{padding-right: 20px;position: relative;}
       .contextual-help{bottom:2px;transform: translateY(0);margin: 0 0;margin-left: 3px;height:auto;

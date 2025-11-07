@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction information Excel submission status details</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submitting<br>company name</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">Lee Jeong-seok Shopping Mall</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Submission number</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">K0000000000</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Number of<br>submissions</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">300</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Submission date</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-11-04</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Processing status</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">Refusal of reception</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Whether to send</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">Not sent</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Transmission date<br>and time</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-11-04</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Error</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt cl-2">Y</p>
+                           </div>   
+                        </li>
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Original file<br>submitted</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <ul class="addmore-list">
+                                 <li class="gap0">
+                                    <p class="title wauto">123456789-250315-000002.json</p>
+                                    <p class="txt"><button class="btn text medium ml-0">download<i class="icon download medium ml-5"></i></button></p>
+                                 </li>                                                                           
+                              </ul>
+                           </div>   
+                        </li>                                                             
+                     </ul>                  
+                  </div>                              
+               </div>
+               <h5 class="title-type3">Transaction information Excel submission results</h5>
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col check">
+                        <caption>Company employee management</caption>
+                        <colgroup>
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                           <col style="width: px;">                                                               
+                        </colgroup>
+                        <thead>
+                           <tr>                                                                              
+                              <th scope="col">Processing<br>status</th>                                                                     
+                              <th scope="col">Number of<br>submissions</th>                                                                     
+                              <th scope="col">Number of<br>completed<br>cases</th>                                                                     
+                              <th scope="col">Number of<br>errors</th>                                                                     
+                              <th scope="col">Number of<br>transport bills</th>                                                                     
+                              <th scope="col">Number of<br>orders</th>                                                                     
+                              <th scope="col">Number of<br>products</th>                                                                     
+                              <th scope="col">Total amount</th>                                                                     
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>                              
+                              <td>Refusal of<br>reception</td>                                                                     
+                              <td>6</td>     
+                              <td></td>     
+                              <td></td>     
+                              <td></td>     
+                              <td></td>     
+                              <td></td>     
+                              <td></td>     
+                           </tr>                                                                                                                                                      
+                        </tbody>
+                     </table>
+                  </div>     
+               </div> 
+               <div class="btn-area btn-end">
+                  <div class="align">
+                     <button type="button" class="btn tertiary large">List</button>                     
+                  </div>
+               </div>
+
+               
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
+   </div>
+</body>
+</html>

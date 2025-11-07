@@ -1,7 +1,7 @@
 @use "../mixin" as *;
 @use "../variable" as *;
 
-#footer {margin-top: 80px;background-color: #f0f0f0;border-top: 1px solid #d8d8d8;
+#footer {margin-top: 40px;background-color: #f0f0f0;border-top: 1px solid #d8d8d8;
   .foot-quick {background-color: #fff;
     .inner {max-width: 1280px;display: flex;justify-content: flex-end;}
     button {background-color: #fff;max-width: 319px;width: 319px;height: 54px;padding: 0 24px;border-left: 1px solid #d8d8d8;text-align: left;position: relative;      
@@ -14,11 +14,12 @@
   .f-box {display: flex;flex-direction: column;padding: 40px 16px;}
   .f-top {display: flex;}
   .f-box {
-    .f-logo {width: 145px;height: 48px;display: block;background-image: url("../assets/icons/logo.svg");background-repeat: no-repeat;background-size: contain;}
-    .f-cnt {flex: 1;padding-left: 72px;padding-right: 70px;display: flex;justify-content: space-between;
+    .f-logo {width: 168px;height: 48px;display: block;background-image: url("../assets/icons/f-logo.svg");background-repeat: no-repeat;background-size: contain;}
+    .f-cnt {flex: 1;padding-left: 52px;display: flex;justify-content: space-between;
       .info-cs {margin-top: 4px;
         li {margin-top: 16px;}        
       }
+      *{font-size:17px}
     }
     .f-btm {width: 100%;}
     .link-go {display: flex;flex-direction: column;margin-top: -16px;
@@ -38,7 +39,7 @@
       .blog {background-image: url("../assets/icons/blog.svg");}
     }
     .f-btm {margin-top: 40px;border-top: 1px solid #D8D8D8;
-      .f-btm-text {padding: 22px 2px 0 2px;display: flex;justify-content: space-between;}
+      .f-btm-text {padding: 22px 2px 0 2px;display: flex;justify-content: flex-end;}
       .f-menu {margin-left: -24px;
         a {margin-left: 24px;
           &:hover{text-decoration: underline;}
@@ -46,6 +47,6 @@
         }
       }
     }
-    .f-copy {font-size: 15px;color: #555;}
+    .f-copy {color: #555;}
   }
 }

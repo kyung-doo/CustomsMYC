@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit">Transaction information error details</h3>            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submitting<br>company name</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">Lee Jeong-seok Shopping Mall</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Submission number</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">K0000000000</p>
+                           </div>   
+                        </li>
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Number of<br>submissions</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">300</p>
+                           </div>   
+                        </li>    
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Verification error</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt cl-2">Y</p>
+                           </div>   
+                        </li>  
+                        <li class="col2 txt-list">
+                           <strong class="tit">
+                              <strong>Processing status</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">All errors are rejected</p>
+                           </div>   
+                        </li>    
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submission date<br>and time</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <p class="txt">2025-11-04- 10:30:00</p>
+                           </div>   
+                        </li>                                                     
+                     </ul>                  
+                  </div>                              
+               </div>
+               <h5 class="title-type3">Transaction Information Submission Registration Information</h5>
+               <div class="wrap-check-tbl">
+                  <div class="table-wrap">
+                     <table class="tbl col check">
+                        <caption>Company employee management</caption>
+                        <colgroup>
+                           <col style="width: 60px;">                                                                                          
+                           <col style="width: 100px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 120px;">                                                                                          
+                           <col style="width: 160px;">                                                                                          
+                        </colgroup>
+                        <thead>
+                           <tr>                                                                              
+                              <th scope="col">No</th>                                                                                                   
+                              <th scope="col">Waybill<br>number</th>                                                                                                   
+                              <th scope="col">Order<br>number</th>                                                                                                   
+                              <th scope="col">Submission<br>date</th>                                                                                                   
+                              <th scope="col">Orderer</th>                                                                                                   
+                              <th scope="col">Consignee</th>                                                                                                   
+                              <th scope="col">Error type</th>                                                                                                   
+                              <th scope="col">Product serial<br>number</th>                                                                                                   
+                              <th scope="col">Error item</th>                                                                                                   
+                              <th scope="col">Error data</th>                                                                                                   
+                              <th scope="col">Error data</th>                                                                                                   
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>                              
+                              <td>1</td>                                                                                                   
+                              <td>A000000000</td>                                                                                                   
+                              <td>A000000000</td>                                                                                                   
+                              <td>20251104</td>                                                                                                   
+                              <td>홍길동</td>                                                                                                   
+                              <td>홍길동</td>                                                                                                   
+                              <td>주문정보 오류</td>                                                                                                   
+                              <td></td>                                                                                                   
+                              <td>구매대행 업체 부호</td>                                                                                                   
+                              <td>구매대행 업체 부호</td>                                                                                                   
+                              <td>구매대행업체부호는 필수 입니다.</td>                                                                                                   
+                           </tr>                                                                                                                                                      
+                        </tbody>
+                     </table>
+                  </div>     
+               </div>
+               <div class="btn-area btn-end">
+                  <div class="align">
+                     <button type="button" class="btn tertiary large">List</button>                     
+                  </div>
+               </div>
+               
+               
+               
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
+   </div>
+</body>
+</html>

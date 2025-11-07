@@ -147,8 +147,8 @@ class Datepicker {
                         <div class="month-con d-none"></div>
                     </div>
                     <div class="calendar-footer">
-                        <button type="button" class="btn tertiary small btn-cancel mr-8">취소</button>
-                        <button type="button" class="btn primary small btn-enter">확인</button>
+                        <button type="button" class="btn tertiary small btn-cancel mr-8">cancel</button>
+                        <button type="button" class="btn primary small btn-enter">check</button>
                     </div>
                 </div>
             </div>
@@ -264,24 +264,24 @@ class Datepicker {
             this.currentMonth = new Date().getMonth() + 1;
         }
 
-        //달력 짤렸을떄
-        const $calendar = $('.calendar-wrap');
+        // 달력 짤렸을떄
+        // const $calendar = $('.calendar-wrap');
 
-        if (!$calendar.is(':visible')) return;
+        // if (!$calendar.is(':visible')) return;
 
-        const calendarOffset = $calendar.offset();
-        const calendarHeight = $calendar.outerHeight();
-        const calendarBottom = calendarOffset.top + calendarHeight;
-        const windowBottom = $('.content-wrap').scrollTop() + $('.content-wrap').height() - 100;        
+        // const calendarOffset = $calendar.offset();
+        // const calendarHeight = $calendar.outerHeight();
+        // const calendarBottom = calendarOffset.top + calendarHeight;
+        // const windowBottom = $('.content-wrap').scrollTop() + $('.content-wrap').height() - 100;        
 
 
-        if (calendarBottom > windowBottom) {                
-            //달력짤림
-            $('.cont-body').addClass('on');                                
-        }else{
-            //달력안짤림
-            $('.cont-body').removeClass('on');                                
-        }  
+        // if (calendarBottom > windowBottom) {                
+        //     달력짤림
+        //     $('.cont-body').addClass('on');                                
+        // }else{
+        //     달력안짤림
+        //     $('.cont-body').removeClass('on');                                
+        // }  
 
         
         this.renderCalendar();
@@ -308,8 +308,8 @@ class Datepicker {
 
         const toDay = new Date();
 
-        this.calendar.find(".btn-year").text(year+'년');
-        this.calendar.find(".btn-month").text(month < 10 ? '0'+month+'월' : month+'월');
+        this.calendar.find(".btn-year").text(year+'yr');
+        this.calendar.find(".btn-month").text(month < 10 ? '0'+month+'mo' : month+'mo');
 
         this.calendar.find(".btn-next").removeAttr('disabled');
         this.calendar.find(".btn-prev").removeAttr('disabled');
@@ -384,10 +384,21 @@ class Datepicker {
             }
         });
 
+        this.doubleClickDelay = false;
         this.calendar.find('.day-con .day button').on('click', ( e ) => {
-            const target = $(e.currentTarget).parent();
-            this.selectDate = dayjs(target.data('date')).toDate();
-            this.renderCalendar();
+            if(!this.doubleClickDelay) {
+                const target = $(e.currentTarget).parent();
+                this.selectDate = dayjs(target.data('date')).toDate();
+                this.renderCalendar();
+                this.doubleClickDelay = true;
+                this.doubleClickTimeout = setTimeout(() => {
+                    this.doubleClickDelay = false;
+                }, 500);
+            } else {
+                const target = $(e.currentTarget).parent();
+                this.selectDate = dayjs(target.data('date')).toDate();
+                this.calendar.find(".btn-enter").trigger('click');
+            }
         });
         this.renderYear();
         this.renderMonth();
@@ -424,9 +435,9 @@ class Datepicker {
         this.calendar.find(".month-con").empty();
         for(let i = 1; i <= 12; i++) {
             if(this.currentMonth === i) {
-                this.calendar.find(".month-con").append(`<button class="btn-month-select active" data-month="${i}">${i}월</button>`)
+                this.calendar.find(".month-con").append(`<button class="btn-month-select active" data-month="${i}">${i}mo</button>`)
             } else {
-                this.calendar.find(".month-con").append(`<button class="btn-month-select" data-month="${i}">${i}월</button>`)
+                this.calendar.find(".month-con").append(`<button class="btn-month-select" data-month="${i}">${i}mo</button>`)
             }
         }
         if(dayjs(this.props.maxDate).format('YYYYMMDD') === dayjs(this.today).format('YYYYMMDD') && this.currentYear === new Date().getFullYear()) {

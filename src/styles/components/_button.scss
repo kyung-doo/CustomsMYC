@@ -3,7 +3,7 @@
 button[class*=btn],label[class*=btn],a[class*=btn] {cursor: pointer;display: inline-flex;align-items: center;border-radius: 4px;justify-content: center;white-space: nowrap;
 
   &.xlarge {padding: 0 24px;height: 64px;}
-  &.large{padding: 0 20px;height: 35px;font-size:15px}
+  &.large{padding: 0 20px;height: 35px;}
   &.medium{padding: 0 16px;height: 30px;}
   &.small{padding: 0 12px;height: 25px;}
   &.xsmall{padding: 0 10px;height: 20px;}  

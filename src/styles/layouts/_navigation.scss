@@ -7,10 +7,10 @@
   .gnb-menu {display: flex;align-items: center;justify-content: flex-start;gap:35px;
     > li {height: 100%;display: flex;align-items: center;position: relative;}
   }
-  .gnb-main-trigger {background-color: rgba(0, 0, 0, 0);font-size: 15px;padding: 0 8px;position: relative;color: #555;line-height: 1.5;height: 100%;font-weight: 700;display: flex;align-items: center;          
+  .gnb-main-trigger {background-color: rgba(0, 0, 0, 0);padding: 0 8px;position: relative;color: #555;line-height: 1.5;height: 100%;font-weight: 700;display: flex;align-items: center;          
     &:before{content: "";display: block;position: absolute;bottom: 0px;left: 50%;width: 0;height: 4px;background-color: #16408d;transition: all 0.6s $easeOutExpo;}
     &:hover::before{width:100%;left: 0;}
-    span {display: flex;font-size: 13px;color: #555;margin-top: -1px;}
+    span {display: flex;color: #555;margin-top: -1px;}
   }  
   .gnb-toggle-wrap {display: none;position: absolute;top: 45px;left: 0;z-index: 100;border-top: 1px solid #d8d8d8;padding-top: 16px;width:416px}    
   .gnb-main-list {border-radius: 8px;border:1px solid #D8D8D8;box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);padding: 8px;background-color: #fff;    

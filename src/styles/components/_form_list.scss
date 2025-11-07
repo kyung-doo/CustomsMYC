@@ -29,6 +29,9 @@
 
     //form-conts안에 버튼이 있을때 중앙정렬
     .form-conts:has(button){display: flex;align-items: center;}
+
+    .form-group.form-tit-group .form-conts{flex:1}
+    .form-group.form-tit-group{background-color: #fff;}
     
     > ul {display:flex;flex-direction:row;flex-wrap:wrap;
       .tit {position:relative;display:inline-flex;align-items:center;gap:4px;padding-right:12px;word-break: break-all;font-weight: 700;        
@@ -46,8 +49,8 @@
 
     /** 텍스트 리스트 **/
     .txt-list {display: flex;align-items: flex-start;border-bottom:1px solid #E6E8EA;padding-top: 0;                     
-      .tit{width:200px;min-width:200px;line-height:120%;padding-right: 0;background-color: #F4F5F6;height:100%;word-break: auto-phrase;padding: 5px 16px;
-        > strong{position: relative;display: inline-block;font-size: 13px;}
+      .tit{width:200px;min-width:200px;line-height:120%;padding-right: 0;background-color: #F4F5F6;height:100%;word-break: auto-phrase;padding: 10px 16px;
+        > strong{position: relative;display: inline-block;}
       }
       .title {display: flex;position: relative;}
       .inp-box {flex: 1;margin-top: 0;padding: 5px 16px;height: 100%;
@@ -221,7 +224,7 @@
   .list-box{border-bottom:1px solid #E6E8EA;margin-top: 30px;padding-bottom: 25px;
     ul{margin-top: -5px;
       li{margin-top: 15px;
-        span{font-size: 13px;color: #555;margin-left: 5px;}
+        span{color: #555;margin-left: 5px;}
       }
     }     
   }

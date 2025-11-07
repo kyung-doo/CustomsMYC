@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <div class="d-flex f-align-center mb-20">
+               <h3 class="head-tit mb-0">Transaction Information Excel Submission</h3>            
+               <span class="cl-3 ml-20">Administrator</span>
+            </div>
+            
+         </div>
+         <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">          
+               <div class="wrap-form-area">
+                  <div class="inp-form">
+                     <ul>                                                         
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Division</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_1">
+                                 <label for="chk_1">Domestic</label>
+                              </div>
+                              <div class="form-check">
+                                 <input type="checkbox" id="chk_2">
+                                 <label for="chk_2">Overseas</label>
+                              </div>                              
+                           </div>
+                        </li>                        
+                        <li class="col1 txt-list">
+                           <strong class="tit">
+                              <strong>Submission date</strong>
+                           </strong>
+                           <div class="inp-box">
+                              <div class="calendar">
+                                 <div class="calendar-form" data-ui="datepicker">
+                                    <input type="text" placeholder="YYYY-MM-DD" maxlength="10" value="1970-01-01">
+                                    <button class="calendar-btn" type="button">달력보기</button>
+                                 </div>                        
+                              </div>
+                           </div>   
+                        </li>                        
+                        <li class="col1 txt-list">
+                           <label for="ex13" class="tit">
+                              <strong>Company name </strong>
+                           </label>
+                           <div class="inp-box">
+                              <div class="form-group medium">                  
+                                 <div class="form-conts">
+                                    <input type="text" id="ex13" class="input">
+                                 </div>  
+                              </div>
+                           </div>
+                        </li>                        
+                        <li class="col1 txt-list">
+                           <label for="ex11" class="tit">
+                              <strong>Upload file name</strong>
+                           </label>
+                           <div class="inp-box">                                       
+                              <div class="form-group medium mw-240">                  
+                                 <div class="form-conts">
+                                    <select class="form-select" required="" id="ex11">
+                                       <option value="" disabled="" hidden="">select</option>
+                                       <option value="항목1" selected="">select</option>                                                
+                                    </select>
+                                 </div>                                          
+                              </div>
+                              <div class="form-group medium">                  
+                                 <div class="form-conts">
+                                    <input type="text" id="ex12" class="input">
+                                 </div>  
+                              </div>                              
+                           </div>
+                        </li>                        
+                     </ul>                  
+                  </div>                     
+               </div>
+               <div class="btn-area btn-end">
+                  <div class="align">                     
+                     <button type="button" class="btn tertiary large"><i class="icon download medium mr-5"></i> Download form</button>
+                  </div>
+               </div>
+               
+
+
+            </div>
+            <!--// 내용 -->
+         </div>
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
+   </div>
+</body>
+</html>
