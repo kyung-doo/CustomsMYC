@@ -393,7 +393,7 @@ class Datepicker {
                 this.doubleClickDelay = true;
                 this.doubleClickTimeout = setTimeout(() => {
                     this.doubleClickDelay = false;
-                }, 500);
+                }, 200);
             } else {
                 const target = $(e.currentTarget).parent();
                 this.selectDate = dayjs(target.data('date')).toDate();

@@ -102,7 +102,7 @@ body.common-loading,html.common-loading{overflow: hidden;}
 .tooltip-tit .title{display: inline !important;}
 
 //제목 
-[class*=title-type]{line-height: 150%;margin-top: 16px;
+[class*=title-type]{line-height: 150%;margin-top: 16px;font-size: 17px;
   .txt{margin-left: 6px;}   
   .compulsory-txt{margin: 0 0 0 10px;display: inline-block;}
   [class*=cl-]{margin: 0 5px;}  
@@ -607,8 +607,7 @@ body.common-loading,html.common-loading{overflow: hidden;}
         .title{font-size: 19px;}
         .box{border-radius: 8px;border:1px solid #F0F0F0;background-color: #fff;padding: 24px;margin: 24px 0;          
           .txt:first-child{margin-top: 0;}
-          .txt{line-height: 150%;margin-top: 20px;
-            .title{}
+          .txt{line-height: 150%;margin-top: 20px;            
             .list{margin-top: 17px;
               li{margin-top: 3px;
                 span{color:#555;}                
@@ -617,7 +616,7 @@ body.common-loading,html.common-loading{overflow: hidden;}
           }
         }        
         .btn-box{display: flex;gap:8px;
-          button[class*="ico"]{height:50px;width:100%;position: relative;padding-right: 58px;font-size:17px;border-radius: 8px;
+          button[class*="ico"]{height:50px;width:100%;position: relative;padding-right: 58px;border-radius: 8px;
             &::before{content:"";display: block;position: absolute;top:50%;right:19px;width:20px;height: 20px;transform: translateY(-50%);background-image: url("../assets/icons/myc-arr.svg");}
 
             &:hover{text-decoration: underline;}
