@@ -20,7 +20,7 @@
 
 #wrap.main .content-wrap{padding: 97px 0 0 0;}
 
-.content-wrap:has(.signup){width:100%;padding: 0;}
+.content-wrap:has(.signup){width:100%;padding: 0;/*display: flex;align-items: center;justify-content: center;*/}
 
 .content-wrap {width:1320px;margin: 0 auto;position: relative;flex:1;height:100%;padding: 120px 20px 0 20px;
   .cont-head {

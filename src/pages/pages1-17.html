@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
+</head>
+<body>
+   <div id="wrap" class="login">
+      <!-- header -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <!-- //header -->
+      <!-- content-wrap -->
+            <h3 class="head-tit sr-only">빈텍스트</h3>            
+            <h4 class="head-tit sr-only">빈텍스트</h4>            
+         </div>
+         <div class="signup">        
+            <div class="content-wrap">
+               <div class="cont-body">            
+            <!-- 내용 -->
+            <div class="cont-area">
+               <div class="wrap-signup">
+                  <div class="header">
+                     <h5 class="pages-logo">Welcome to KOREA CUSTOMS SERVICE</h5>
+                  </div>
+                  <div class="body">
+                     <div class="cont w100per">
+                        <strong class="title">Sing-Up guide for foreign e-commerce company</strong>
+                        <div class="box">
+                           <p class="title font-3">Thank you for visiting the intermet Customs Clearance Potal for foreing e-commerce company</p>
+                           <ul class="list solid-line-top5">
+                              <li class="dotted-line-bottom">
+                                 <strong class="title">Company Representative</strong>
+                                 <p class="txt pl-20">This option is selecred by the representive of company wising to use the exclusive customs clearance platform for e-commerce, when they intend to resgister as an e-commerce company and utilize services such as the e-commerce RESTAPI. System usage is possible only after obtaining approval from Korea Customs Service.</p>                                 
+                              </li>
+                              <li>
+                                 <strong class="title">Company Staff</strong>
+                                 <p class="txt pl-20">This Option is selected when a user wishes to additional employee IDs, The company reperesentative and the e-commerc company code must registered first. The approval for usage is conducted by company representative</p>                                 
+                              </li>                              
+                           </ul>
+                        </div>
+                        <div class="btn-box">
+                           <button class="btn primary large ico1 f-j-start">Company and representative</button>
+                           <button class="btn primary large ico2 f-j-start">Company staff</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--// 내용 -->
+         </div>
+            </div>
+         </div>         
+      </div>
+      <!-- //content-wrap -->
+      <!-- footer -->
+      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <!-- //footer -->
+
+   </div>
+</body>
+</html>

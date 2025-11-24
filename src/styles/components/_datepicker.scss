@@ -13,7 +13,7 @@
     .form-group input[type=text]{padding: 0;text-align: center;}
 }
 
-.datepicker {width:360px;position:fixed;left:0;top:0;border:1px solid #ccc;z-index:9;background-color:#fff;
+.datepicker {width:250px;position:fixed;left:0;top:0;border:1px solid #ccc;z-index:9;background-color:#fff;
     @include tablet {left: 0 !important;top: 0 !important;width: 100%;height: 100%;z-index: 999;background-color: rgba(0,0,0,0.5);
         .calendar-wrap {@include absolute($left: 50%, $top: 50%);width: 360px;background-color: #fff;transform: translate(-50%, -50%);}
     }
@@ -21,14 +21,14 @@
         .calendar-wrap {width: calc(100% - 40px);}
     }    
     .calendar-header {padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:8px;background-color:#edf1f5;
-        [class*=btn-]{background-color: rgba(0,0,0,0.0);font-size: 19px;
+        [class*=btn-]{background-color: rgba(0,0,0,0.0);font-size: 17px;
             &.btn-prev,&.btn-next{display:flex;font-size:0;width:16px;height:16px;position:relative;background-image:url('../assets/icons/calendar-btn.svg');background-position:center;padding:0;
                 &:disabled{background-image: url('../assets/icons/calendar-btn-d.svg');}
             }
             &.btn-next{transform: rotate(180deg);
                 &:disabled{transform: rotate(360deg);}
             }
-            &.btn-year,&.btn-month{padding:8px 8.8px;width:112px;background-image:url('../assets/icons/btn-arrow-down.svg');background-repeat:no-repeat;background-position:center right 9px;background-size:15px;
+            &.btn-year,&.btn-month{padding:0 8px;width:90px;background-image:url('../assets/icons/btn-arrow-down.svg');background-repeat:no-repeat;background-position:center right 4px;background-size:15px;
                 &.on{outline:1px solid #99B0CB;}
             }            
             &.btn-month{background-position: center right 13px;}
@@ -39,8 +39,8 @@
             div {flex: 1;@include flex($direction: row);width:48px;height:40px;}
         }
         .day-con {@include flex($direction: row);flex-wrap: wrap;width: 100%;
-            .day {display: flex;align-items: center;justify-content: center;width: calc(100% / 7);height: 48px;                              
-                button {width: 40px;height: 40px;border-radius: 50%;}
+            .day {display: flex;align-items: center;justify-content: center;width: calc(100% / 7);height: 35px;                              
+                button {width: 30px;height: 30px;border-radius: 50%;}
 
                 /** 오늘 **/
                 &.today button {color: #246BEB;border:1px solid #246BEB;background-color: rgba(0,0,0,0.0);}
@@ -55,15 +55,15 @@
             }
         }
         .year-con {@include absolute();width: 100%;height: 100%;overflow-y: scroll;text-align: center;padding: 8px 0;            
-            .btn-year-select {display:block;text-align:center;height:40px;width:100%;background-color:#fff;position:relative;z-index:1;                
+            .btn-year-select {display:block;text-align:center;height:35px;width:100%;background-color:#fff;position:relative;z-index:1;                
                 &.active {color: #fff;}                
                 &.btn-year-select:hover::before,&.active::before{content:"";display:block;width:140px;height:100%;position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:-1;border-radius:4px;}
                 &.btn-year-select:hover::before{background-color: #EDF1F5;}
                 &.active::before,&.active:hover::before{background-color: #246BEB;}                
             }
         }
-        .month-con {@include absolute();@include flex($direction: row);flex-wrap:wrap;width:100%;height:100%;background-color:#fff;padding:8px 20px;gap:8px;
-            .btn-month-select {@include flex();width:calc(100% / 3 - 8px);height:40px;background-color:#fff;padding:0;
+        .month-con {@include absolute();@include flex($direction: row);flex-wrap:wrap;width:100%;height:100%;background-color:#fff;padding:8px;gap:8px;
+            .btn-month-select {@include flex();width:calc(100% / 3 - 8px);height:40px;background-color:#fff;padding:0;font-size:15px;
                 &.active,&.active:hover {background-color: #246BEB;color: #fff;}
                 &:hover{background-color: #EDF1F5;}
                 &:disabled {pointer-events: none;opacity: 0.5;color:#717171;
@@ -71,5 +71,5 @@
             }
         }
     }
-    .calendar-footer {@include flex($direction: row, $justifyContents: flex-end);padding: 16px;border-top:1px solid #E4E4E4}    
+    .calendar-footer {@include flex($direction: row, $justifyContents: flex-end);padding: 10px 16px;border-top:1px solid #E4E4E4}    
 }

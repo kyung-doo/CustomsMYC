@@ -11,6 +11,11 @@ body.common-loading,html.common-loading{overflow: hidden;}
     .loading-txt{position: absolute;top: 50%;left: 50%;font-size: 25px;font-weight: 700;z-index: 9999;transform: translate(-50%, -50%);margin-top: 60px;}
 }
 
+.pop_loading{position: absolute;top:50%;left:50%;margin-left: -23px;text-align: center;z-index: 2;
+  p{width: 50px;padding-top: 52px;font-weight: 700;color: #24489a;font-size: 12px;background: url(../../images/ovrs/icons/com-loading.svg) no-repeat 50% 0;}
+  button{display: inline-block;height: 32px;line-height: 32px;padding: 0 20px;border: 1px solid #a5a5a5;border-radius: 3px;font-size: 14px;font-weight: 700;color: #424242;background: #f1f1f1;background: linear-gradient(#f9f9f9,#e6e6e6);filter: progid:DXimageTransform.Microsoft.gradient(startColorStr="#f9f9f9",endColorStr="#e6e6e6");box-shadow: 1px 1px 1px #d8d8d8;}
+}
+
 
 .table-content.common-loading::before,
 .table-content.common-loading::after{z-index: 2;}

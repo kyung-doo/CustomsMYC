@@ -166,10 +166,10 @@ class Datepicker {
         this.calendar.find(".month-con").hide();
 
         $("html, body").on('scroll.datepicker', () => {
-            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
+            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 40});
         });
         $(window).on('resize.datepicker', () => {
-            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 50});
+            this.calendar.css({left: this.ele.offset().left, top: this.ele.offset().top + 40});
         });
         $("html, body").trigger('scroll.datepicker');                        
 
@@ -308,8 +308,8 @@ class Datepicker {
 
         const toDay = new Date();
 
-        this.calendar.find(".btn-year").text(year+'yr');
-        this.calendar.find(".btn-month").text(month < 10 ? '0'+month+'mo' : month+'mo');
+        this.calendar.find(".btn-year").text(year);
+        this.calendar.find(".btn-month").text(month < 10 ? '0'+month : month);
 
         this.calendar.find(".btn-next").removeAttr('disabled');
         this.calendar.find(".btn-prev").removeAttr('disabled');
@@ -435,10 +435,10 @@ class Datepicker {
         this.calendar.find(".month-con").empty();
         for(let i = 1; i <= 12; i++) {
             if(this.currentMonth === i) {
-                this.calendar.find(".month-con").append(`<button class="btn-month-select active" data-month="${i}">${i}mo</button>`)
+                this.calendar.find(".month-con").append(`<button class="btn-month-select active" data-month="${i}">${i}</button>`)
             } else {
-                this.calendar.find(".month-con").append(`<button class="btn-month-select" data-month="${i}">${i}mo</button>`)
-            }
+                this.calendar.find(".month-con").append(`<button class="btn-month-select" data-month="${i}">${i}</button>`)
+            }            
         }
         if(dayjs(this.props.maxDate).format('YYYYMMDD') === dayjs(this.today).format('YYYYMMDD') && this.currentYear === new Date().getFullYear()) {
             this.calendar.find(".month-con button").each(function () {
