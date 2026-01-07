@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
    <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
 </head>
 <body>
-   <div id="wrap" class="logout">
+   <div id="wrap" class="login">
       <!-- header -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-header.html', 'utf8'))({}) %>
       <!-- //header -->
       <!-- content-wrap -->
-            <h3 class="head-tit">User management</h3>            
+            <h3 class="head-tit">로그인전 국문 레이아웃</h3>            
          </div>
          <div class="cont-body">            
             <!-- 내용 -->
@@ -19,12 +19,11 @@
             <!--// 내용 -->
          </div>
       </div>
-      <!-- //content-wrap -->
+      <!-- //content-wrap -->      
        <!-- footer -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-footer.html', 'utf8'))({}) %>
       <!-- //footer -->
 
-      
    </div>
 </body>
 </html>

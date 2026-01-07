@@ -1,39 +1,92 @@
-@use "../mixin" as *;
-.paging {display: flex;gap: 8px;align-items: center;justify-content: center;padding-bottom: 2px;  
-
-  //다음 이전
-  & > ul:not(.pages){display: flex;
-    li{width:35px;height:30px;
-      a{display: flex;align-items: center;position: relative;color: #555;border-radius: 4px;justify-content: center;width:100%;height: 100%;
-        &:hover{background-color: #EDF1F5;}
-        span{font-size:0;}
-      }   
-      &[class*=more] a{
-        &::before,&::after{content:"";display: block;position: absolute;background-repeat: no-repeat;background-position: center;width:15px;height: 15px;}        
-      }   
-      &.morePrev a{        
-        &::before,&::after{background-image: url("../assets/icons/btn-arrow-left.svg");}
-        &::before{left:5px;}
-        &::after{right:5px;}
-      }
-      &.moreNext a{
-        &::before,&::after{background-image: url("../assets/icons/btn-arrow-right.svg");}
-        &::before{left:5px;}
-        &::after{right:5px;}
-      }
-
-      &.prev a{background-image: url("../assets/icons/btn-arrow-left.svg");background-repeat: no-repeat;background-position: center}      
-      &.next a{background-image: url("../assets/icons/btn-arrow-right.svg");background-repeat: no-repeat;background-position: center}
-    }        
-  }    
-
-  //페이징 넘버   
-  .pages {display: flex;gap: 8px;}
-  .pages li a,.pages li strong {width: 30px;height: 30px;display: flex;justify-content: center;align-items: center;color: #555;background-color: #fff;border-radius: 4px;}  
-  .pages li a:hover{background-color: #EDF1F5;}  
-  .pages li strong {background-color: #003675;color: #fff;pointer-events: none;}  
+/* ==================================================
+   Style Guide pagination
+   ================================================== */
+.paging {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
 }
-
-
-
-
+.paging > ul:not(.pages) {
+  display: flex;
+}
+.paging > ul:not(.pages) li {
+  width: 35px;
+  height: 30px;
+}
+.paging > ul:not(.pages) li a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #555;
+  border-radius: 4px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.paging > ul:not(.pages) li a:hover {
+  background-color: #EDF1F5;
+}
+.paging > ul:not(.pages) li a span {
+  font-size: 0;
+}
+.paging > ul:not(.pages) li[class*=more] a::before, .paging > ul:not(.pages) li[class*=more] a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+}
+.paging > ul:not(.pages) li.morePrev a::before, .paging > ul:not(.pages) li.morePrev a::after {
+  background-image: url("../assets/icons/btn-arrow-left.svg");
+}
+.paging > ul:not(.pages) li.morePrev a::before {
+  left: 5px;
+}
+.paging > ul:not(.pages) li.morePrev a::after {
+  right: 5px;
+}
+.paging > ul:not(.pages) li.moreNext a::before, .paging > ul:not(.pages) li.moreNext a::after {
+  background-image: url("../assets/icons/btn-arrow-right.svg");
+}
+.paging > ul:not(.pages) li.moreNext a::before {
+  left: 5px;
+}
+.paging > ul:not(.pages) li.moreNext a::after {
+  right: 5px;
+}
+.paging > ul:not(.pages) li.prev a {
+  background-image: url("../assets/icons/btn-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paging > ul:not(.pages) li.next a {
+  background-image: url("../assets/icons/btn-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paging .pages {
+  display: flex;
+  gap: 8px;
+}
+.paging .pages li a, .paging .pages li strong {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.paging .pages li a:hover {
+  background-color: #EDF1F5;
+}
+.paging .pages li strong {
+  background-color: #003675;
+  color: #fff;
+  pointer-events: none;
+}

@@ -1,31 +1,71 @@
-.accordion-wrap{margin-top: 24px;border-bottom:1px solid #58616A;
-    &.active{border-bottom:0;
-      .accordion-header{
-        a{
-          &::before{transition: all .3s;transform: rotate(270deg);}
-          i{transition: all .3s;transform: rotate(180deg);}
-        }
-      }
-    }
-    .accordion-header{      
-      a{display: flex;justify-content: space-between;align-items: center;position: relative;        
-        &::before{content:"";display: block;position: absolute;top:0;right:0;width:20px;height:100%;background-image: url("../assets/icons/btn-arrow-right-d.svg");background-repeat: no-repeat;background-position: center;transform: rotate(90deg);}        
-        .data{display: block;color:#555;margin-top: 5px;}
-        i{font-size:0;}
-        .title-type3{margin-bottom: 0;}
-      }
-    }
-    .accordion-body{
-      ul{
-        li{padding-top: 25px;
-          .txt-area{text-align: right;}
-          &.form-list{flex-direction: column;
-            .form-group{margin-top: 12px;}
-            .acc-tit{width:100%;text-align: left;}
-          }
-          .acc-tit{width:150px;min-width:150px;}          
-          .acc-txt{width:100%;}         
-        }
-      }
-    }
-  }
+/* ==================================================
+   Style Guide accordion
+   ================================================== */
+.accordion-wrap {
+  margin-top: 24px;
+  border-bottom: 1px solid #58616A;
+}
+.accordion-wrap.active {
+  border-bottom: 0;
+}
+.accordion-wrap.active .accordion-header a::before {
+  transition: all 0.3s;
+  transform: rotate(270deg);
+}
+.accordion-wrap.active .accordion-header a i {
+  transition: all 0.3s;
+  transform: rotate(180deg);
+}
+.accordion-wrap .accordion-header a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.accordion-wrap .accordion-header a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background-image: url("../assets/icons/btn-arrow-right-d.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+}
+.accordion-wrap .accordion-header a .data {
+  display: block;
+  color: #555;
+  margin-top: 5px;
+}
+.accordion-wrap .accordion-header a i {
+  font-size: 0;
+}
+.accordion-wrap .accordion-header a .title-type3 {
+  margin-bottom: 0;
+}
+.accordion-wrap .accordion-body ul li {
+  padding-top: 25px;
+}
+.accordion-wrap .accordion-body ul li .txt-area {
+  text-align: right;
+}
+.accordion-wrap .accordion-body ul li.form-list {
+  flex-direction: column;
+}
+.accordion-wrap .accordion-body ul li.form-list .form-group {
+  margin-top: 12px;
+}
+.accordion-wrap .accordion-body ul li.form-list .acc-tit {
+  width: 100%;
+  text-align: left;
+}
+.accordion-wrap .accordion-body ul li .acc-tit {
+  width: 150px;
+  min-width: 150px;
+}
+.accordion-wrap .accordion-body ul li .acc-txt {
+  width: 100%;
+}

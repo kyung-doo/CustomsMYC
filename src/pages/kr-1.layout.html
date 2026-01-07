@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
    <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
 </head>
 <body>
    <!-- 로그인전 - login / 로그인후 - logout -->
-   <div id="wrap" class="main logout">
+   <div id="wrap" class="main login">
       <!-- header -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-header.html', 'utf8'))({}) %>
       <!-- //header -->
       <!-- content-wrap -->
          </div>      
          <div id="main">
             <div class="area1">
                <div class="slide-box">            
-                  <div class="swiper">            
+                  <div class="swiper" id="images-slide">            
                      <div class="swiper-wrapper">               
                         <div class="swiper-slide">
                            <img src="../assets/image/slide01.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE1</p>
+                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE</p>
                         </div>
                         <div class="swiper-slide">
                            <img src="../assets/image/slide02.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE2</p>
+                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE</p>
                         </div>
                         <div class="swiper-slide">
                            <img src="../assets/image/slide03.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE3</p>
+                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE</p>
                         </div>
                         <div class="swiper-slide">
                            <img src="../assets/image/slide04.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE4</p>
+                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE</p>
                         </div>
                         <div class="swiper-slide">
                            <img src="../assets/image/slide05.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE5</p>
-                        </div>
-                        <div class="swiper-slide">
-                           <img src="../assets/image/slide05.png" alt="KOREA CUSTOMS SERVICE">
-                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE6</p>
+                           <p class="txt"><span>KOREA</span>CUSTOMS<br> SERVICE</p>
                         </div>
                      </div>                   
-                  </div>                      
+                  </div>    
+                  <div class="wrap-swiper-btn">
+                     <div class="swiper-pagination"></div>        
+                     <button class="swiper-stop">정지</button>    
+                     <button class="swiper-button-prev"></button>
+                     <button class="swiper-button-next"></button>                                    
+                  </div>     
                </div>                                          
                <div class="login-box">
                   <!-- 로그인전 -->
@@ -50,8 +52,9 @@
                      <!-- <button class="btn login primary medium">Log In</button>
                      <button class="btn signup medium">Sign Up</button> -->
 
-                     <a href="#none" class="btn login primary medium">Log In</a>
-                     <a href="#none" class="btn signup medium">Sign Up</a>
+                     <a href="#none" class="btn login primary medium">로그인</a>
+                     <a href="#none" class="btn signup medium">유니패스 회원가입</a>
+                     <p class="mt-8">* 유니패스에서 회원가입 후 로그인해 주시기 바랍니다.</p>
                   </div>
                   <!-- // 로그인전 -->
 
@@ -134,7 +137,7 @@
       </div>
       <!-- //content-wrap -->      
       <!-- footer -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-footer.html', 'utf8'))({}) %>
       <!-- //footer -->
    </div>
 </body>

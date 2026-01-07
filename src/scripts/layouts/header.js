@@ -25,11 +25,26 @@ $(() => {
     /* ==================================================
         검은색 배경 클릭하면 메뉴 닫기
         ================================================== */
-    $("#wrap > .blind").on('click', function () {
+    $("#wrap > .blind,#header .main-menu .gnb-main-list .gnb-list a").on('click', function () {
         $(".gnb-menu li").removeClass('active');
         $("#wrap > .blind").hide();
         $('body').css({'overflow-y': 'auto'});      
     });
+
+    /* ==================================================
+        국내 업체용 [국문]
+        ================================================== */
+    document.querySelectorAll('html[lang=ko] #wrap.login #header .header-container .Company-box .Company-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const box = this.closest('html[lang=ko] #wrap.login #header .header-container .Company-box');
+            const isActive = box.classList.toggle('active');
+
+            // title 변경
+            this.title = isActive ? '국내 업체용 닫기' : '국내 업체용 열기';
+        });
+    });
+
+    
 });
 
 

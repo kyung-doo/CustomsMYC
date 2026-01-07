@@ -1,231 +1,540 @@
-
-.change-pass{border-top:1px solid #58616A;background-color: #F4F5F6;padding: 80px 0;margin-top: 16px;
-  .wrap-form-area{width:400px;margin: 0 auto;
-    .form-group{position: relative;
-      &::before{content: "";display: block;position: absolute;top: 50%;left: 16px;width: 16px;height: 16px;transform: translateY(-50%);background-position: center;background-image: url(../assets/icons/myc-pass.svg);}
-      input{padding-left: 45px;}
-    }
-    .btn-box{margin-top: 24px;
-      button{width:100%;}
-    } 
-  }  
+/* ==================================================
+   Style Guide list
+   ================================================== */
+.change-pass {
+  border-top: 1px solid #58616A;
+  background-color: #F4F5F6;
+  padding: 80px 0;
+  margin-top: 16px;
 }
-.wrap-form-area{  
-  .list-box .title{margin-bottom: 27px !important;}
-  .inp-form {border:1px solid #e4e4e4;border-radius:8px;padding:32px;position:relative;border:0;padding: 0;  
-    //버튼이있을때
-    &:has(.form-btn-area){padding: 32px 130px 32px 32px;}   
-
-    //stop이 있을떄
-    &:has(.step-area.type1){padding: 32px 32px 32px 239px;}
-
-    //stop,버튼이 같이 있을떄
-    &:has(.step-area.type1):has(.form-btn-area){padding: 32px 130px 32px 239px;}
-
-    &:has(.txt-list){margin-top: 24px;border-top:1px solid #58616A;border-radius: 0;
-      &:first-child{margin-top: 0px;}
-
-    }
-
-    //form-conts안에 버튼이 있을때 중앙정렬
-    .form-conts:has(button){display: flex;align-items: center;}
-
-    .form-group.form-tit-group .form-conts{flex:1}
-    .form-group.form-tit-group{background-color: #fff;}
-    
-    > ul {display:flex;flex-direction:row;flex-wrap:wrap;
-      .tit {position:relative;display:inline-flex;align-items:center;gap:4px;padding-right:12px;word-break: break-all;font-weight: 700;        
-        + .form-group {display:flex;align-items:center;gap:8px;margin-top:9px;}
-      }      
-
-      li {padding-top: 20px;min-width: 100px;align-items: flex-start;}          
-    }    
-    
-    /** 넓이 **/
-    .col1 {width: 100%;}
-    .col2 {width: 50%}
-    .col3 {width: 33.3333%}
-    .col4 {width: 25%}
-
-    /** 텍스트 리스트 **/
-    .txt-list {display: flex;align-items: flex-start;border-bottom:1px solid #E6E8EA;padding-top: 0;                     
-      .tit{width:200px;min-width:200px;line-height:120%;padding-right: 0;background-color: #F4F5F6;height:100%;word-break: auto-phrase;padding: 10px 16px;
-        > strong{position: relative;display: inline-block;}
-      }
-      .title {display: flex;position: relative;}
-      .inp-box {flex: 1;margin-top: 0;padding: 5px 16px;height: 100%;
-        .txt {line-height: 150%;word-break: break-word;display: block;
-          button{margin-left: 15px;}
-        }                
-        .form-check{margin-right: 13px;
-          label{padding-left: 23px !important;}
-        }
-        .addmore-list{display: flex;flex-direction: column;width:100%;padding: 5px 0;
-          li{display: flex;gap:8px;padding: 0 0 5px 0;margin-bottom: 5px !important;border-bottom:1px solid #E6E8EA;width:100%;align-items: center;padding-left: 16px;
-            .txt:first-child{padding-left: 0 !important;}
-            &:last-child{padding-bottom: 0;margin-bottom: 0 !important;border-bottom: 0;}
-            .title{margin-bottom: 0 !important;width:200px;min-width:200px;padding-right: 16px;position: relative;
-              &::before{content:"";display: block;position: absolute;top:50%;right:0;width:1px;height:12px;background-color: #E4E4E4;transform: translateY(-50%);}
-            }
-            .txt{padding-left: 16px;}
-          }
-        }   
-        &:has(.addmore-list){padding: 0;}  
-        
-        &.line-box{flex-direction: column;align-items: flex-start;padding: 0;gap:0;          
-          > .txt{border-top:1px solid #E6E8EA;width:100%;padding: 5px 16px;display: flex;gap:8px;align-items: center;
-            &:first-child{border-top:0;}
-          }
-        }
-      }
-    }    
-
-    /** 필수 **/
-    .compulsory-title {margin-top: 10px;}
-
-    /** 파일첨부 **/
-    .file-upload{display: flex;gap:8px;
-      .txt-box{border:1px solid #c6c6c6;background-color:#fff;border-radius:4px;width:100%;height:30px;display:flex;align-items:center;padding-left: 16px;padding-right: 16px;                            
-        .txt{display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}        
-      }
-    }
-    
-    .inp-box {margin-top: 12px;display: flex;align-items: center;gap: 8px;width:100%;      
-      .area-group{display: flex;align-items: center;gap: 8px;width: 100%;min-width: 100px;}
-      .check-list-box{display: flex;gap:24px;flex-wrap: wrap;margin-top: 10px;width:100%;}
-    }  
-
-    .form-group, .wrap-form-group {width: 100%;}
-    .form-btn-area {position: absolute;top: 32px;right: 32px;display: flex;gap: 20px;
-      button.text {background-color: rgba(0, 0, 0, 0);gap: 5px;padding-right: 0;
-        &:disabled{
-          i.refresh{background-image: url('../assets/icons/refresh-d.svg');}
-        }      
-        &:disabled{
-          i.close{background-image: url('../assets/icons/close-d.svg');}
-        }      
-      }
-    }  
-
-    /** 체크박스 타입 **/
-    &:has(>.form-check){padding-left: 76px;
-      > .form-check{position: absolute;top:32px;left:32px;
-        label{padding: 0;padding-left: 0 !important;width:20px;}
-      }
-      
-    }
-
-    /** 드롭다운 메뉴 타입1 **/
-    &.type1 .cont-acc-list.type1 .accordion-body{border-top:0;margin-top: 0;}
-    .cont-acc-list.type1{margin: 0;border-top:0; padding: 0;   
-      .accordion-header{display: none;
-        a{padding: 0;}
-      }
-      .accordion-body{margin-top: 24px;padding: 0; padding-top: 24px;border-top:1px solid #D8D8D8;      
-        .inp-form{border:0;border-radius: 0;padding: 0;
-          ul{border-top:0;
-            li{background-color: rgba(0,0,0,0.0);border-radius: 0;align-items: flex-start;                        
-              &:not(.txt-list){flex-direction: column;}                        
-              .inp-box{width:100%;}
-              label{width:auto;padding-right: 12px;}              
-              .compulsory-txt{margin-top: 2px;margin-bottom: 0;}
-              .return-btn{width:121px}              
-            }
-          }
-        }      
-      }
-    }
-
-    /** 드롭다운 메뉴 타입2 **/  
-    .cont-acc-list.type2{margin: 0;padding: 0;border-top:0;margin-top: 11px;
-      .accordion-wrap{width:100%;
-        .accordion-body{
-          .inp-form{padding: 0;border:0;border-top:1px solid #D8D8D8;border-radius: 0;padding-top: 24px;}
-          ul{border-top:0;}
-          li{
-            label{width:auto;padding-right: 12px;}            
-            &:not(.txt-list){flex-direction: column;}          
-            .inp-box{width:100%;}
-          }        
-        }
-      }
-    } 
-
-    /** step **/
-    .step-area.type1{position: absolute;top:0;left:0;height:100%;padding: 32px 40px 32px 32px;
-      &::before{height:calc(100% - 64px)}
-      .step-wrap{flex-direction: column;
-        li{padding: 0 0 32px 0;width:127px;
-          &::before{width: 1px;height: 100%;left: 8.5px;}
-          .step-tit{padding-left: 32px;padding-top: 1px;}
-        }
-      }
-    }
-
-    .hy{min-width: 15px;display: flex;justify-content: center;}
-  }
-
- /** 리스트 합계 **/
-  .total-area{display:flex;justify-content:flex-end;align-items:center;margin-top:24px;padding:24px 0;border-top:1px solid #717171;
-    p{font-size: 19px;}
-    strong{margin-left: 24px;font-size: 25px;
-      span{margin-left: 4px;}
-    }
-  }
-
-  /** 주소찾기 모바일 **/
-  &.type1{margin-top: 24px;
-    .inp-form{padding: 24px !important;
-      li.txt-list{flex-direction: column;
-        .inp-box{text-align: left;padding-left: 0 !important;margin-top: 14px;width: 100%;}
-        .add-tit{font-size:19px;display:flex;align-items:center;width:100%;padding-right: 75px;line-height: 150%;
-          .add-modify-btn{font-size:0;width:0;background-color: rgba(0,0,0,0.0);margin-left: 8px;}        
-        }
-        .add-txt{color:#555;line-height: 150%;}
-      }  
-    }  
-    .form-btn-area{top:29px !important}
-  }
-
-  .batch-list{width: 100%;display: flex;align-items: center;justify-content: flex-end;gap: 24px;
-    .txt{line-height: 150%;}
-  }
-
-  .nowrap-box{display: flex;gap: 8px;}
-
-  //인증번호 입력
-  .vc-list{
-    .inp-box{align-items: flex-start;}
-  }   
-
-  //서브 리스트 유형
-  .sub-form{    
-    &.dotted-line-bottom{margin-bottom: 0 !important;}
-    .calendar{margin-right: 0;}
-    .sub-form-box{width:100%;
-      ul{display: flex;margin-left: -40px;}
-      .sub-list-wrap{display: flex;gap:24px}      
-      .sub-box{margin-top: 12px;display: flex;align-items: center;gap: 8px;}
-      .sub-list-box{width:100%;min-width: 100px;}
-      label{font-weight: 700;}      
-    }   
-    .sub-tit{position: relative;}  
-  }
-
-  //주소
-  .address-list button{gap:4px;margin-right: 8px;}
-
-  //선이없는 타입
-  &.no-bor-form{
-    .inp-form{padding: 0;border:0;}
-  }
-
-  //리스트
-  .list-box{border-bottom:1px solid #E6E8EA;margin-top: 30px;padding-bottom: 25px;
-    ul{margin-top: -5px;
-      li{margin-top: 15px;
-        span{color: #555;margin-left: 5px;}
-      }
-    }     
-  }
+.change-pass .wrap-form-area {
+  width: 400px;
+  margin: 0 auto;
+}
+.change-pass .wrap-form-area .form-group {
+  position: relative;
+}
+.change-pass .wrap-form-area .form-group::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  background-position: center;
+  background-image: url(../assets/icons/myc-pass.svg);
+}
+.change-pass .wrap-form-area .form-group input {
+  padding-left: 45px;
+}
+.change-pass .wrap-form-area .btn-box {
+  margin-top: 24px;
+}
+.change-pass .wrap-form-area .btn-box button {
+  width: 100%;
+}
+.wrap-form-area .list-box .title {
+  margin-bottom: 27px !important;
+}
+.wrap-form-area .inp-form {
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  padding: 32px;
+  position: relative;
+  border: 0;
+  padding: 0;  
+}
+.wrap-form-area .inp-form:has(.form-btn-area) {
+  padding: 32px 130px 32px 32px;
+}
+.wrap-form-area .inp-form:has(.step-area.type1) {
+  padding: 32px 32px 32px 239px;
+}
+.wrap-form-area .inp-form:has(.step-area.type1):has(.form-btn-area) {
+  padding: 32px 130px 32px 239px;
+}
+.wrap-form-area .inp-form:has(.txt-list) {
+  margin-top: 24px;
+  border-top: 1px solid #58616A;
+  border-radius: 0;
+}
+.wrap-form-area .inp-form:has(.txt-list):first-child {
+  margin-top: 0px;
+}
+.wrap-form-area .inp-form .form-conts:has(button) {
+  display: flex;
+  align-items: center;
+}
+.wrap-form-area .inp-form .form-group.form-tit-group .form-conts {
+  flex: 1;
+}
+.wrap-form-area .inp-form .form-group.form-tit-group {
+  background-color: #fff;
+}
+.wrap-form-area .inp-form > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.wrap-form-area .inp-form > ul .tit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 12px;
+  word-break: break-all;
+  font-weight: 700;
+}
+.wrap-form-area .inp-form > ul .tit + .form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+}
+.wrap-form-area .inp-form > ul li {
+  padding-top: 20px;
+  min-width: 100px;
+  align-items: flex-start;
+}
+.wrap-form-area .inp-form .col1 {
+  width: 100%;
+}
+.wrap-form-area .inp-form .col2 {
+  width: 50%;
+}
+.wrap-form-area .inp-form .col3 {
+  width: 33.3333%;
+}
+.wrap-form-area .inp-form .col4 {
+  width: 25%;
+}
+.wrap-form-area .inp-form .txt-list {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #E6E8EA;
+  padding-top: 0;
+}
+.wrap-form-area .inp-form .txt-list .tit {
+  width: 200px;
+  min-width: 200px;
+  line-height: 120%;
+  padding-right: 0;
+  background-color: #F4F5F6;
+  height: 100%;
+  word-break: auto-phrase;
+  padding: 10px 16px;
+}
+.wrap-form-area .inp-form .txt-list .tit > strong {
+  position: relative;
+  display: inline-block;
+}
+.wrap-form-area .inp-form .txt-list .title {
+  display: flex;
+  position: relative;
+}
+.wrap-form-area .inp-form .txt-list .inp-box {
+  flex: 1;
+  margin-top: 0;
+  padding: 5px 16px;
+  height: 100%;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .txt {
+  line-height: 150%;
+  word-break: break-word;
+  display: block;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .txt button {
+  margin-left: 15px;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .form-check {
+  margin-right: 13px;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .form-check label {
+  padding-left: 23px !important;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 0;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 5px 0;
+  margin-bottom: 5px !important;
+  border-bottom: 1px solid #E6E8EA;
+  width: 100%;
+  align-items: center;
+  padding-left: 16px;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li .txt:first-child {
+  padding-left: 0 !important;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+  border-bottom: 0;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li .title {
+  margin-bottom: 0 !important;
+  width: 200px;
+  min-width: 200px;
+  padding-right: 16px;
+  position: relative;
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li .title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 12px;
+  background-color: #E4E4E4;
+  transform: translateY(-50%);
+}
+.wrap-form-area .inp-form .txt-list .inp-box .addmore-list li .txt {
+  padding-left: 16px;
+}
+.wrap-form-area .inp-form .txt-list .inp-box:has(.addmore-list) {
+  padding: 0;
+}
+.wrap-form-area .inp-form .txt-list .inp-box.line-box {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 0;
+}
+.wrap-form-area .inp-form .txt-list .inp-box.line-box > .txt {
+  border-top: 1px solid #E6E8EA;
+  width: 100%;
+  padding: 5px 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.wrap-form-area .inp-form .txt-list .inp-box.line-box > .txt:first-child {
+  border-top: 0;
+}
+.wrap-form-area .inp-form .compulsory-title {
+  margin-top: 10px;
+}
+.wrap-form-area .inp-form .file-upload {
+  display: flex;
+  gap: 8px;
+}
+.wrap-form-area .inp-form .file-upload .txt-box {
+  border: 1px solid #c6c6c6;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.wrap-form-area .inp-form .file-upload .txt-box .txt {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.wrap-form-area .inp-form .inp-box {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.wrap-form-area .inp-form .inp-box .area-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 100px;
+}
+.wrap-form-area .inp-form .inp-box .check-list-box {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  width: 100%;
+}
+.wrap-form-area .inp-form .form-group, .wrap-form-area .inp-form .wrap-form-group {
+  width: 100%;
+}
+.wrap-form-area .inp-form .form-btn-area {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  gap: 20px;
+}
+.wrap-form-area .inp-form .form-btn-area button.text {
+  background-color: rgba(0, 0, 0, 0);
+  gap: 5px;
+  padding-right: 0;
+}
+.wrap-form-area .inp-form .form-btn-area button.text:disabled i.refresh {
+  background-image: url("../assets/icons/refresh-d.svg");
+}
+.wrap-form-area .inp-form .form-btn-area button.text:disabled i.close {
+  background-image: url("../assets/icons/close-d.svg");
+}
+.wrap-form-area .inp-form:has(> .form-check) {
+  padding-left: 76px;
+}
+.wrap-form-area .inp-form:has(> .form-check) > .form-check {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.wrap-form-area .inp-form:has(> .form-check) > .form-check label {
+  padding: 0;
+  padding-left: 0 !important;
+  width: 20px;
+}
+.wrap-form-area .inp-form.type1 .cont-acc-list.type1 .accordion-body {
+  border-top: 0;
+  margin-top: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 {
+  margin: 0;
+  border-top: 0;
+  padding: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-header {
+  display: none;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-header a {
+  padding: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body {
+  margin-top: 24px;
+  padding: 0;
+  padding-top: 24px;
+  border-top: 1px solid #D8D8D8;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul {
+  border-top: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  align-items: flex-start;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li:not(.txt-list) {
+  flex-direction: column;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li .inp-box {
+  width: 100%;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li label {
+  width: auto;
+  padding-right: 12px;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li .compulsory-txt {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type1 .accordion-body .inp-form ul li .return-btn {
+  width: 121px;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 {
+  margin: 0;
+  padding: 0;
+  border-top: 0;
+  margin-top: 11px;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap {
+  width: 100%;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap .accordion-body .inp-form {
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #D8D8D8;
+  border-radius: 0;
+  padding-top: 24px;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap .accordion-body ul {
+  border-top: 0;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap .accordion-body li label {
+  width: auto;
+  padding-right: 12px;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap .accordion-body li:not(.txt-list) {
+  flex-direction: column;
+}
+.wrap-form-area .inp-form .cont-acc-list.type2 .accordion-wrap .accordion-body li .inp-box {
+  width: 100%;
+}
+.wrap-form-area .inp-form .step-area.type1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 32px 40px 32px 32px;
+}
+.wrap-form-area .inp-form .step-area.type1::before {
+  height: calc(100% - 64px);
+}
+.wrap-form-area .inp-form .step-area.type1 .step-wrap {
+  flex-direction: column;
+}
+.wrap-form-area .inp-form .step-area.type1 .step-wrap li {
+  padding: 0 0 32px 0;
+  width: 127px;
+}
+.wrap-form-area .inp-form .step-area.type1 .step-wrap li::before {
+  width: 1px;
+  height: 100%;
+  left: 8.5px;
+}
+.wrap-form-area .inp-form .step-area.type1 .step-wrap li .step-tit {
+  padding-left: 32px;
+  padding-top: 1px;
+}
+.wrap-form-area .inp-form .hy {
+  min-width: 15px;
+  display: flex;
+  justify-content: center;
+}
+.wrap-form-area .total-area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 24px;
+  padding: 24px 0;
+  border-top: 1px solid #717171;
+}
+.wrap-form-area .total-area p {
+  font-size: 19px;
+}
+.wrap-form-area .total-area strong {
+  margin-left: 24px;
+  font-size: 25px;
+}
+.wrap-form-area .total-area strong span {
+  margin-left: 4px;
+}
+.wrap-form-area.type1 {
+  margin-top: 24px;
+}
+.wrap-form-area.type1 .inp-form {
+  padding: 24px !important;
+}
+.wrap-form-area.type1 .inp-form li.txt-list {
+  flex-direction: column;
+}
+.wrap-form-area.type1 .inp-form li.txt-list .inp-box {
+  text-align: left;
+  padding-left: 0 !important;
+  margin-top: 14px;
+  width: 100%;
+}
+.wrap-form-area.type1 .inp-form li.txt-list .add-tit {
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 75px;
+  line-height: 150%;
+}
+.wrap-form-area.type1 .inp-form li.txt-list .add-tit .add-modify-btn {
+  font-size: 0;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left: 8px;
+}
+.wrap-form-area.type1 .inp-form li.txt-list .add-txt {
+  color: #555;
+  line-height: 150%;
+}
+.wrap-form-area.type1 .form-btn-area {
+  top: 29px !important;
+}
+.wrap-form-area .batch-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+.wrap-form-area .batch-list .txt {
+  line-height: 150%;
+}
+.wrap-form-area .nowrap-box {
+  display: flex;
+  gap: 8px;
+}
+.wrap-form-area .vc-list .inp-box {
+  align-items: flex-start;
+}
+.wrap-form-area .sub-form.dotted-line-bottom {
+  margin-bottom: 0 !important;
+}
+.wrap-form-area .sub-form .calendar {
+  margin-right: 0;
+}
+.wrap-form-area .sub-form .sub-form-box {
+  width: 100%;
+}
+.wrap-form-area .sub-form .sub-form-box ul {
+  display: flex;
+  margin-left: -40px;
+}
+.wrap-form-area .sub-form .sub-form-box .sub-list-wrap {
+  display: flex;
+  gap: 24px;
+}
+.wrap-form-area .sub-form .sub-form-box .sub-box {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wrap-form-area .sub-form .sub-form-box .sub-list-box {
+  width: 100%;
+  min-width: 100px;
+}
+.wrap-form-area .sub-form .sub-form-box label {
+  font-weight: 700;
+}
+.wrap-form-area .sub-form .sub-tit {
+  position: relative;
+}
+.wrap-form-area .address-list button {
+  gap: 4px;
+  margin-right: 8px;
+}
+.wrap-form-area.no-bor-form .inp-form {
+  padding: 0;
+  border: 0;
+}
+.wrap-form-area .list-box {
+  border-bottom: 1px solid #E6E8EA;
+  margin-top: 30px;
+  padding-bottom: 25px;
+}
+.wrap-form-area .list-box ul {
+  margin-top: -5px;
+}
+.wrap-form-area .list-box ul li {
+  margin-top: 15px;
+}
+.wrap-form-area .list-box ul li span {
+  color: #555;
+  margin-left: 5px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
    <%= _.template(require('fs').readFileSync('./src/layouts/head.html', 'utf8'))({}) %>
 </head>
@@ -7,7 +7,7 @@
    <!-- 로그인전 - login / 로그인후 - logout -->
    <div id="wrap" class="main logout">
       <!-- header -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/header.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-header.html', 'utf8'))({}) %>
       <!-- //header -->
       <!-- content-wrap -->
          </div>      
@@ -58,15 +58,15 @@
                   <!-- 로그인 후 -->
                   <div class="login2">
                      <div class="txt-box">
-                        <strong class="txt1">e-Commerce Business Code</strong>
+                        <strong class="txt1">전자상거래업자부호</strong>
                         <strong class="txt2">F25123456</strong>
                      </div>
                      <div class="num-box">
-                        <strong class="tit">Days Valid</strong>
+                        <strong class="tit">유효일자</strong>
                         <p class="num1">+ 850</p>
                      </div>
                      <div class="num-box dotted-line-top">
-                        <strong class="tit">Purchase Info.</strong>                              
+                        <strong class="tit">거래정보 제출건수</strong>                              
                         <a href="#none" class="num2">2,345</a>
                      </div>
                   </div>
@@ -134,7 +134,7 @@
       </div>
       <!-- //content-wrap -->      
       <!-- footer -->
-      <%= _.template(require('fs').readFileSync('./src/layouts/footer.html', 'utf8'))({}) %>
+      <%= _.template(require('fs').readFileSync('./src/layouts/kr-footer.html', 'utf8'))({}) %>
       <!-- //footer -->
    </div>
 </body>
