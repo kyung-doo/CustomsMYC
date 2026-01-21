@@ -34,9 +34,9 @@ $(() => {
     /* ==================================================
         국내 업체용 [국문]
         ================================================== */
-    document.querySelectorAll('html[lang=ko] #wrap.login #header .header-container .Company-box .Company-btn').forEach(btn => {
+    document.querySelectorAll('#wrap.login #header .header-container .Company-box .Company-btn').forEach(btn => {
         btn.addEventListener('click', function () {
-            const box = this.closest('html[lang=ko] #wrap.login #header .header-container .Company-box');
+            const box = this.closest('#wrap.login #header .header-container .Company-box');
             const isActive = box.classList.toggle('active');
 
             // title 변경

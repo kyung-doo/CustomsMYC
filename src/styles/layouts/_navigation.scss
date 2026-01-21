@@ -5,8 +5,8 @@
 /* 메뉴 */
 #header .main-menu {border-bottom: 1px solid #d8d8d8;padding: 0 16px;transform: translate(0px, 0px);}
 #header .main-menu .inner {max-width: 1280px;margin: 0 auto;display: flex;justify-content: space-between;}
-#header .main-menu .gnb-menu {display: flex;width: 100%;align-items: center;justify-content: space-between;}
-#header .main-menu .gnb-menu > li {height: 100%;display: flex;align-items: center;}
+#header .main-menu .gnb-menu {display: flex;width: 100%;align-items: center;}
+#header .main-menu .gnb-menu > li {height: 100%;display: flex;align-items: center;padding-right:30px;}
 #header .main-menu .gnb-menu > li.active .gnb-main-trigger:before {left: 0;width: 100%;}
 #header .main-menu .gnb-menu > li.active .gnb-toggle-wrap {display: block;}
 #header .main-menu .gnb-main-trigger {background-color: rgba(0, 0, 0, 0);padding: 18px 0;position: relative;color: #555;line-height: 1.5;height: 100%;font-weight: 700;}

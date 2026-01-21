@@ -491,3 +491,11 @@ html[lang=ko] #wrap.login #header .header-container .Company-box.active i {
   width: 100%;
   height: 100%;
 }
+#wrap.login #header .header-container .Company-box ul li a.on{
+  background-color: #246BEB;
+  color: #fff;
+  border-radius: 4px;
+}
+#wrap.login #header .header-container .Company-box ul li a:hover{
+  text-decoration: underline;
+}
